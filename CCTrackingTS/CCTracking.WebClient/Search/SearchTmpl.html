@@ -1,0 +1,109 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span>SEARCH FORM</div>
+            <div class="panel-body">
+                <form id="form1">
+                    <table class="table table-condensed table-hover form-group">
+                        <tr>
+                            <td class="col-sm-6 col-md-6">
+                                <input type="text" id="txtContactInfo" class="form-control input-sm" placeholder="Contact Info: Name, Mobile or Nic" data-bind="value:contactInfo" />
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                                <input type="text" id="txtDeseasedInfo" class="form-control input-sm" placeholder="Deseased Info: Name or Address" data-bind="value:deseasedInfo" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">
+                                <input type="radio" class="jsGender" name="rbGender" value="1" data-bind="checked:genderId" />Male
+                                <input type="radio" class="jsGender"  name="rbGender" value="2" data-bind="checked:genderId" />Female
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                                <input name="rbStatus" class="jsPaymentStatus" type="radio" title="Paid" value="1" data-bind="checked:paymentStatusId" />Paid
+                                <input name="rbStatus" class="jsPaymentStatus" type="radio" title="UnPaid" value="0" data-bind="checked:paymentStatusId" />UnpPaid 
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td class="col-sm-6 col-md-6">
+                                <input type="text" id="txtBookingDate" class="form-control input-sm"  data-bind="datepicker: {}, value: bookingDate"/>
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                                <select id="ddlGraveyard" class="form-control input-sm"
+                                        data-bind="options:graveyardList, optionsText:'description', value:graveyardIdSelected,optionsCaption: 'Please Select Graveyard'">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">
+                                <select id="ddlCentre" class="form-control input-sm"
+                                        data-bind="options: alkhidmatCentreList, optionsText:'description', value:alkhidmatCentreSelected,optionsCaption: 'Please Select Centre'">
+                                </select>
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                                <select id="ddlBusDetails" class="form-control input-sm"
+                                        data-bind="options: busList, optionsText:'description', value:busSelected, optionsCaption: 'Please Select Bus'">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">&nbsp;
+                            </td>
+                            <td class="col-sm-6 col-md-6 ">
+                                <span class="pull-right">
+                                    <button type="button" class="jsSearch btn btn-primary">Search</button>&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-primary" title="Cancel">Cancel</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!--<div id="gridTemplate1">-->
+            <div class="panel panel-default">
+                <div class="panel-heading header-bold">
+                    <span class="glyphicon glyphicon-time"></span>View - Search Details
+                    <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+                </div>
+                <div class="panel-body">
+                    <table id="tblSearch" class="table table-condensed table-bordered table-hover table-striped form-group">
+                        <thead>
+                            <tr class="active">
+                                <th class="input-sm">Contat Name</th>
+                                <th class="input-sm">Contact Mobile</th>
+                                <th class="input-sm">Contact Nic</th>
+                                <th class="input-sm">Deseased Name</th>
+                                <th class="input-sm">Address</th>
+                                <th class="input-sm">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr class="active">
+                                <td colspan="6">&nbsp;</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        <!--</div>-->
+        
+      <!--  <script type="text/javascript">
+            $(function () {
+                alert('dddd');
+                $("#txtBookingDate").datepicker();
+            });
+        </script>-->
+
+    </div>
+    
+    <script type="text/html" id="rowTemplate">
+        <td class="jsShowDetail input-sm"><a href="#editBooking?id=<%=id%>"><%=contactName %></a></td>
+        <td class="input-sm"><%=contactMobile%></td>
+        <td class="input-sm"><%=contactNic%></td>
+        <td class="input-sm"><%=deseasedName%></td>
+        <td class="input-sm"><%=address%></td>
+        <td class="input-sm"><%=status%></td>
+    </script>
+
+</div>

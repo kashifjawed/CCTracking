@@ -1,0 +1,40 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold">
+                <span class="glyphicon glyphicon-time"></span>View - Search Details
+                <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+            </div>
+            <div class="panel-body">
+                <table id="tblSearch" class="table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <th class="input-sm">Contat Name</th>
+                            <th class="input-sm">Contact Mobile</th>
+                            <th class="input-sm">Contact Nic</th>
+                            <th class="input-sm">Deseased Name</th>
+                            <th class="input-sm">Address</th>
+                            <th class="input-sm">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active">
+                            <td colspan="6">&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="rowTemplate">
+        <td class="jsShowDetail input-sm"><%=contactName %></td>
+        <td class="input-sm"><%=contactMobile%></td>
+        <td class="input-sm"><%=contactNic%></td>
+        <td class="input-sm"><%=deseasedName%></td>
+        <td class="input-sm"><%=address%></td>
+        <td class="input-sm"><%=status%></td>
+    </script>
+</div>
+
+

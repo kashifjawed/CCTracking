@@ -1,0 +1,65 @@
+﻿<div>
+<div id="BusAvailabilityPanel">
+    
+    <div class="panel panel-default">
+        <div class="panel-heading header-bold"><span class="glyphicon glyphicon-search"></span>CHECK BUS AVAILABILITY</div>
+        <div class="panel-body">
+            <table class="table table-condensed form-group">
+                <tr>
+                    <td class="col-sm-4 col-md-4 input-sm">Centres/Parnters</td>
+                    <td class="col-sm-8 col-md-8">
+                            <select id="ddlCentre" class="form-control input-sm"
+                                            data-bind="options: model.alkhidmatCentreList, optionsText:'description', value:model.alkhidmatCentreSelected">
+                                    </select></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-4 col-md-4 input-sm">Buses</td>
+                    <td class="col-sm-8 col-md-8">
+                         <select id="ddlBusDetails" class="form-control input-sm"
+                                        data-bind="options: model.busList, optionsText:'description', value:model.busSelected">
+                                    </select></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-4 col-md-4 input-sm"></td>
+                    <td class="col-sm-8 col-md-8 input-sm">
+                        <button id="btnAvailability" class="jsAvailability btn btn-primary">Avialability</button>&nbsp;
+                        <button id="btnLocation" class="btn btn-primary">Location</button>&nbsp;
+                    </td>
+                </tr>
+            </table>
+            <div id="SubRegion"></div>
+
+            <!--<table class="table table-condensed form-group">
+                <tr>
+                    <td>Alkhidmat Centre - Tariq Rd</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-123</a>|
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-221</a>|
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-143</a>|
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-321</a>|
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alkhidmat Centre - Korangi</td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-123</a>|
+                        <span class="btn-success">reg-abc-221</span>|
+                        <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">reg-abc-143</a>|
+                        <span class="btn-success">reg-abc-321</span>|
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alkhidmat Centre - Nomayesh</td>
+                    <td>
+                        <span class="btn-success">reg-abc-123</span>|
+                        <span class="btn-success">reg-abc-221</span>|
+                        <span class="btn-success">reg-abc-143</span>|
+                        <span class="btn-success">reg-abc-321</span>|
+                    </td>
+                </tr>
+            </table>-->
+        </div>
+    </div>
+    
+</div>
+</div>

@@ -1,0 +1,65 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span>Bus Visit Milage </div>
+            <div class="panel-body">
+                <form>
+                    <table class="table table-condensed table-hover form-group table-removeTopBorder">
+
+                        <tr>
+                            <td class="col-sm-6 col-md-6">
+                               From Date <input type="text" id="txtFromVisitDate" class="form-control input-sm" data-bind="datepicker: {}, value: fromVisitDate" />
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                              To Date  <input type="text" id="txtToVisitDate" class="form-control input-sm" data-bind="datepicker: {}, value: toVisitDate" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">&nbsp;
+                            </td>
+                            <td class="col-sm-6 col-md-6 ">
+                                <span class="pull-right">
+                                    <button type="button" class="jsSearchVisits btn btn-primary">Search</button>&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-primary" title="Cancel">Cancel</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold">
+                <span class="glyphicon glyphicon-time"></span>View - Search Details
+                    <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+            </div>
+            <div class="panel-body">
+                <table id="tblMilage" class="jsMilage table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <th class="input-sm">Bus</th>
+                            <th class="input-sm">Centre</th>
+                            <th class="input-sm">Total Milage</th>
+                            <th class="input-sm">Total Visits</th>
+                            <!-- <th class="input-sm">Action</th>-->
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active">
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="rowTemplate">
+        <td class="jsShowDetail input-sm"><%=vehicleNo %></td>
+        <td class="input-sm"><%=centreDesc%></td>
+        <td class="input-sm"><%=totalMilage%></td>
+        <td class="input-sm"><%=totalVisits%></td>
+    </script>
+</div>

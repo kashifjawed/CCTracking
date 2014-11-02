@@ -1,0 +1,4 @@
+﻿STORED PROCEDURE CHANGES
+- [dbo].[SavePayment]
+- [dbo].[SaveBusVisit]  
+

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11014D81-9EEC-4777-9A8F-B8F5A2A83800}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCTracking.Dto</RootNamespace>
+    <AssemblyName>CCTracking.Dto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlkhidmatCentre.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Booking.cs" />
+    <Compile Include="BookingSummary.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="BusMilage.cs" />
+    <Compile Include="BusVisit.cs" />
+    <Compile Include="CauseofDeath.cs" />
+    <Compile Include="BookingLeft.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="PaymentType.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Graveyard.cs" />
+    <Compile Include="Landmark.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="Lookup.cs" />
+    <Compile Include="NearestAlkhidmatCentre.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefundBooking.cs" />
+    <Compile Include="RefundType.cs" />
+    <Compile Include="Response\BaseModelResponse.cs" />
+    <Compile Include="Response\BookingResponse.cs" />
+    <Compile Include="Response\BookingLeftResponse.cs" />
+    <Compile Include="Response\BookingSummaryResponse.cs" />
+    <Compile Include="Response\BusMilageResponse.cs" />
+    <Compile Include="Response\PaymentTypeResponse.cs" />
+    <Compile Include="Response\UnionCouncilResponse.cs" />
+    <Compile Include="Response\VisitTypeResponse.cs" />
+    <Compile Include="Response\TrackingDeviceResponse.cs" />
+    <Compile Include="Response\TownResponse.cs" />
+    <Compile Include="Response\RoleResponse.cs" />
+    <Compile Include="Response\RefundTypeResponse.cs" />
+    <Compile Include="Response\RefundBookingResponse.cs" />
+    <Compile Include="Response\NearestCentreResponse.cs" />
+    <Compile Include="Response\LandmarkResponse.cs" />
+    <Compile Include="Response\GraveyardResponse.cs" />
+    <Compile Include="Response\CentreResponse.cs" />
+    <Compile Include="Response\BusVisitResponse.cs" />
+    <Compile Include="Response\CauseofDeathResponse.cs" />
+    <Compile Include="Response\BusResponse.cs" />
+    <Compile Include="Response\DriverResponse.cs" />
+    <Compile Include="Response\LoginResponse.cs" />
+    <Compile Include="Response\LookupResponse.cs" />
+    <Compile Include="Response\PaymentResponse.cs" />
+    <Compile Include="Response\UserResponse.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="SearchCriteria.cs" />
+    <Compile Include="Town.cs" />
+    <Compile Include="TrackingDevice.cs" />
+    <Compile Include="UnionCouncil.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="VisitType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

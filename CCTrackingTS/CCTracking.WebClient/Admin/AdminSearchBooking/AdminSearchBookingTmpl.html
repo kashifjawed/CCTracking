@@ -1,0 +1,69 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span>Bus Bookings</div>
+            <div class="panel-body">
+                <form id="form1">
+                    <table class="table table-condensed table-hover form-group table-removeTopBorder">
+                       
+                        <tr> 
+                            <td class="col-sm-6 col-md-6">
+                                From Date <input type="text" id="txtFromBookingDate" class="form-control input-sm"  data-bind="datepicker: {}, value: fromBookingDate"/>
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                               To Date <input type="text" id="txtToBookingDate" class="form-control input-sm"  data-bind="datepicker: {}, value: toBookingDate"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">&nbsp;
+                            </td>
+                            <td class="col-sm-6 col-md-6 ">
+                                <span class="pull-right">
+                                    <button type="button" class="jsSearch btn btn-primary">Search</button>&nbsp;&nbsp;
+                                    <button type="reset" class="btn btn-primary" title="Cancel">Cancel</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!--<div id="gridTemplate1">-->
+            <div class="panel panel-default">
+                <div class="panel-heading header-bold">
+                    <span class="glyphicon glyphicon-time"></span>View - Search Details
+                    <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+                </div>
+                <div class="panel-body">
+                    <table id="tblSearch" class="table table-condensed table-bordered table-hover table-striped form-group">
+                        <thead>
+                            <tr class="active">
+                                <th class="input-sm">Centre Name</th>
+                                <th class="input-sm">Unpaid Amount</th>
+                                <th class="input-sm">Paid Amount</th>
+                                <th class="input-sm">Unpaid Booking</th>
+                                <th class="input-sm">Paid Booikng</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr class="active">
+                                <td colspan="6">&nbsp;</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+    </div>
+    
+    <script type="text/html" id="rowTemplate">
+      <td class="jsShowDetail input-sm"><%=alkhidmatCentre%></td>
+        <td class="input-sm"><%=unpaidAmount%></td>
+        <td class="input-sm"><%=paidAmount%></td>
+        <td class="input-sm"><%=unpaidBooking%></td>
+        <td class="input-sm"><%=paidBooking%></td>
+
+    </script>
+
+</div>

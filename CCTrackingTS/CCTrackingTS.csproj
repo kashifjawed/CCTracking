@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{A7F1D1A0-0072-49ED-8CA8-4C9AF3BDC1F6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="CCTracking.WebClient\App.ts" />
+    <Content Include="CCTracking.WebClient\Admin\AlkhidmatCentre\AlkhidmatCentreCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\AlkhidmatCentre\AlkhidmatCentreGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\AlkhidmatCentre\AlkhidmatCentreGridRow.html" />
+    <Content Include="CCTracking.WebClient\Admin\AlkhidmatCentre\AlkhidmatCentreTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\AlkhidmatCentre\AlkhidmatCentreView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\BusMilage\BusMilageCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\BusMilage\BusMilageGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\BusMilage\BusMilageView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Bus\BusCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Bus\BusGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\Bus\BusTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\Bus\BusView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\CauseOfDeath\CauseOfDeathCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\CauseOfDeath\CauseOfDeathGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\CauseOfDeath\CauseOfDeathTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\CauseOfDeath\CauseOfDeathView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Driver\DriverCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Driver\DriverGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\Driver\DriverTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\Driver\DriverView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Graveyard\GraveyardCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Graveyard\GraveyardGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\Graveyard\GraveyardTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\Graveyard\GraveyardView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Landmark\LandmarkCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Landmark\LandmarkGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\Landmark\LandmarkTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\Landmark\LandmarkView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\PaymentType\PaymentTypeCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\PaymentType\PaymentTypeGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\PaymentType\PaymentTypeTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\PaymentType\PaymentTypeView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\RefundType\RefundTypeCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\RefundType\RefundTypeGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\RefundType\RefundTypeTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\RefundType\RefundTypeView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Admin\AdminSearchBooking\AdminSearchBookingCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\AdminSearchBooking\AdminSearchBookingGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\AdminSearchBooking\AdminSearchBookingTmpl.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Admin\AdminSearchBooking\AdminSearchBookingView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Town\TownCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\Town\TownGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\Town\TownTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\Town\TownView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\TrackingDevice\TrackingDeviceCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\TrackingDevice\TrackingDeviceGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\TrackingDevice\TrackingDeviceTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\TrackingDevice\TrackingDeviceView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\UnionCouncil\UnionCouncilCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\UnionCouncil\UnionCouncilGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\UnionCouncil\UnionCouncilTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\UnionCouncil\UnionCouncilView.ts" />
+    <Content Include="CCTracking.WebClient\Admin\VisitType\VisitTypeCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Admin\VisitType\VisitTypeGrid.html" />
+    <Content Include="CCTracking.WebClient\Admin\VisitType\VisitTypeTmpl.html" />
+    <Content Include="CCTracking.WebClient\Admin\VisitType\VisitTypeView.ts" />
+    <Content Include="CCTracking.WebClient\Booking\BokingGridRow.html" />
+    <Content Include="CCTracking.WebClient\Booking\BookingCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Booking\BookingGrid.html" />
+    <Content Include="CCTracking.WebClient\Booking\BookingLeft\BookingLeftCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Booking\BookingTmpl.html" />
+    <Content Include="CCTracking.WebClient\Booking\BookingView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\RefundBooking\RefundBookingCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Bus\BusAvailability.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusAvailabilityView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusAvailabilityCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Bus\BusAvailabilityGrid.html" />
+    <Content Include="CCTracking.WebClient\Bus\BusVisit.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusVisitView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusVisitCtrl.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\BusVisit.ts" />
+    <Content Include="CCTracking.WebClient\Bus\BusVisitGrid.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\BusAvailability.ts" />
+    <Content Include="CCTracking.WebClient\Common\Templates\BusDetailModalPopup.html" />
+    <Content Include="CCTracking.WebClient\Common\Templates\BusDetailModalPopupGrid.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\AdminSearch.ts" />
+    <Content Include="CCTracking.WebClient\DAL\BusMilage.ts" />
+    <Content Include="CCTracking.WebClient\DAL\CauseOfDeath.ts" />
+    <Content Include="CCTracking.WebClient\DAL\BookingLeft.ts" />
+    <Content Include="CCTracking.WebClient\DAL\Driver.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BusAvailabilityDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\Search.ts" />
+    <Content Include="CCTracking.WebClient\DAL\Graveyard.ts" />
+    <Content Include="CCTracking.WebClient\DAL\Landmark.ts" />
+    <Content Include="CCTracking.WebClient\DAL\PaymentType.ts" />
+    <Content Include="CCTracking.WebClient\DAL\RefundType.ts" />
+    <Content Include="CCTracking.WebClient\DAL\Town.ts" />
+    <Content Include="CCTracking.WebClient\DAL\TrackingDevice.ts" />
+    <Content Include="CCTracking.WebClient\DAL\UnionCouncil.ts" />
+    <Content Include="CCTracking.WebClient\DAL\VisitType.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\BusMilageDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\CauseOfDeathDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\BookingLeftDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BookingSummaryDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\DriverDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\NearestCentreDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\SearchDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\GraveyardDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\LandmarkDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\LoginDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\PaymentTypeDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\RefundTypeDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\TownDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\TrackingDeviceDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\UnionCouncilDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\VisitTypeDto.ts" />
+    <Content Include="CCTracking.WebClient\Login\LoginCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Login\LoginView.ts" />
+    <Content Include="CCTracking.WebClient\RefundBooking\RefundBookingTmpl.html" />
+    <Content Include="CCTracking.WebClient\Booking\BookingLeft\BookingLeftTmpl.html" />
+    <Content Include="CCTracking.WebClient\Booking\Templates\BookingRight.html" />
+    <Content Include="CCTracking.WebClient\Booking\BookingLeft\BookingLeftView.ts" />
+    <Content Include="CCTracking.WebClient\Bus\Bus.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Bus\BusGrid.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Bus\BusView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\RefundBooking\RefundBookingView.ts" />
+    <Content Include="CCTracking.WebClient\Common\Templates\AdminLeft.html" />
+    <Content Include="CCTracking.WebClient\Common\Templates\AdminRight.html" />
+    <Content Include="CCTracking.WebClient\Common\Templates\Header.html" />
+    <Content Include="CCTracking.WebClient\Common\Templates\ModalPopup.html" />
+    <Content Include="CCTracking.WebClient\Common\Views\AdminLeftView.ts" />
+    <Content Include="CCTracking.WebClient\Common\Views\AdminRightView.ts" />
+    <Content Include="CCTracking.WebClient\Common\Views\HeaderView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\AjaxRequest.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\Booking.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\Login.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\User.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BaseDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BusDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\Bus.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\AppObjectDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BookingDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\Payment.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\PaymentDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\BusVisitDto.ts" />
+    <Content Include="CCTracking.WebClient\DAL\AlkhidmatCentre.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\DAL\RefundBooking.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\AlkhidmatCentreDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Dtos\RefundBookingDto.ts" />
+    <Content Include="CCTracking.WebClient\Dtos\UserDto.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Helper.ts" />
+    <Content Include="CCTracking.WebClient\Login\Login.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Main.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\ModalHelper.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Payment\PaymentCtrl.ts" />
+    <Content Include="CCTracking.WebClient\Payment\PaymentGrid.html" />
+    <Content Include="CCTracking.WebClient\Payment\PaymentTmpl.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Payment\PaymentView.ts" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Search\SearchCtrl.ts" />
+    <Content Include="CCTracking.WebClient\ResetPassword\ResetPassword.html" />
+    <Content Include="CCTracking.WebClient\ResetPassword\ResetPasswordCtrl.ts" />
+    <Content Include="CCTracking.WebClient\ResetPassword\ResetPasswordView.ts" />
+    <Content Include="CCTracking.WebClient\Search\SearchGrid.html" />
+    <Content Include="CCTracking.WebClient\Search\SearchTmpl.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\Search\SearchView.ts" />
+    <Content Include="CCTracking.WebClient\User\HtmlPage1.html" />
+    <Content Include="CCTracking.WebClient\User\SuccessModal.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\User\UserCtrl.ts" />
+    <Content Include="CCTracking.WebClient\User\UserGrid.html" />
+    <Content Include="CCTracking.WebClient\User\UserGridRow.html" />
+    <TypeScriptCompile Include="CCTracking.WebClient\User\UserView.ts" />
+    <Content Include="CCTracking.WebClient\User\UserTmpl.html" />
+    <Content Include="Content\App.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.autoFill.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.autoFill.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colReorder.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colReorder.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colVis.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colVis.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedHeader.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.keyTable.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.keyTable.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.scroller.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.scroller.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.tableTools.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.tableTools.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables_themeroller.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\AutoFill\images\filler.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColReorder\images\insert.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\background.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\collection.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\copy.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\csv.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\pdf.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\print.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\xls.png" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\background.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\collection.png" />
+    <Content Include="Content\DataTables-1.10.0\images\collection_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\copy.png" />
+    <Content Include="Content\DataTables-1.10.0\images\copy_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\csv.png" />
+    <Content Include="Content\DataTables-1.10.0\images\csv_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\filler.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\insert.png" />
+    <Content Include="Content\DataTables-1.10.0\images\loading-background.png" />
+    <Content Include="Content\DataTables-1.10.0\images\pdf.png" />
+    <Content Include="Content\DataTables-1.10.0\images\pdf_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\print.png" />
+    <Content Include="Content\DataTables-1.10.0\images\print_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_asc.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_both.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_desc.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\xls.png" />
+    <Content Include="Content\DataTables-1.10.0\images\xls_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\media\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables-1.10.0\media\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables-1.10.0\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables-1.10.0\media\css\jquery.dataTables_themeroller.min.css" />
+    <Content Include="Content\DataTables-1.10.0\media\images\back_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\back_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\back_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\favicon.ico" />
+    <Content Include="Content\DataTables-1.10.0\media\images\forward_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\forward_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\forward_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\sort_asc.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\sort_both.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\sort_desc.png" />
+    <Content Include="Content\DataTables-1.10.0\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\swf\copy_csv_xls.swf" />
+    <Content Include="Content\DataTables-1.10.0\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\Images\bus.jpg" />
+    <Content Include="Content\Images\spiffygif_54x54.gif" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\Themes\amelia\bootstrap.min.css" />
+    <Content Include="Content\Themes\cerulean\bootstrap.min.css" />
+    <Content Include="Content\Themes\cosmo\bootstrap.min.css" />
+    <Content Include="Content\Themes\cyborg\bootstrap.min.css" />
+    <Content Include="Content\Themes\darkly\bootstrap.min.css" />
+    <Content Include="Content\Themes\flatly\bootstrap.min.css" />
+    <Content Include="Content\Themes\journal\bootstrap.min.css" />
+    <Content Include="Content\Themes\lumen\bootstrap.min.css" />
+    <Content Include="Content\Themes\readable\bootstrap.min.css" />
+    <Content Include="Content\Themes\simplex\bootstrap.min.css" />
+    <Content Include="Content\Themes\slate\bootstrap.min.css" />
+    <Content Include="Content\Themes\spacelab\bootstrap.min.css" />
+    <Content Include="Content\Themes\superhero\bootstrap.min.css" />
+    <Content Include="Content\Themes\united\bootstrap.min.css" />
+    <Content Include="Content\Themes\yeti\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\backbone.marionette.js" />
+    <Content Include="Scripts\backbone.marionette.min.js" />
+    <Content Include="Scripts\backbone.min.js" />
+    <Content Include="Scripts\backbone.min.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.jqueryui.scss" />
+    <Content Include="Content\DataTables-1.10.0\media\images\Sorting icons.psd" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Content\DataTables-1.10.0\extensions\TableTools\images\psd\collection.psd" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-popover.js" />
+    <Content Include="Scripts\bootstrap-tooltip.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.colVis.js" />
+    <Content Include="Scripts\DataTables\dataTables.colVis.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.tableTools.js" />
+    <Content Include="Scripts\DataTables\dataTables.tableTools.min.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\knockback-core-stack.js" />
+    <Content Include="Scripts\knockback-core-stack.min.js" />
+    <Content Include="Scripts\knockback-core.js" />
+    <Content Include="Scripts\knockback-core.min.js" />
+    <Content Include="Scripts\knockback-full-stack.js" />
+    <Content Include="Scripts\knockback-full-stack.min.js" />
+    <Content Include="Scripts\knockback.js" />
+    <Content Include="Scripts\knockback.min.js" />
+    <Content Include="Scripts\knockout-3.1.0.debug.js" />
+    <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\knockout.validation.debug.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\lib\defaults.js" />
+    <Content Include="Scripts\lib\defaults.min.js" />
+    <Content Include="Scripts\lib\formatting.js" />
+    <Content Include="Scripts\lib\formatting.min.js" />
+    <Content Include="Scripts\lib\localization.js" />
+    <Content Include="Scripts\lib\localization.min.js" />
+    <Content Include="Scripts\lib\statistics.js" />
+    <Content Include="Scripts\lib\statistics.min.js" />
+    <Content Include="Scripts\lib\triggering.js" />
+    <Content Include="Scripts\lib\triggering.min.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\text.js" />
+    <Content Include="Scripts\typings\backbone\backbone.d.ts" />
+    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\knockback\knockback.d.ts" />
+    <Content Include="Scripts\typings\knockout.validation\knockout.validation.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.d.ts" />
+    <Content Include="Scripts\typings\marionette\marionette.d.ts" />
+    <Content Include="Scripts\typings\require\require.d.ts" />
+    <Content Include="Scripts\typings\underscore\underscore.d.ts" />
+    <Content Include="Scripts\underscore-min.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Temp\KoValidation.html" />
+    <Content Include="web.config" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Scripts\underscore-min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CCTracking.WebClient\Booking\Views\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CCTrackingTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15395</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CCTrackingTS</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

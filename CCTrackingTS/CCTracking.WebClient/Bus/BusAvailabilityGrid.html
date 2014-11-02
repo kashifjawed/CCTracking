@@ -1,0 +1,34 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold">
+                <span class="glyphicon glyphicon-time"></span>View - Availability
+                <!--<span class="pull-right"><a href="#busVisit">Add New</a></span>-->
+            </div>
+            <div class="panel-body">
+                <table id="tblStation" class="table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <th class="input-sm">Centres</th>
+                            <th class="input-sm">Bus Availability</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active">
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/html" id="rowTemplate">
+        <td class="jsShowDetail input-sm"><a href="#editBusVisit?id=<%=id%>"><%=centreName%></a></td>
+        <td class="jsBusList input-sm"><%=showBuses()%></td>        
+    </script>
+</div>
+
+

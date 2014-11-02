@@ -1,0 +1,84 @@
+﻿<div>
+    <script type="text/html" id="SiteHeader">
+
+        <!--@*<nav class="navbar navbar-default" role="navigation">*@-->
+        <div class="container-fluid btn-default">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#viewBooking"><span class="glyphicon glyphicon-home"></span>Home</a></li>               
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-time"></span>Main<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--<li><a href="#addBooking"><span class="glyphicon glyphicon-time"></span>Add</a></li>-->
+                        <li><a href="#viewBooking"><span class="glyphicon glyphicon-time"></span>Booking</a></li>
+                        <li><a href="#viewBusVisit"><span class="glyphicon glyphicon-time"></span>Bus Visit</a></li>
+                        <li><a href="#searchBooking"><span class="glyphicon glyphicon-search"></span>Search</a></li>
+                        <!--<li class="divider"></li>
+                        <li><a href="#cancelBooking"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>-->
+                    </ul>
+                </li>
+                <!-- diaplay only to admin-->
+                <% if(isAdminRole()) {%> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-time"></span>Admin<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#viewAlkhidmatCentre"><span class="glyphicon glyphicon-time"></span>Alkhidmat Centre</a></li>
+                        <li><a href="#viewTrackingDevice"><span class="glyphicon glyphicon-time"></span>Tracking Device</a></li>
+                        <li><a href="#viewLandmark"><span class="glyphicon glyphicon-time"></span>Landmark</a></li>
+                        <li><a href="#viewAdminBus"><span class="glyphicon glyphicon-time"></span>Bus</a></li>
+                        <li><a href="#viewDriver"><span class="glyphicon glyphicon-time"></span>Driver</a></li>
+                        <li><a href="#viewGraveyard"><span class="glyphicon glyphicon-time"></span>Graveyard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#viewPaymentType"><span class="glyphicon glyphicon-time"></span>Payment Type</a></li>
+                        <li><a href="#viewRefundType"><span class="glyphicon glyphicon-time"></span>Refund Type</a></li>
+                        <li><a href="#viewVisitType"><span class="glyphicon glyphicon-time"></span>Visit Type</a></li>
+                        <li><a href="#viewCauseOfDeath"><span class="glyphicon glyphicon-time"></span>Cause of Death</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#viewUser"><span class="glyphicon glyphicon-search"></span>User</a></li>
+
+                        <li><a href="#cancelAdmin"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>
+                    </ul>
+                </li>
+                <%}%>
+                
+            </ul>
+           <!-- <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>-->
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="#">Link</a></li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><%=firstName%>,<%=lastName%><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#changePassword">Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!--@*</nav>*@-->
+
+        <!--<table class="table table-condensed">
+            <tr>
+                <td class="col-md-10">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="~/home">Home</a></li>
+                        <li><a href="~/home">Booking</a></li>
+                        <li class="active"><a href="~/search">Searching</a></li>
+                        <li><a href="~/admin">Administration</a></li>
+                    </ul>
+                </td>
+                <td class="col-md-2">
+                    <%=firstName%>,<%=lastName%> &nbsp;&nbsp;<a href="#">Logout</a>                    
+                </td>
+            </tr>
+        </table>-->
+
+
+    </script>
+</div>

@@ -1,0 +1,8 @@
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Release\CCTracking.DAL.dll.config
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Release\CCTracking.DAL.dll
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Release\CCTracking.DAL.pdb
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Release\CCTracking.Dto.dll
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Release\CCTracking.Dto.pdb
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Release\CCTracking.DAL.csprojResolveAssemblyReference.cache
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Release\CCTracking.DAL.dll
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Release\CCTracking.DAL.pdb

@@ -1,0 +1,13 @@
+﻿select t.TABLE_NAME, c.* from INFORMATION_SCHEMA.TABLES t 
+inner join INFORMATION_SCHEMA.COLUMNS c
+on t.TABLE_NAME =  c.TABLE_NAME
+
+
+
+select * from sys.objects o
+where o.schema_id =1
+--and [type] in ( 'U', 'P')
+order by o.modify_date desc
+
+select * from sys.schemas
+select * from sys.check_constraints
