@@ -59,7 +59,7 @@ define(["require", "exports", "../../App", "../../Helper", "./BusMilageView", ".
         };
 
         BusMilageCtrl.prototype.GetByCriteriaCompleted = function (model) {
-            debugger;
+            // debugger;
             this.collection.reset(model["busMilageList"]);
         };
 

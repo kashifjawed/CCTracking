@@ -49,6 +49,7 @@
     <Compile Include="BookingLeftDal.cs" />
     <Compile Include="BookingSummaryDal.cs" />
     <Compile Include="ChangePasswordDal.cs" />
+    <Compile Include="ResetPasswordDal.cs" />
     <Compile Include="DalService.cs" />
     <Compile Include="PaymentTypeDal.cs" />
     <Compile Include="UnionCouncilDal.cs" />

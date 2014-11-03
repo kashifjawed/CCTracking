@@ -24,6 +24,7 @@ define(["require", "exports", "backbone"], function(require, exports) {
                     no: "",
                     modelNo: "",
                     description: "",
+                    initialReading: "",
                     isActive: "",
                     createdBy: "",
                     createdDate: "",

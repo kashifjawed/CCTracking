@@ -91,7 +91,6 @@ C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Api\bin\System.Web.WebPages.R
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.csprojResolveAssemblyReference.cache
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.pdb
-D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.csprojResolveAssemblyReference.cache
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\CCTracking.Api.dll
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\CCTracking.Api.pdb
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\CCTracking.DAL.dll
@@ -118,5 +117,6 @@ D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\System.Web.Razor.xml
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\System.Web.WebPages.xml
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\System.Web.WebPages.Deployment.xml
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\bin\System.Web.WebPages.Razor.xml
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.csprojResolveAssemblyReference.cache
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.dll
 D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Api\obj\Debug\CCTracking.Api.pdb

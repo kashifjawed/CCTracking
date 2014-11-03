@@ -1,5 +1,8 @@
 ﻿namespace CCTracking.Dto
 {
+    public class Constant{ 
+    public static readonly string PasswordSuffix = "akws123"; 
+    }
     public enum PaymentTypes
     {
         Cash = 1,

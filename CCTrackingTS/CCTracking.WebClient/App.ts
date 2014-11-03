@@ -252,7 +252,7 @@ export class Application extends Marionette.Application {
                 require(['./Admin/TrackingDevice/TrackingDeviceCtrl'], (p) => { new p.TrackingDeviceCtrl().GetAll(); });
             },
             goChangePassword() {
-            require(['./ResetPassword/ResetPasswordCtrl'], (p) => { new p.ResetPasswordCtrl().Load(); });
+            require(['./ChangePassword/ChangePasswordCtrl'], (p) => { new p.ChangePasswordCtrl().Load(); });
             },
             defaultRoute() {
                 self.ContainerRegion.reset();

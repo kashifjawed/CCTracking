@@ -60,7 +60,7 @@ export class TrackingDeviceCtrl extends helper.Controller {
         this.trackingDeviceViewModel.model = kb.viewModel(model);
         // debugger;
         model.set("trackingNo", "");
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.trackingDeviceViewModel = new views.TrackingDeviceViewModel(model, this);
         this.trackingDeviceView = new views.TrackingDeviceView({ viewModel: this.trackingDeviceViewModel });
@@ -117,12 +117,9 @@ export class TrackingDeviceCtrl extends helper.Controller {
     }
 
     SaveCompleted(trackingDeviceDto: dto.Models.TrackingDeviceDto) {
-        this.backboneModel = new Backbone.Model(trackingDeviceDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (trackingDeviceDto == undefined) {
-           // alert("TrackingDevice Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Tracking Device", "TrackingDevice Detail have not been saved successfully!");
+        var result = new Backbone.Model(trackingDeviceDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Tracking Device", "Due to some technical reason Tracking Device have not been saved successfully!<br> Pelase try later");
         }
         else {
             //alert("Record has been saved successfully with TrackingDevice ID : " + trackingDeviceDto["id"]);

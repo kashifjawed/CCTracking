@@ -5,6 +5,9 @@
 /// <amd-dependency path="jquery"/>
 /// <amd-dependency path="knockout"/>
 /// <amd-dependency path="text!./CauseOfDeathTmpl.html"/>
+
+
+
 var _ = require("underscore");
 var ko = require("knockout");
 var kb = require("knockback");
@@ -51,7 +54,7 @@ export class CauseOfDeathCtrl extends helper.Controller {
 
     Load() {
 
-
+        
         var model = this.backboneModel;
         this.causeOfDeathViewModel.bbModel = model;
         this.causeOfDeathViewModel.model = kb.viewModel(model);
@@ -106,7 +109,7 @@ export class CauseOfDeathCtrl extends helper.Controller {
 
     GetAllCompleted(causeOfDeath: dto.Models.CauseOfDeathDto) {
         //app = application.Application.getInstance();
-        //  debugger;
+       //  debugger;
         this.collection.reset(causeOfDeath["causeofDeathList"]);
         this.collectionView = new views.CauseOfDeathCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
@@ -114,15 +117,11 @@ export class CauseOfDeathCtrl extends helper.Controller {
     }
 
     SaveCompleted(causeOfDeathDto: dto.Models.CauseOfDeathDto) {
-        this.backboneModel = new Backbone.Model(causeOfDeathDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (causeOfDeathDto == undefined) {
-            //alert("CauseOfDeath Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Cause Of Death", "CauseOfDeath Detail have not been saved successfully!");
+        var result = new Backbone.Model(causeOfDeathDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Cause Of Death", "Due to some technical reason Cause of Death have not been saved successfully!<br> Pelase try later");
         }
         else {
-            //alert("Record has been saved successfully with CauseOfDeath ID : " + causeOfDeathDto["id"]);
             helper.ShowModalPopup("success", "Cause Of Death", "Record has been saved successfully with CauseOfDeath ID : " + causeOfDeathDto["id"]);
             this.Cancel();
         }
@@ -134,7 +133,7 @@ export class CauseOfDeathCtrl extends helper.Controller {
 
     UIBinding(model: any) {
 
-        model.set("isActive", model.get("isActive") ? "1" : "0");
+         model.set("isActive", model.get("isActive") ? "1" : "0");
 
         this.causeOfDeathViewModel.bbModel = model;
         this.causeOfDeathViewModel.model = kb.viewModel(model);

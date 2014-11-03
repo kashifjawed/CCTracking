@@ -67,12 +67,20 @@ export class UserItemView extends helper.Views.ItemView {
         options.tagName = "tr";
         options.className = "jsRowClick";
         options.events = {
-            "click .jsShowDetail": "ShowDetail"
+            "click .jsShowDetail": "ShowDetail",
+            "click .jsResetPassword": "ResetPassword"
         };
         super(options);
     }
     ShowDetail() {
         this.trigger("ShowDetail");
+    }
+
+    ResetPassword(e) {
+        var userId = helper.GetParameterByName("id", e.target.href);//.split("=")[1];
+        var userName = helper.GetParameterByName("username", e.target.href);
+        var model = new Backbone.Model( {id : userId,  userName :  userName });
+        this.trigger("Event:ResetPassword", model);
     }
 }
 

@@ -6,6 +6,8 @@
 /// <amd-dependency path="knockout"/>
 /// <amd-dependency path="text!./RefundTypeTmpl.html"/>
 
+
+
 var _ = require("underscore");
 var ko = require("knockout");
 var kb = require("knockback");
@@ -58,7 +60,7 @@ export class RefundTypeCtrl extends helper.Controller {
         this.refundTypeViewModel.model = kb.viewModel(model);
         // debugger;
         model.set("name", "");
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.refundTypeViewModel = new views.RefundTypeViewModel(model, this);
         this.refundTypeView = new views.RefundTypeView({ viewModel: this.refundTypeViewModel });
@@ -115,12 +117,9 @@ export class RefundTypeCtrl extends helper.Controller {
     }
 
     SaveCompleted(refundTypeDto: dto.Models.RefundTypeDto) {
-        this.backboneModel = new Backbone.Model(refundTypeDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (refundTypeDto == undefined) {
-            //alert("RefundType Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Refund Type", "RefundType Detail have not been saved successfully!");
+        var result = new Backbone.Model(refundTypeDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Refund Type", "Due to some technical reason Refund Type have not been saved successfully!<br> Pelase try later");
         }
         else {
            // alert("Record has been saved successfully with RefundType ID : " + refundTypeDto["id"]);

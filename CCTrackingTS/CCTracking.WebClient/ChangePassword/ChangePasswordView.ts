@@ -5,37 +5,37 @@
 /// <amd-dependency path="jquery"/>
 /// <amd-dependency path="knockout"/>
 
-/// <amd-dependency path="text!./ResetPassword.html"/>
+/// <amd-dependency path="text!./ChangePassword.html"/>
 
 var _ = require('underscore');
 import helper = require("../Helper");
 
-var templateView = require("text!./ResetPassword.html");
+var templateView = require("text!./ChangePassword.html");
 import APP = require("../App");
-import user = require("../ResetPassword/ResetPasswordView");
+import user = require("../ChangePassword/ChangePasswordView");
 
 
 // View Model
-export class ResetPasswordViewModel extends helper.ViewModel {
+export class ChangePasswordViewModel extends helper.ViewModel {
     constructor(model: any, controller: any) {
         super(model, controller);
     }
 }
 
 
-export class ResetPasswordView extends helper.Views.MvvmView {
+export class ChangePasswordView extends helper.Views.MvvmView {
     App: Marionette.Application;
     constructor(options?: any) {
         this.template = templateView;
         this.events = {
-            "submit": "ResetPassword"
+            "submit": "ChangePassword"
         }
         this.App = APP.Application.getInstance();
         super(options);
     }
-    ResetPassword(e) {
+    ChangePassword(e) {
         e.preventDefault();
-        this.trigger("ResetPassword");
+        this.trigger("ChangePassword");
     }
 
     

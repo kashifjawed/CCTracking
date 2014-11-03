@@ -34,6 +34,11 @@ export function GetById(id) {
     return o.doAjaxRequest(null, "GET", "User?id=" + id);
 }
 
+
+export function ResetUserPasswrd(user: any) {
+    var o: baseDAL.BaseDto = new UserDal();
+    return o.doAjaxRequest(user, "POST", "ResetPassword");
+}
 //aaa
 
 

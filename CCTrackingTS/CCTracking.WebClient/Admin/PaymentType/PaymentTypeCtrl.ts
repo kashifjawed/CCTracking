@@ -54,13 +54,13 @@ export class PaymentTypeCtrl extends helper.Controller {
 
     Load() {
 
-
+        
         var model = this.backboneModel;
         this.paymentTypeViewModel.bbModel = model;
         this.paymentTypeViewModel.model = kb.viewModel(model);
         // debugger;
         model.set("name", "");
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.paymentTypeViewModel = new views.PaymentTypeViewModel(model, this);
         this.paymentTypeView = new views.PaymentTypeView({ viewModel: this.paymentTypeViewModel });
@@ -109,7 +109,7 @@ export class PaymentTypeCtrl extends helper.Controller {
 
     GetAllCompleted(paymentType: dto.Models.PaymentTypeDto) {
         //app = application.Application.getInstance();
-        //  debugger;
+       //  debugger;
         this.collection.reset(paymentType["paymentTypeList"]);
         this.collectionView = new views.PaymentTypeCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
@@ -117,17 +117,14 @@ export class PaymentTypeCtrl extends helper.Controller {
     }
 
     SaveCompleted(paymentTypeDto: dto.Models.PaymentTypeDto) {
-        this.backboneModel = new Backbone.Model(paymentTypeDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (paymentTypeDto == undefined) {
-            //alert("PaymentType Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Payment Type", "PaymentType Detail have not been saved successfully!");
+        var result = new Backbone.Model(paymentTypeDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Booking", "Due to some technical reason Payment Type have not been saved successfully!<br> Pelase try later");
         }
         else {
             //alert("Record has been saved successfully with PaymentType ID : " + paymentTypeDto["id"]);
             helper.ShowModalPopup("success", "Payment Type", "Record has been saved successfully with PaymentType ID : " + paymentTypeDto["id"]);
-
+            
             this.Cancel();
         }
     }

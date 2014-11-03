@@ -68,6 +68,7 @@ export class BusCtrl extends helper.Controller {
         model.set("busModelSelected", "");
         model.set("no", "");
         model.set("description", "");
+        model.set("initialReading","");
         model.set("isActive", "1");
 
         this.busViewModel = new views.BusViewModel(model, this);
@@ -128,17 +129,12 @@ export class BusCtrl extends helper.Controller {
     }
 
     SaveCompleted(busDto: dto.Models.BusDto) {
-        this.backboneModel = new Backbone.Model(busDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (busDto == undefined) {
-            // alert("Bus Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Bus", "Bus Details have not been saved successfully!");
+         var result = new Backbone.Model(busDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Bus", "Due to some technical reason Bus Detail have not been saved successfully!<br> Pelase try later");
         }
         else {
-            //alert("Record has been saved successfully with Bus ID : " + busDto["id"]);
             helper.ShowModalPopup("success", "Bus", "Record has been saved successfully with Bus ID : " + busDto["id"]);
-            //this.UIBinding(model);
             this.Cancel();
         }
     }

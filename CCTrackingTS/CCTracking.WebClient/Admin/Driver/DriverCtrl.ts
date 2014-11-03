@@ -68,7 +68,7 @@ export class DriverCtrl extends helper.Controller {
         model.set("address", "");
         model.set("city", "");
         model.set("mobile", "");
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.driverViewModel = new views.DriverViewModel(model, this);
         this.driverView = new views.DriverView({ viewModel: this.driverViewModel });
@@ -126,12 +126,9 @@ export class DriverCtrl extends helper.Controller {
     }
 
     SaveCompleted(driverDto: dto.Models.DriverDto) {
-        this.backboneModel = new Backbone.Model(driverDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (driverDto == undefined) {
-            //alert("Driver Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Driver", "Driver have not been saved successfully!");
+        var result = new Backbone.Model(driverDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != ""){
+            helper.ShowModalPopup("danger", "Driver", "Due to some technical reason Driver have not been saved successfully!<br> Pelase try later");
         }
         else {
             //alert("Record has been saved successfully with Driver ID : " + driverDto["id"]);

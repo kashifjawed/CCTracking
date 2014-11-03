@@ -14,9 +14,7 @@
                                     <select id="ddlCentre" class="form-control input-sm"
                                         data-bind="options: model.alkhidmatCentreList, optionsText:'description', value:model.alkhidmatCentreSelected" >
                                     </select></td>
-                            </tr>
-
-                          
+                            </tr>                          
                             <tr>
                                 <td class="col-sm-4 col-md-4 input-sm">Tracking Device</td>
                                 <td class="col-sm-8 col-md-8">
@@ -44,11 +42,18 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Initial Reading</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input id="txtInitailReading" type="text" class="form-control input-sm" data-bind="value: model.initialReading" 
+                                        required="required" data-role="validate" title="Initial Reading" data-content="Initial Reading is required"/></td>
+                            </tr>
+                            <tr>
                                 <td class="col-sm-4 col-md-4 input-sm">Description</td>
                                 <td class="col-sm-8 col-md-8">
                                     <input id="txtDescription" type="text" class="form-control input-sm" data-bind="value: model.description" /></td>
 
                             </tr>
+                           
                             <tr>
                                 <td class="col-sm-4 col-md-4 input-sm">Is Active</td>
                                 <td class="col-sm-8 col-md-8">

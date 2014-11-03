@@ -80,12 +80,20 @@ define(["require", "exports", "../Helper", "marionette", "jquery", "knockout", "
             options.tagName = "tr";
             options.className = "jsRowClick";
             options.events = {
-                "click .jsShowDetail": "ShowDetail"
+                "click .jsShowDetail": "ShowDetail",
+                "click .jsResetPassword": "ResetPassword"
             };
             _super.call(this, options);
         }
         UserItemView.prototype.ShowDetail = function () {
             this.trigger("ShowDetail");
+        };
+
+        UserItemView.prototype.ResetPassword = function (e) {
+            var userId = helper.GetParameterByName("id", e.target.href);
+            var userName = helper.GetParameterByName("username", e.target.href);
+            var model = new Backbone.Model({ id: userId, userName: userName });
+            this.trigger("Event:ResetPassword", model);
         };
         return UserItemView;
     })(helper.Views.ItemView);

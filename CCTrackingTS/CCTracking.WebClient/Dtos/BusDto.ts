@@ -14,6 +14,7 @@ export module Models {
                 no: "",
                 modelNo: "",
                 description: "",
+                initialReading:"",
                 isActive: "",
                 createdBy: "",
                 createdDate: "",

@@ -131,6 +131,7 @@
     <Compile Include="Controllers\BookingLeftController.cs" />
     <Compile Include="Controllers\BookingSummaryController.cs" />
     <Compile Include="Controllers\ChangePasswordController.cs" />
+    <Compile Include="Controllers\ResetPasswordController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\GraveyardController.cs" />

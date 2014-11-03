@@ -6,6 +6,8 @@
 /// <amd-dependency path="knockout"/>
 /// <amd-dependency path="text!./VisitTypeTmpl.html"/>
 
+
+
 var _ = require("underscore");
 var ko = require("knockout");
 var kb = require("knockback");
@@ -52,13 +54,13 @@ export class VisitTypeCtrl extends helper.Controller {
 
     Load() {
 
-
+        
         var model = this.backboneModel;
         this.visitTypeViewModel.bbModel = model;
         this.visitTypeViewModel.model = kb.viewModel(model);
         // debugger;
         model.set("name", "");
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.visitTypeViewModel = new views.VisitTypeViewModel(model, this);
         this.visitTypeView = new views.VisitTypeView({ viewModel: this.visitTypeViewModel });
@@ -107,7 +109,7 @@ export class VisitTypeCtrl extends helper.Controller {
 
     GetAllCompleted(visitType: dto.Models.VisitTypeDto) {
         //app = application.Application.getInstance();
-        //  debugger;
+       //  debugger;
         this.collection.reset(visitType["visitTypeList"]);
         this.collectionView = new views.VisitTypeCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
@@ -115,12 +117,9 @@ export class VisitTypeCtrl extends helper.Controller {
     }
 
     SaveCompleted(visitTypeDto: dto.Models.VisitTypeDto) {
-        this.backboneModel = new Backbone.Model(visitTypeDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (visitTypeDto == undefined) {
-            //alert("VisitType Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Visit Type", "VisitType Detail have not been saved successfully!");
+        var result = new Backbone.Model(visitTypeDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Visit Type", "Due to some technical reason Visit Type have not been saved successfully!<br> Pelase try later");
         }
         else {
             //alert("Record has been saved successfully with VisitType ID : " + visitTypeDto["id"]);
@@ -135,7 +134,7 @@ export class VisitTypeCtrl extends helper.Controller {
 
     UIBinding(model: any) {
 
-        model.set("isActive", model.get("isActive") ? "1" : "0");
+         model.set("isActive", model.get("isActive") ? "1" : "0");
 
         this.visitTypeViewModel.bbModel = model;
         this.visitTypeViewModel.model = kb.viewModel(model);

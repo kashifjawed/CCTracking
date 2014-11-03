@@ -168,9 +168,9 @@
     <Content Include="CCTracking.WebClient\Payment\PaymentTmpl.html" />
     <TypeScriptCompile Include="CCTracking.WebClient\Payment\PaymentView.ts" />
     <TypeScriptCompile Include="CCTracking.WebClient\Search\SearchCtrl.ts" />
-    <Content Include="CCTracking.WebClient\ResetPassword\ResetPassword.html" />
-    <Content Include="CCTracking.WebClient\ResetPassword\ResetPasswordCtrl.ts" />
-    <Content Include="CCTracking.WebClient\ResetPassword\ResetPasswordView.ts" />
+    <Content Include="CCTracking.WebClient\ChangePassword\ChangePassword.html" />
+    <Content Include="CCTracking.WebClient\ChangePassword\ChangePasswordCtrl.ts" />
+    <Content Include="CCTracking.WebClient\ChangePassword\ChangePasswordView.ts" />
     <Content Include="CCTracking.WebClient\Search\SearchGrid.html" />
     <Content Include="CCTracking.WebClient\Search\SearchTmpl.html" />
     <TypeScriptCompile Include="CCTracking.WebClient\Search\SearchView.ts" />

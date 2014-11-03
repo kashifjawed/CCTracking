@@ -110,7 +110,7 @@ namespace CCTracking.Api.Controllers
 				DBFacade facade = new UserDal();
 				if (user.Id <= 0)
 				{
-					user.Password = Security.GetRandomString(8);
+                    user.Password = Security.Encrypt(user.UserName + Constant.PasswordSuffix); 
 					user.CreatedDate = user.ModifiedDate = DateTime.Today;
 					user.CreatedBy = user.ModifiedBy;
 				}

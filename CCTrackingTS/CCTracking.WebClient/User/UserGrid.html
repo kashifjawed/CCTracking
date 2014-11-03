@@ -13,7 +13,8 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>CNIC</th>
-                            <th>Mobile</th>
+                            <th>Mobile</th>                            
+                            <th>Reset Password</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -32,7 +33,8 @@
         <td class="input-sm"><%=firstName%> <%=lastName%></td>
          <td class="input-sm"><%=email%></td>
          <td class="input-sm"><%=cnic%></td>
-         <td class="input-sm"><%=mobile%></td>
+         <td class="input-sm"><%=mobile%></td>        
+         <td class="input-sm"><a class="jsResetPassword" href="javascript:void(0); ?id=<%=id%>&username=<%=userName%>" >Reset</a></td>
     </script>
 </div>
 

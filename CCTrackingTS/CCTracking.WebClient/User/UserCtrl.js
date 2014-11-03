@@ -124,6 +124,10 @@ define(["require", "exports", "../App", "../Helper", "./UserView", "../Dtos/User
             this.collectionView.on("itemview:ShowDetail", function (view) {
                 return _this.GetByIdCompleted(view.model);
             });
+            this.collectionView.listenTo(this.collectionView, "itemview:Event:ResetPassword", function (view, userDto) {
+                return _this.ResetUserPassword(userDto);
+            });
+
             this.app.MainRegion.show(this.collectionView);
         };
 
@@ -146,6 +150,31 @@ define(["require", "exports", "../App", "../Helper", "./UserView", "../Dtos/User
 
         UserCtrl.prototype.Cancel = function () {
             window.location.href = "#viewUser";
+        };
+
+        UserCtrl.prototype.ResetUserPassword = function (userDto) {
+            var _this = this;
+            var appObj = this.app.request("AppGlobalSetting");
+
+            userDto.set("modifiedBy", appObj.get("Id"));
+            var promise = DAL.ResetUserPasswrd(userDto);
+
+            promise.done(function (p) {
+                return _this.ResetUserPasswrdCompleted(p);
+            });
+        };
+
+        UserCtrl.prototype.ResetUserPasswrdCompleted = function (userDto) {
+            var result = new Backbone.Model(userDto);
+            if (result == undefined) {
+                helper.ShowModalPopup("danger", "Reset Password", "Due to some technical reason password have not been reset successfully!<br> Pelase try later");
+                return;
+            } else if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Reset Password", result.get("errorMessage"));
+                return;
+            } else {
+                helper.ShowModalPopup("success", "Reset Password", "User Password has been reset successfully to his initial password.");
+            }
         };
 
         UserCtrl.prototype.UIBinding = function (model) {

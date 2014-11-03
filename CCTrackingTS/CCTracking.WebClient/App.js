@@ -308,8 +308,8 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                     });
                 },
                 goChangePassword: function () {
-                    require(['./ResetPassword/ResetPasswordCtrl'], function (p) {
-                        new p.ResetPasswordCtrl().Load();
+                    require(['./ChangePassword/ChangePasswordCtrl'], function (p) {
+                        new p.ChangePasswordCtrl().Load();
                     });
                 },
                 defaultRoute: function () {

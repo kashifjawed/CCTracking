@@ -60,11 +60,11 @@ export class UnionCouncilCtrl extends helper.Controller {
         this.unionCouncilViewModel.bbModel = model;
         this.unionCouncilViewModel.model = kb.viewModel(model);
         // debugger;
-
+       
         model.set("name", "");
         model.set("landmarkIdSelected", "");
         model.set("landmarkList", lookupResponse.landmark);
-        model.set("isActive", "1");
+        model.set("isActive", "");
 
         this.unionCouncilViewModel = new views.UnionCouncilViewModel(model, this);
         this.unionCouncilView = new views.UnionCouncilView({ viewModel: this.unionCouncilViewModel });
@@ -114,7 +114,7 @@ export class UnionCouncilCtrl extends helper.Controller {
 
     GetAllCompleted(unionCouncil: dto.Models.UnionCouncilDto) {
         //app = application.Application.getInstance();
-        //  debugger;
+       //  debugger;
         this.collection.reset(unionCouncil["unionCouncilList"]);
         this.collectionView = new views.UnionCouncilCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
@@ -122,12 +122,9 @@ export class UnionCouncilCtrl extends helper.Controller {
     }
 
     SaveCompleted(unionCouncilDto: dto.Models.UnionCouncilDto) {
-        this.backboneModel = new Backbone.Model(unionCouncilDto);
-        var model = this.backboneModel;
-        //console.log(loginResponse);        
-        if (unionCouncilDto == undefined) {
-            //alert("UnionCouncil Detail have not been saved successfully!");
-            helper.ShowModalPopup("danger", "Union Council", "UnionCouncil Detail have not been saved successfully!");
+        var result = new Backbone.Model(unionCouncilDto);
+        if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Union Council", "Due to some technical reason Union Council have not been saved successfully!<br> Pelase try later");
         }
         else {
             //alert("Record has been saved successfully with UnionCouncil ID : " + unionCouncilDto["id"]);

@@ -44,6 +44,7 @@ namespace CCTracking.DAL
             dictionary.Add("@TrackingDeviceId", bus.TrackingDeviceId);
             dictionary.Add("@ModelNo", bus.ModelNo);
             dictionary.Add("@No", bus.No);
+            dictionary.Add("@InitialReading", bus.InitialReading);
             dictionary.Add("@Description", bus.Description);
             base.ExecuteSql(bus, dictionary);
             return "dbo.SaveBus";
@@ -100,10 +101,8 @@ namespace CCTracking.DAL
                 bus.No = dr.GetString(dr.GetOrdinal("No"));
             if (!dr.IsDBNull(dr.GetOrdinal("Description")))
                 bus.Description = dr.GetString(dr.GetOrdinal("Description"));
-            if (!dr.IsDBNull(dr.GetOrdinal("BusStatus")))
-                bus.BusStatus = dr.GetByte(dr.GetOrdinal("BusStatus"));
-            if (!dr.IsDBNull(dr.GetOrdinal("BookForPrayer")))
-                bus.BookForPrayer = dr.GetByte(dr.GetOrdinal("BookForPrayer"));
+            if (!dr.IsDBNull(dr.GetOrdinal("InitialReading")))
+                bus.InitialReading = dr.GetInt64(dr.GetOrdinal("InitialReading"));
         }
     }
 }

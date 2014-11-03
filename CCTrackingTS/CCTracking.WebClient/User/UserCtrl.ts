@@ -114,6 +114,8 @@ export class UserCtrl extends helper.Controller {
         this.collection.reset(user);
         this.collectionView = new views.UserCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
+        this.collectionView.listenTo(this.collectionView, "itemview:Event:ResetPassword", (view, userDto) => this.ResetUserPassword(userDto));
+
         this.app.MainRegion.show(this.collectionView);
     }
 
@@ -126,7 +128,7 @@ export class UserCtrl extends helper.Controller {
             helper.ShowModalPopup("danger", "User Detail", "User Detail have not been saved successfully!");
         }
         else {
-           // alert("Record has been saved successfully with User ID : " + userDto["id"]);
+            // alert("Record has been saved successfully with User ID : " + userDto["id"]);
             helper.ShowModalPopup("success", "User Detail", "Record has been saved successfully with User ID : " + userDto["id"]);
             //this.UIBinding(model);
             this.Cancel();
@@ -135,6 +137,30 @@ export class UserCtrl extends helper.Controller {
 
     Cancel() {
         window.location.href = "#viewUser";
+    }
+
+    ResetUserPassword(userDto: any) {
+        var appObj = this.app.request("AppGlobalSetting");
+      
+        userDto.set("modifiedBy", appObj.get("Id"));
+        var promise = DAL.ResetUserPasswrd(userDto);
+
+        promise.done((p) => this.ResetUserPasswrdCompleted(p));
+    }
+
+    ResetUserPasswrdCompleted(userDto: dto.Models.UserDto) {
+        var result = new Backbone.Model(userDto);
+        if (result == undefined) {
+            helper.ShowModalPopup("danger", "Reset Password", "Due to some technical reason password have not been reset successfully!<br> Pelase try later");
+            return;
+        }
+        else if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+            helper.ShowModalPopup("danger", "Reset Password", result.get("errorMessage"));
+            return;
+        }
+        else {
+            helper.ShowModalPopup("success", "Reset Password", "User Password has been reset successfully to his initial password.");
+        }
     }
 
     UIBinding(model: any) {

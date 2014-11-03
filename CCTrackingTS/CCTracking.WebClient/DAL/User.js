@@ -40,6 +40,12 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
         return o.doAjaxRequest(null, "GET", "User?id=" + id);
     }
     exports.GetById = GetById;
+
+    function ResetUserPasswrd(user) {
+        var o = new UserDal();
+        return o.doAjaxRequest(user, "POST", "ResetPassword");
+    }
+    exports.ResetUserPasswrd = ResetUserPasswrd;
 });
 //aaa
 //# sourceMappingURL=User.js.map
