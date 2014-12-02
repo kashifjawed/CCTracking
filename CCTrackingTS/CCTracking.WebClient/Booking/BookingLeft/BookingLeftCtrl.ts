@@ -45,7 +45,7 @@ export class BookingLeftCtrl extends helper.Controller {
        // debugger;
        var appObj = this.app.request("AppGlobalSetting");
        var model = new dto.Models.BookingLeftDto();
-       model.set("officerId",appObj.get("Id") )
+       model.set("officerId", appObj.get("Id"));
        var deferredById = DAL.GetByCriteria(model);
             deferredById.done(p=> this.GetByCriteriaCompleted(p));      
     }
@@ -56,7 +56,7 @@ export class BookingLeftCtrl extends helper.Controller {
         var model = this.backboneModel;
 
         this.UIBinding(model);
-
+        //this.bookingLeftView.viewModel = this.bookingLeftViewModel;
         this.bookingLeftView = new views.BookingLeftView({ viewModel: this.bookingLeftViewModel});
 
         this.bookingLeftView.on("ShowTotalBooking", () => this.ShowTotalBooking());
@@ -85,7 +85,6 @@ export class BookingLeftCtrl extends helper.Controller {
     }
 
     UIBinding(model: any) {       
-
         this.bookingLeftViewModel.bbModel = model;
         this.bookingLeftViewModel.model = kb.viewModel(model);
         ko.cleanNode($(this.bookingLeftView.el)[0]);

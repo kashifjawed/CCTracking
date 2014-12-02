@@ -42,4 +42,3 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
     exports.GetById = GetById;
 });
 //aaa
-//# sourceMappingURL=Landmark.js.map

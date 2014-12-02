@@ -138,9 +138,9 @@ export class BusVisitCtrl extends helper.Controller {
         this.backboneModel = new Backbone.Model(dto["busVisitModel"]);
         var model = this.backboneModel;
 
-        if (model.get("visitDate")!=null && model.get("visitDate").trim() != "")
+        if (model.get("visitDate") != null && model.get("visitDate").trim() != "")
             model.set("visitDate", helper.FormatDateString(model.get("visitDate")));
-        
+
         this.view = new views.BusVisitView(model);
         this.view.on("Event:SaveForm", (busVisitModel) => this.Save(busVisitModel));
         this.view.on("Event:CancelForm", () => this.Cancel());
@@ -150,6 +150,7 @@ export class BusVisitCtrl extends helper.Controller {
     Save(model: any) {
         var appObj = this.app.request("AppGlobalSetting");
         model.set("modifiedBy", appObj.get("Id"));
+        model.set("isBookingCompleted", model.get("isBookingCompleted") == "1" ? true : false);
         var deferred = DAL.Save(model);
         deferred.done(p=> this.SaveCompleted(p));
     }
@@ -197,6 +198,7 @@ export class BusVisitCtrl extends helper.Controller {
             //this.UIBinding(model);
             this.Cancel();
         }
+        this.app.vent.trigger("Event:UpdateSummary");
     }
 
     Cancel() {

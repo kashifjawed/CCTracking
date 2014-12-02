@@ -46,4 +46,3 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
     })(helper.Views.MvvmView);
     exports.LoginView = LoginView;
 });
-//# sourceMappingURL=LoginView.js.map

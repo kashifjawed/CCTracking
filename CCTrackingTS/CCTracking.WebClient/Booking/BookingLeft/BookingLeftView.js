@@ -8,11 +8,11 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-define(["require", "exports", "../../Helper", "text!CCTracking.WebClient/Booking/BookingLeft/BookingLeftTmpl.html", "marionette"], function(require, exports, helper) {
-    //var Marionette = require("marionette");
+define(["require", "exports", "../../App", "../../Helper", "text!CCTracking.WebClient/Booking/BookingLeft/BookingLeftTmpl.html", "marionette"], function(require, exports, APP, helper) {
     var _ = require('underscore');
 
     var templateView = require("text!CCTracking.WebClient/Booking/BookingLeft/BookingLeftTmpl.html");
+    var app;
 
     // View Model
     var BookingLeftViewModel = (function (_super) {
@@ -28,12 +28,17 @@ define(["require", "exports", "../../Helper", "text!CCTracking.WebClient/Booking
         __extends(BookingLeftView, _super);
         function BookingLeftView(options) {
             this.template = templateView;
+            app = APP.Application.getInstance();
             this.events = {
                 "click .jsTodayBooking": "ShowTodayBooking",
                 "click .jsTotalBooking": "ShowTotalBooking",
                 "click .jsPaidBooking": "ShowPaidBooking",
                 "click .jsUnpaidBooking": "ShowUnpaidBooking"
             };
+
+            //app.vent.on("Event:UpdateSummary", () => {
+            //    alert("updated...");
+            //});
             _super.call(this, options);
             //this.listenTo(this, "TestEvent", () => this.TestFunction());
         }
@@ -63,4 +68,3 @@ define(["require", "exports", "../../Helper", "text!CCTracking.WebClient/Booking
     })(helper.Views.MvvmView);
     exports.BookingLeftView = BookingLeftView;
 });
-//# sourceMappingURL=BookingLeftView.js.map

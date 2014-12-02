@@ -48,11 +48,11 @@ namespace CCTracking.Api.Controllers
         {
             //	Login login = null;
 
-            User user = new Dto.User { UserName = login.UserName, Password = Security.Encrypt(login.Password), ResetPassword = Security.Encrypt(login.ResetPassword) };
+            User user = new Dto.User { UserName = login.UserName, Password = Security.Encrypt(login.Password), ResetPassword = Security.Encrypt(login.ChangePassword) };
 
             DBFacade facade = new ChangePasswordDal();
             login.Password = string.Empty;
-            login.ResetPassword = string.Empty;
+            login.ChangePassword = string.Empty;
 
             BaseModelResponse response = facade.Execute(user);
            // UserResponse response = baseModelResponse as UserResponse;

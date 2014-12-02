@@ -36,6 +36,13 @@ namespace CCTracking.DAL
                 paymentResponse.PaymentModel.BusVisits = GetBusVisit(paymentResponse.PaymentModel.BookingId);
             return baseModelResponse;
         }
+        public BaseModelResponse GetBusAvailabilityByCriteria(int id)
+        {
+            facade = new BusAvailabilityDal();
+            BaseModelResponse baseModelResponse = facade.GetByCriteria(new BusAvailability{BookingId = id});
+            BusAvailabilityResponse busAvailabilityResponse= (BusAvailabilityResponse)baseModelResponse;
+            return baseModelResponse;
+        }
 
         private bool DeletePayment(Payment payment)
         {

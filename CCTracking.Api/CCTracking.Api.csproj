@@ -124,6 +124,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AlkhidmatCentreController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Controllers\BusAvailabilityController.cs" />
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\BusMilageController.cs" />
     <Compile Include="Controllers\BusVisitController.cs" />
@@ -131,17 +132,17 @@
     <Compile Include="Controllers\BookingLeftController.cs" />
     <Compile Include="Controllers\BookingSummaryController.cs" />
     <Compile Include="Controllers\ChangePasswordController.cs" />
-    <Compile Include="Controllers\ResetPasswordController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\GraveyardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandmarkController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NearestCentreController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\PaymentTypeController.cs" />
     <Compile Include="Controllers\RefundBookingController.cs" />
     <Compile Include="Controllers\RefundTypeController.cs" />
+    <Compile Include="Controllers\ResetPasswordController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\TownController.cs" />
     <Compile Include="Controllers\TrackingDeviceController.cs" />

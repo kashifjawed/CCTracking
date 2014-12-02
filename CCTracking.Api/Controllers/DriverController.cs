@@ -26,16 +26,10 @@ namespace CCTracking.Api.Controllers
                 {
                     driver.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(driver);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    driver.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    driver = ((DriverResponse)response).DriverModel;
-                }
-               
+                BaseModelResponse centreResponse = facade.Execute(driver);
+                //var a = facade.Execute(booking);
+                driver = ((DriverResponse)centreResponse).DriverModel;
+                //bookings.Add(booking);
             }
             return driver;
         }

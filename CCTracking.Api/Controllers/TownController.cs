@@ -24,15 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     town.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(town);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    town.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    town = ((TownResponse)response).TownModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(town);
+                town = ((TownResponse)centreResponse).TownModel;
             }
             return town;
         }

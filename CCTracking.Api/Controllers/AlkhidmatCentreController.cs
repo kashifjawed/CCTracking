@@ -35,15 +35,9 @@ namespace CCTracking.Api.Controllers
                     alkhidmatCentre.ModifiedDate = DateTime.Today;
                 }
                 BaseModelResponse centreResponse = facade.Execute(alkhidmatCentre);
-                if (!string.IsNullOrEmpty(centreResponse.ErrorMessage))
-                {
-                    alkhidmatCentre.ErrorMessage = centreResponse.ErrorMessage;
-                }
-                else
-                {
-                    alkhidmatCentre = ((CentreResponse)centreResponse).CentreModel;
-                }
-                
+                //var a = facade.Execute(booking);
+                alkhidmatCentre = ((CentreResponse)centreResponse).CentreModel;
+                //bookings.Add(booking);
             }
             return alkhidmatCentre;
         }

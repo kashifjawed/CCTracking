@@ -54,7 +54,7 @@ export class TrackingDeviceCtrl extends helper.Controller {
 
     Load() {
 
-        
+
         var model = this.backboneModel;
         this.trackingDeviceViewModel.bbModel = model;
         this.trackingDeviceViewModel.model = kb.viewModel(model);
@@ -109,7 +109,7 @@ export class TrackingDeviceCtrl extends helper.Controller {
 
     GetAllCompleted(trackingDevice: dto.Models.TrackingDeviceDto) {
         //app = application.Application.getInstance();
-       //  debugger;
+        //  debugger;
         this.collection.reset(trackingDevice["trackingDeviceList"]);
         this.collectionView = new views.TrackingDeviceCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));
@@ -135,7 +135,7 @@ export class TrackingDeviceCtrl extends helper.Controller {
 
     UIBinding(model: any) {
 
-         model.set("isActive", model.get("isActive") ? "1" : "0");
+        model.set("isActive", model.get("isActive") ? "1" : "0");
 
         this.trackingDeviceViewModel.bbModel = model;
         this.trackingDeviceViewModel.model = kb.viewModel(model);

@@ -49,6 +49,7 @@ define(["require", "exports", "../../App", "../../Helper", "./BookingLeftView", 
 
             this.UIBinding(model);
 
+            //this.bookingLeftView.viewModel = this.bookingLeftViewModel;
             this.bookingLeftView = new views.BookingLeftView({ viewModel: this.bookingLeftViewModel });
 
             this.bookingLeftView.on("ShowTotalBooking", function () {
@@ -94,4 +95,3 @@ define(["require", "exports", "../../App", "../../Helper", "./BookingLeftView", 
     })(helper.Controller);
     exports.BookingLeftCtrl = BookingLeftCtrl;
 });
-//# sourceMappingURL=BookingLeftCtrl.js.map

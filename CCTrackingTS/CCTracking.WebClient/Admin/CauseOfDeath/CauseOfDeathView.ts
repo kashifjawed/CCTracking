@@ -15,8 +15,6 @@ var templateGrid = require("text!./CauseOfDeathGrid.html");
 import application = require("../../App");
 var app;
 
-
-
 // View Model
 export class CauseOfDeathViewModel extends helper.ViewModel {
     constructor(model: any, controller: any) {

@@ -161,7 +161,7 @@ export class Application extends Marionette.Application {
                 require(['./Admin/AlkhidmatCentre/AlkhidmatCentreCtrl'], (p) => { new p.StationCtrl().GetAll(); });
             },
             goCancel() {
-            require(['./RefundBooking/RefundBookingCtrl'], (p) => { new p.RefundBookingCtrl().Show(); });
+                require(['./RefundBooking/RefundBookingCtrl'], (p) => { new p.RefundBookingCtrl().Show(); });
             },
             goViewBusVisit() {
                 require(['./Bus/BusVisitCtrl'], (p) => { new p.BusVisitCtrl().SimpleLoad(); });
@@ -173,7 +173,7 @@ export class Application extends Marionette.Application {
                 require(['./Bus/BusVisitCtrl'], (p) => { new p.BusVisitCtrl().Show(); });
             },
             goAdminBusVisit() {
-            require(['./Admin/BusMilage/BusMilageCtrl'], (p) => { new p.BusMilageCtrl().SimpleLoad(); });
+                require(['./Admin/BusMilage/BusMilageCtrl'], (p) => { new p.BusMilageCtrl().SimpleLoad(); });
             },
             goAdminBus() {
                 require(['./Admin/Bus/BusCtrl'], (p) => { new p.BusCtrl().Show(); });
@@ -252,7 +252,7 @@ export class Application extends Marionette.Application {
                 require(['./Admin/TrackingDevice/TrackingDeviceCtrl'], (p) => { new p.TrackingDeviceCtrl().GetAll(); });
             },
             goChangePassword() {
-            require(['./ChangePassword/ChangePasswordCtrl'], (p) => { new p.ChangePasswordCtrl().Load(); });
+                require(['./ChangePassword/ChangePasswordCtrl'], (p) => { new p.ChangePasswordCtrl().Load(); });
             },
             defaultRoute() {
                 self.ContainerRegion.reset();
@@ -270,9 +270,9 @@ export class Application extends Marionette.Application {
         require(['./DAL/Booking'], (p) => {
             var deferred = p.Load();
             deferred.done(p => {
-                    localStorage.setItem('lookupResponse', JSON.stringify(p));
-                }
-            );
+                localStorage.setItem('lookupResponse', JSON.stringify(p));
+            }
+                );
         });
     }
     public static getInstance(): Application {

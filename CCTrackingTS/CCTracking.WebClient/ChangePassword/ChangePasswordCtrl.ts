@@ -47,12 +47,10 @@ export class ChangePasswordCtrl extends helper.Controller {
     }
 
     ChangePassword(login: any) {
-       
         var password = $("#txtPassword").val();
         var resetPassword = $("#txtResetPassword").val();
         var reEnterPassword = $("#txtReEnterPassword").val();
-
-        var appObj = this.app.request("AppGlobalSetting");
+        
         if (resetPassword != reEnterPassword) {
             helper.ShowModalPopup("danger", "Reset Password", "New Password and Re-Enter Password are not same.<br>Please enter same password.");
             return;

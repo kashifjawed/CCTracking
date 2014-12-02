@@ -123,11 +123,13 @@ namespace CCTracking.DAL
             NearestCentre nearestCentre = baseModel as NearestCentre;
             if (!dr.IsDBNull(dr.GetOrdinal("BookingId")))
                 nearestCentre.BookingId = dr.GetInt32(dr.GetOrdinal("BookingId"));
-            
-            if (!dr.IsDBNull(dr.GetOrdinal("OutTime")))
-                nearestCentre.OutTime = Convert.ToString(dr.GetOrdinal("OutTime"));
-            if (!dr.IsDBNull(dr.GetOrdinal("ReturnTime")))
-                nearestCentre.ReturnTime = Convert.ToString(dr.GetOrdinal("ReturnTime"));
+
+            if (!dr.IsDBNull(dr.GetOrdinal("PickupDate")))
+                nearestCentre.PickupDate = dr.GetDateTime((dr.GetOrdinal("PickupDate")));
+            //if (!dr.IsDBNull(dr.GetOrdinal("OutTime")))
+            //    nearestCentre.PickupTime = dr.GetString(dr.GetOrdinal("PickupTime"));
+            //if (!dr.IsDBNull(dr.GetOrdinal("ReturnTime")))
+            //    nearestCentre.ReturnTime = dr.GetString(dr.GetOrdinal("ReturnTime"));
             if (!dr.IsDBNull(dr.GetOrdinal("Address")))
                 nearestCentre.Address = dr.GetString(dr.GetOrdinal("Address"));
             if (!dr.IsDBNull(dr.GetOrdinal("BusPoint")))
@@ -137,7 +139,7 @@ namespace CCTracking.DAL
             if (!dr.IsDBNull(dr.GetOrdinal("MasjidName")))
                 nearestCentre.MasjidName = dr.GetString(dr.GetOrdinal("MasjidName"));
             if (!dr.IsDBNull(dr.GetOrdinal("NamazEJanazaHeldIn")))
-                nearestCentre.NamazEJanazaHeldIn = Convert.ToString(dr.GetOrdinal("NamazEJanazaHeldIn"));
+                nearestCentre.NamazEJanazaHeldIn = dr.GetString(dr.GetOrdinal("NamazEJanazaHeldIn"));
             if (!dr.IsDBNull(dr.GetOrdinal("NamazEJanazaLocation")))
                 nearestCentre.NamazEJanazaLocation = dr.GetString(dr.GetOrdinal("NamazEJanazaLocation"));
             if (!dr.IsDBNull(dr.GetOrdinal("OtherDetail")))

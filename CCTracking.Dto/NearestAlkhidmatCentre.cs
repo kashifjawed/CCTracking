@@ -1,4 +1,6 @@
-﻿namespace CCTracking.Dto
+﻿using System;
+
+namespace CCTracking.Dto
 {
     public class NearestCentre :  BaseModel
     {
@@ -10,7 +12,8 @@
         public string Address { get; set; }
         public string ContactNo1 { get; set; }
         public string ContactNo2 { get; set; }
-        public string OutTime { get; set; }
+        public string PickupTime { get; set; }
+        public DateTime PickupDate { get; set; }
         public string ReturnTime { get; set; }
         public string BusPoint { get; set; }
         public string Graveyard{ get; set; }

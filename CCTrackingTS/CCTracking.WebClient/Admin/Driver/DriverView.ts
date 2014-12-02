@@ -15,8 +15,6 @@ var templateGrid = require("text!./DriverGrid.html");
 import application = require("../../App");
 var app;
 
-
-
 // View Model
 export class DriverViewModel extends helper.ViewModel {
     constructor(model: any, controller: any) {

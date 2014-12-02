@@ -61,8 +61,8 @@ define(["require", "exports", "../../App", "../../Helper", "./AlkhidmatCentreVie
             model.set("landmarkList", lookupResponse.landmark);
             model.set("contactNo1", "");
             model.set("contactNo2", "");
-            model.set("isCoPartner", "0");
-            model.set("isActive", "1");
+            model.set("isCoPartner", "");
+            model.set("isActive", "");
 
             this.stationViewModel = new views.StationViewModel(model, this);
             this.stationView = new views.StationView({ viewModel: this.stationViewModel });
@@ -135,15 +135,11 @@ define(["require", "exports", "../../App", "../../Helper", "./AlkhidmatCentreVie
         };
 
         StationCtrl.prototype.SaveCompleted = function (stationDto) {
-            this.backboneModel = new Backbone.Model(stationDto);
-            var model = this.backboneModel;
-            if (stationDto == undefined) {
-                //alert("Alkhidmat Centre have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Alkhidmat Centre", "Alkhidmat Centre have not been saved successfully!");
+            var result = new Backbone.Model(stationDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Alkhidmat Centre", "Due to some technical reason Alkhidmat Centre have not been saved successfully!<br> Pelase try later");
             } else {
                 helper.ShowModalPopup("success", "Alkhidmat Centre", "Record has been saved successfully with Alkhidmat Centre ID : " + stationDto["id"]);
-
-                //alert("Record has been saved successfully with Alkhidmat Centre ID : " + stationDto["id"]);
                 this.Cancel();
             }
         };

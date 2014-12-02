@@ -133,13 +133,9 @@ define(["require", "exports", "../../App", "../../Helper", "./LandmarkView", "..
         };
 
         LandmarkCtrl.prototype.SaveCompleted = function (landmarkDto) {
-            this.backboneModel = new Backbone.Model(landmarkDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (landmarkDto == undefined) {
-                // alert("Landmark Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Landmark", "Landmark Detail have not been saved successfully!");
+            var result = new Backbone.Model(landmarkDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Landmark", "Due to some technical reason Landmark have not been saved successfully!<br> Pelase try later");
             } else {
                 helper.ShowModalPopup("success", "Landmark", "Record has been saved successfully with Landmark ID : " + landmarkDto["id"]);
 

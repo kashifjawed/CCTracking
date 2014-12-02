@@ -59,7 +59,7 @@ define(["require", "exports", "../../App", "../../Helper", "./UnionCouncilView",
             model.set("name", "");
             model.set("landmarkIdSelected", "");
             model.set("landmarkList", lookupResponse.landmark);
-            model.set("isActive", "1");
+            model.set("isActive", "");
 
             this.unionCouncilViewModel = new views.UnionCouncilViewModel(model, this);
             this.unionCouncilView = new views.UnionCouncilView({ viewModel: this.unionCouncilViewModel });
@@ -133,13 +133,9 @@ define(["require", "exports", "../../App", "../../Helper", "./UnionCouncilView",
         };
 
         UnionCouncilCtrl.prototype.SaveCompleted = function (unionCouncilDto) {
-            this.backboneModel = new Backbone.Model(unionCouncilDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (unionCouncilDto == undefined) {
-                //alert("UnionCouncil Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Union Council", "UnionCouncil Detail have not been saved successfully!");
+            var result = new Backbone.Model(unionCouncilDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Union Council", "Due to some technical reason Union Council have not been saved successfully!<br> Pelase try later");
             } else {
                 //alert("Record has been saved successfully with UnionCouncil ID : " + unionCouncilDto["id"]);
                 helper.ShowModalPopup("success", "Union Council", "Record has been saved successfully with UnionCouncil ID : " + unionCouncilDto["id"]);

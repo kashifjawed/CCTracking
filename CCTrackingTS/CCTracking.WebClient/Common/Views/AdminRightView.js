@@ -25,4 +25,3 @@ define(["require", "exports", "text!CCTracking.WebClient/Common/Templates/AdminR
     exports.AdminRightItemView = AdminRightItemView;
 });
 //aaa
-//# sourceMappingURL=AdminRightView.js.map

@@ -38,22 +38,41 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
         PaymentCtrl.prototype.Show = function () {
             var _this = this;
             var url = window.location.href;
+            var id = "0";
 
             //update payment
             if (url.indexOf("id=") > -1) {
                 //alert(url.substring(url.indexOf("id=") + 3, url.length));
-                var id = (url.substring(url.indexOf("id=") + 3, url.length));
+                id = (url.substring(url.indexOf("id=") + 3, url.length));
+            }
+            var deferredBusAvailability = DAL.GetBusAvialability(id);
+            deferredBusAvailability.done(function (p) {
+                _this.FillBusAvailability(p, id);
+            });
+            //add payment
+            //else {
+            //    var deferredBusAvailability = DAL.GetBusAvialability(0);
+            //    deferredBusAvailability.done(p => {
+            //        this.LoadCompleted();
+            //    });
+            //}
+        };
+
+        PaymentCtrl.prototype.FillBusAvailability = function (busList, id) {
+            var _this = this;
+            var busAvailability = busList["busAvailabilityList"];
+            if (id > 0) {
                 var deferred = DAL.GetById(id);
                 deferred.done(function (p) {
-                    return _this.GetByIdCompleted(p);
+                    return _this.GetByIdCompleted(p, busAvailability);
                 });
             } else {
-                this.LoadCompleted();
+                this.LoadCompleted(busAvailability);
             }
         };
 
         //GetByIdCompleted(paymentResponse: dto.Models.PaymentResponse) {
-        PaymentCtrl.prototype.GetByIdCompleted = function (paymentResponse) {
+        PaymentCtrl.prototype.GetByIdCompleted = function (paymentResponse, busList) {
             var _this = this;
             var lookupResponse = JSON.parse(localStorage.getItem('lookupResponse'));
             var model = new Backbone.Model(paymentResponse["paymentModel"]);
@@ -66,40 +85,10 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
             }
 
             model.set("bookingId", id);
-
-            //model.set("busList", lookupResponse.bus);
-            //model.set("driverList", lookupResponse.driver);
-            //model.set("alkhidmatCentreList", lookupResponse.alkhidmatCentre);
-            //model.set("paymentLocationList", lookupResponse.alkhidmatCentre);
-            //model.set("paymentTypeList", lookupResponse.paymentType);
-            //model.set("cashierList", lookupResponse.cashier);
-            //model.set("busSelected", "");
-            //model.set("driverSelected", "");
-            //model.set("alkhidmatCentreSelected", "");
-            //debugger;
-            //var paymentLocation1 = _.filter(lookupResponse.alkhidmatCentre, (p) => { return p.id == model.get("paymentLocation") });
-            //model.set("paymentLocationSelected1", paymentLocation1[0]);
-            //var paymentType = _.filter(lookupResponse.paymentType, (p) => { return p.id == model.get("paymentType") });
-            //model.set("paymentTypeSelected", paymentType[0]);
-            //var cashier = _.filter(lookupResponse.cashier, (p) => { return p.id == model.get("officerId") });
-            //model.set("cashierSelected", cashier[0]);
             this.layout = app.AppLayout;
-
-            //this.paymentViewModel = new views.PaymentViewModel(model, this);
-            //this.paymentView = new views.PaymentView({ viewModel: this.paymentViewModel });
-            this.paymentView = new views.PaymentView(model);
+            this.paymentView = new views.PaymentView(busList, model);
             var vm = this.paymentView.viewModel;
 
-            //vm.paymentTypeSelected(paymentType[0]);
-            ////vm.paymentLocationSelected(paymentLocation[0]);
-            //vm.cashierList(cashier[0]);
-            //vm.amount(model.get("amount"));
-            //vm.receiptNo(model.get("receiptNo"));
-            //vm.easyPaisaTranNo(model.get("easyPaisaTranNo"));
-            //vm.extraAmountCharge(model.get("extraAmountCharge"));
-            //vm.extraAmountReason(model.get("extraAmountReason"));
-            //vm.extraAmountReceipt(model.get("extraAmountReceipt"));
-            //vm.paymentStatus(model.get("paymentStatus"));
             this.paymentView.on("BusVisitAddItem", function (bookingId, alkhidmatCentre, driver, bus) {
                 return _this.AddBusVisitItem(bookingId, alkhidmatCentre, driver, bus);
             });
@@ -118,10 +107,6 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
             app.SubRegion.show(this.busVisitCollectionView);
         };
 
-        //BindWithVM(vm) {
-        //    this.paymentView.viewModel.extraAmountReason("heheheheheh");
-        //    this.paymentView.viewModel.paymentLocationList(paymentLocation[0]);
-        //}
         PaymentCtrl.prototype.InitalizeKoBinding = function (model) {
             model.set("amount", "");
             model.set("busChangeReason", "");
@@ -132,10 +117,10 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
             model.set("extraAmountReceipt", "");
         };
 
-        PaymentCtrl.prototype.LoadCompleted = function () {
+        PaymentCtrl.prototype.LoadCompleted = function (busList) {
             var _this = this;
             this.layout = app.AppLayout;
-            this.paymentView = new views.PaymentView();
+            this.paymentView = new views.PaymentView(busList);
 
             this.paymentView.on("BusVisitAddItem", function (bookingId, alkhidmatCentre, driver, bus) {
                 return _this.AddBusVisitItem(bookingId, alkhidmatCentre, driver, bus);
@@ -238,7 +223,7 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
 
             //TODO: call controller from here...
             deferred.done(function (p) {
-                return new views.PaymentView().SaveCompleted(p);
+                return new views.PaymentView(null).SaveCompleted(p);
             });
         };
         return PaymentCtrl;

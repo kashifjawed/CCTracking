@@ -59,7 +59,7 @@ define(["require", "exports", "../../App", "../../Helper", "./GraveyardView", ".
             model.set("name", "");
             model.set("landmarkIdSelected", "");
             model.set("landmarkList", lookupResponse.landmark);
-            model.set("isActive", "1");
+            model.set("isActive", "");
 
             this.graveyardViewModel = new views.GraveyardViewModel(model, this);
             this.graveyardView = new views.GraveyardView({ viewModel: this.graveyardViewModel });
@@ -133,13 +133,9 @@ define(["require", "exports", "../../App", "../../Helper", "./GraveyardView", ".
         };
 
         GraveyardCtrl.prototype.SaveCompleted = function (graveyardDto) {
-            this.backboneModel = new Backbone.Model(graveyardDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (graveyardDto == undefined) {
-                helper.ShowModalPopup("danger", "Graveyard", "Booking have not been saved successfully!");
-                //alert("Graveyard Detail have not been saved successfully!");
+            var result = new Backbone.Model(graveyardDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Graveyard", "Due to some technical reason Graveyard have not been saved successfully!<br> Pelase try later");
             } else {
                 // alert("Record has been saved successfully with Graveyard ID : " + graveyardDto["id"]);
                 helper.ShowModalPopup("success", "Graveyard", "Record has been saved successfully with Graveyard ID : " + graveyardDto["id"]);

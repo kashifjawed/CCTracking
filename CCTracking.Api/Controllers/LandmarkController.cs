@@ -25,15 +25,10 @@ namespace CCTracking.Api.Controllers
                 {
                     landmark.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(landmark);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    landmark.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    landmark = ((LandmarkResponse)response).LandmarkModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(landmark);
+                //var a = facade.Execute(booking);
+                landmark = ((LandmarkResponse)centreResponse).LandmarkModel;
+                //bookings.Add(booking);
             }
             return landmark;
         }

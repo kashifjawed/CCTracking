@@ -24,15 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     paymentType.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(paymentType);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    paymentType.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    paymentType = ((PaymentTypeResponse)response).PaymentTypeModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(paymentType);
+                paymentType = ((PaymentTypeResponse)centreResponse).PaymentTypeModel;
             }
             return paymentType;
         }

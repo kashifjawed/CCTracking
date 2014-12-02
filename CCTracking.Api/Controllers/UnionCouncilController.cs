@@ -25,15 +25,10 @@ namespace CCTracking.Api.Controllers
                 {
                     unionCouncil.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(unionCouncil);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    unionCouncil.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    unionCouncil = ((UnionCouncilResponse)response).UnionCouncilModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(unionCouncil);
+                //var a = facade.Execute(booking);
+                unionCouncil = ((UnionCouncilResponse)centreResponse).UnionCouncilModel;
+                //bookings.Add(booking);
             }
             return unionCouncil;
         }

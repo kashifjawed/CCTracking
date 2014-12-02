@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookingDal.cs" />
+    <Compile Include="BusAvailabilityDal.cs" />
     <Compile Include="BusDal.cs" />
     <Compile Include="BusMilageDal.cs" />
     <Compile Include="CentreDal.cs" />
@@ -49,9 +50,9 @@
     <Compile Include="BookingLeftDal.cs" />
     <Compile Include="BookingSummaryDal.cs" />
     <Compile Include="ChangePasswordDal.cs" />
-    <Compile Include="ResetPasswordDal.cs" />
     <Compile Include="DalService.cs" />
     <Compile Include="PaymentTypeDal.cs" />
+    <Compile Include="ResetPasswordDal.cs" />
     <Compile Include="UnionCouncilDal.cs" />
     <Compile Include="VisitTypeDal.cs" />
     <Compile Include="TrackingDeviceDal.cs" />

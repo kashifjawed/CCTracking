@@ -127,13 +127,9 @@ define(["require", "exports", "../../App", "../../Helper", "./TownView", "../../
         };
 
         TownCtrl.prototype.SaveCompleted = function (townDto) {
-            this.backboneModel = new Backbone.Model(townDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (townDto == undefined) {
-                //alert("Town Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Town", "Town Detail have not been saved successfully!");
+            var result = new Backbone.Model(townDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Town", "Due to some technical reason Town have not been saved successfully!<br> Pelase try later");
             } else {
                 //alert("Record has been saved successfully with Town ID : " + townDto["id"]);
                 helper.ShowModalPopup("success", "Town", "Record has been saved successfully with Town ID : " + townDto["id"]);

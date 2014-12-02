@@ -24,15 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     visitType.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(visitType);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    visitType.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    visitType = ((VisitTypeResponse)response).VisitTypeModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(visitType);
+                visitType = ((VisitTypeResponse)centreResponse).VisitTypeModel;
             }
             return visitType;
         }

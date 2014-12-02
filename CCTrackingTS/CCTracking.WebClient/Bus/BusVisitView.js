@@ -196,7 +196,8 @@ define(["require", "exports", "../Helper", "marionette", "jquery", "knockout", "
                     this.fuelAmount = ko.observable(model.get("fuelAmount"));
 
                 //for booking only
-                this.isBookingCompleted = ko.observable(model.get("isBookingCompleted"));
+                var flag = model.get("isBookingCompleted") == true ? "1" : "0";
+                this.isBookingCompleted = ko.observable(flag); //ko.observable(model.get("isBookingCompleted"));
 
                 this.description = ko.observable(model.get("description"));
                 this.initialReading = ko.observable(model.get("initialReading"));

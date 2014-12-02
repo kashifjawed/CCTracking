@@ -60,7 +60,6 @@ export class BusAvailabilityCtrl extends helper.Controller {
     }
 
     ShowBusBookingDetailCompleted(model) {
-        
         var busDetailCollection = new Backbone.Collection(model["nearestCentreList"]);
         var busDetail = new Backbone.Model();
         busDetail.set("type", "btn-warning");

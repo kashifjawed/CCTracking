@@ -24,15 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     trackingDevice.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(trackingDevice);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    trackingDevice.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    trackingDevice = ((TrackingDeviceResponse)response).TrackingDeviceModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(trackingDevice);
+                trackingDevice = ((TrackingDeviceResponse)centreResponse).TrackingDeviceModel;
             }
             return trackingDevice;
         }

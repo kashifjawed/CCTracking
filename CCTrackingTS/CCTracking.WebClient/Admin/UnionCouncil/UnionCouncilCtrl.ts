@@ -60,7 +60,7 @@ export class UnionCouncilCtrl extends helper.Controller {
         this.unionCouncilViewModel.bbModel = model;
         this.unionCouncilViewModel.model = kb.viewModel(model);
         // debugger;
-       
+
         model.set("name", "");
         model.set("landmarkIdSelected", "");
         model.set("landmarkList", lookupResponse.landmark);
@@ -114,7 +114,7 @@ export class UnionCouncilCtrl extends helper.Controller {
 
     GetAllCompleted(unionCouncil: dto.Models.UnionCouncilDto) {
         //app = application.Application.getInstance();
-       //  debugger;
+        //  debugger;
         this.collection.reset(unionCouncil["unionCouncilList"]);
         this.collectionView = new views.UnionCouncilCollectionView({ collection: this.collection });
         this.collectionView.on("itemview:ShowDetail", (view) => this.GetByIdCompleted(view.model));

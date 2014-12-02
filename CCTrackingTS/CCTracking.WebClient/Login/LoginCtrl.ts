@@ -66,13 +66,13 @@ export class LoginCtrl extends helper.Controller {
         promise.done((p) => this.Authenticated(p));
     }
 
-    
+
 
 
     //TODO: this method should be inside controller
     Authenticated(loginDto: dto.Models.LoginDto) {
         //console.log(loginResponse);
-        
+
         var lblLoginMessage = $("#lblLoginMessage");
         if (loginDto == undefined) {
             helper.ShowModalPopup("danger", "Authentication", "User name or password is wrong..!<br> Pelase try again");
@@ -91,14 +91,14 @@ export class LoginCtrl extends helper.Controller {
             appObject.set("UserName", loginDto["userName"]);
             appObject.set("IsAdmin", loginDto["isAdmin"]);
             appObject.set("AuthenticationToken", loginDto["authenticationToken"]);
-            
+
             this.app.reqres.setHandler("AppGlobalSetting", () => appObject, this);
-            
+
             this.app.LoginRegion.close();
 
             var appObj = this.app.request("AppGlobalSetting");
             var headerModel = new Backbone.Model({ firstName: appObj.get("FirstName"), lastName: appObj.get("LastName"), userName: appObj.get("UserName") });
-          
+
             var headerView = new menu.HeaderItemView({
                 model: headerModel
             });
@@ -125,7 +125,7 @@ export class LoginCtrl extends helper.Controller {
         }
     }
 
-    
+
 
     Cancel() {
         window.location.href = "#viewLogin";

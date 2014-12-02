@@ -24,16 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     causeOfDeath.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(causeOfDeath);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    causeOfDeath.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    causeOfDeath = ((CauseofDeathResponse)response).CauseofDeathModel;
-                }
-                
+                BaseModelResponse centreResponse = facade.Execute(causeOfDeath);
+                causeOfDeath = ((CauseofDeathResponse)centreResponse).CauseofDeathModel;
             }
             return causeOfDeath;
         }

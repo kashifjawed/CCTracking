@@ -151,6 +151,7 @@ define(["require", "exports", "../App", "../Helper", "./BusVisitView", "../Dtos/
             var _this = this;
             var appObj = this.app.request("AppGlobalSetting");
             model.set("modifiedBy", appObj.get("Id"));
+            model.set("isBookingCompleted", model.get("isBookingCompleted") == "1" ? true : false);
             var deferred = DAL.Save(model);
             deferred.done(function (p) {
                 return _this.SaveCompleted(p);
@@ -209,6 +210,7 @@ define(["require", "exports", "../App", "../Helper", "./BusVisitView", "../Dtos/
                 //this.UIBinding(model);
                 this.Cancel();
             }
+            this.app.vent.trigger("Event:UpdateSummary");
         };
 
         BusVisitCtrl.prototype.Cancel = function () {

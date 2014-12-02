@@ -54,7 +54,7 @@ define(["require", "exports", "../../App", "../../Helper", "./VisitTypeView", ".
 
             // debugger;
             model.set("name", "");
-            model.set("isActive", "1");
+            model.set("isActive", "");
 
             this.visitTypeViewModel = new views.VisitTypeViewModel(model, this);
             this.visitTypeView = new views.VisitTypeView({ viewModel: this.visitTypeViewModel });
@@ -127,13 +127,9 @@ define(["require", "exports", "../../App", "../../Helper", "./VisitTypeView", ".
         };
 
         VisitTypeCtrl.prototype.SaveCompleted = function (visitTypeDto) {
-            this.backboneModel = new Backbone.Model(visitTypeDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (visitTypeDto == undefined) {
-                //alert("VisitType Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Visit Type", "VisitType Detail have not been saved successfully!");
+            var result = new Backbone.Model(visitTypeDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Visit Type", "Due to some technical reason Visit Type have not been saved successfully!<br> Pelase try later");
             } else {
                 //alert("Record has been saved successfully with VisitType ID : " + visitTypeDto["id"]);
                 helper.ShowModalPopup("success", "Visit Type", "Record has been saved successfully with VisitType ID : " + visitTypeDto["id"]);

@@ -26,15 +26,10 @@ namespace CCTracking.Api.Controllers
                 {
                     bus.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse busResponse = facade.Execute(bus);
-                if (!string.IsNullOrEmpty(busResponse.ErrorMessage))
-                {
-                    bus.ErrorMessage = busResponse.ErrorMessage;
-                }
-                else
-                {
-                    bus = ((BusResponse)busResponse).BusModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(bus);
+                //var a = facade.Execute(booking);
+                bus = ((BusResponse)centreResponse).BusModel;
+                //bookings.Add(booking);
             }
             return bus;
         }

@@ -54,7 +54,7 @@ define(["require", "exports", "../../App", "../../Helper", "./RefundTypeView", "
 
             // debugger;
             model.set("name", "");
-            model.set("isActive", "1");
+            model.set("isActive", "");
 
             this.refundTypeViewModel = new views.RefundTypeViewModel(model, this);
             this.refundTypeView = new views.RefundTypeView({ viewModel: this.refundTypeViewModel });
@@ -127,13 +127,9 @@ define(["require", "exports", "../../App", "../../Helper", "./RefundTypeView", "
         };
 
         RefundTypeCtrl.prototype.SaveCompleted = function (refundTypeDto) {
-            this.backboneModel = new Backbone.Model(refundTypeDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (refundTypeDto == undefined) {
-                //alert("RefundType Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Refund Type", "RefundType Detail have not been saved successfully!");
+            var result = new Backbone.Model(refundTypeDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Refund Type", "Due to some technical reason Refund Type have not been saved successfully!<br> Pelase try later");
             } else {
                 // alert("Record has been saved successfully with RefundType ID : " + refundTypeDto["id"]);
                 helper.ShowModalPopup("success", "Refund Type", "Record has been saved successfully with RefundType ID : " + refundTypeDto["id"]);

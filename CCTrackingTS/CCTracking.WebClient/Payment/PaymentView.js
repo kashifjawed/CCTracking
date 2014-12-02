@@ -40,10 +40,14 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
 
     var PaymentView = (function (_super) {
         __extends(PaymentView, _super);
-        function PaymentView(options) {
+        //availabilityList:any;
+        function PaymentView(busList, options) {
             app = application.Application.getInstance();
             this.template = templateView;
-            this.viewModel = new ViewModel(options);
+
+            //this.availabilityList = [{}];
+            this.viewModel = new ViewModel(busList, options);
+
             this.bbModel = new Backbone.Model();
             this.events = {
                 "submit": "Save",
@@ -93,16 +97,21 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
                 //alert("Record has been saved successfully with Payment ID : " + paymentResponse["id"]);
                 location.href = "#viewBooking";
             }
+            app.vent.trigger("Event:UpdateSummary");
         };
         PaymentView.prototype.onShow = function () {
             ko.applyBindings(this.viewModel, this.el);
+        };
+
+        PaymentView.prototype.onClose = function () {
+            app.vent.off("Event:UpdateSummary");
         };
         return PaymentView;
     })(helper.Views.ItemView);
     exports.PaymentView = PaymentView;
 
     var ViewModel = (function () {
-        function ViewModel(model) {
+        function ViewModel(busLsit, model) {
             var _this = this;
             if (model == undefined) {
                 this.Id = ko.observable();
@@ -122,7 +131,7 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
 
                 var lookupResponse = JSON.parse(localStorage.getItem('lookupResponse'));
 
-                this.busList = ko.observableArray(lookupResponse.bus);
+                this.busList = ko.observableArray(busLsit);
                 this.busSelected = ko.observable();
                 this.driverList = ko.observableArray(lookupResponse.driver);
                 this.driverSelected = ko.observable();
@@ -202,7 +211,7 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
 
                 var lookupResponse = JSON.parse(localStorage.getItem('lookupResponse'));
 
-                this.busList = ko.observableArray(lookupResponse.bus);
+                this.busList = ko.observableArray(busLsit);
                 this.busSelected = ko.observable();
                 this.driverList = ko.observableArray(lookupResponse.driver);
                 this.driverSelected = ko.observable();
@@ -284,8 +293,7 @@ define(["require", "exports", "../Helper", "../App", "marionette", "jquery", "kn
             }
         }
         ViewModel.prototype.setOptionDisable = function (option, item) {
-            //debugger;
-            if (item.description.indexOf('Booked - Paid') >= 0) {
+            if (item.description.indexOf('Booked - Paid') >= 0 || item.description.indexOf('Booked - Unpaid') >= 0) {
                 ko.applyBindingsToNode(option, { disable: true, text: item.description }, item);
             }
         };

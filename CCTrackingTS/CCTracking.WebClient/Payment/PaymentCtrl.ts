@@ -42,22 +42,39 @@ export class PaymentCtrl extends helper.Controller {
     }
     Show() {
         var url = window.location.href;
+        var id = "0";
         //update payment
         if (url.indexOf("id=") > -1) {
             //alert(url.substring(url.indexOf("id=") + 3, url.length));
-            var id = (url.substring(url.indexOf("id=") + 3, url.length));
-            var deferred = DAL.GetById(id);
-            deferred.done(p=> this.GetByIdCompleted(p));
-
+            id = (url.substring(url.indexOf("id=") + 3, url.length));
         }
+        var deferredBusAvailability = DAL.GetBusAvialability(id);
+        deferredBusAvailability.done(p => {
+            this.FillBusAvailability(p, id);
+        });
         //add payment
-        else {
-            this.LoadCompleted();
-        }
+        //else {
+        //    var deferredBusAvailability = DAL.GetBusAvialability(0);
+        //    deferredBusAvailability.done(p => {
+        //        this.LoadCompleted();    
+        //    });
+            
+        //}
     }
 
-    //GetByIdCompleted(paymentResponse: dto.Models.PaymentResponse) {
-    GetByIdCompleted(paymentResponse: any) {
+    FillBusAvailability(busList: any,id) {
+        var busAvailability = busList["busAvailabilityList"];
+        if (id > 0) {
+            var deferred = DAL.GetById(id);
+            deferred.done(p => this.GetByIdCompleted(p, busAvailability));
+        } else {
+            this.LoadCompleted(busAvailability);    
+        }
+
+    }
+
+//GetByIdCompleted(paymentResponse: dto.Models.PaymentResponse) {
+    GetByIdCompleted(paymentResponse: any,busList) {
         var lookupResponse = JSON.parse(localStorage.getItem('lookupResponse'));
         var model = new Backbone.Model(paymentResponse["paymentModel"]);
         //booking id
@@ -68,50 +85,9 @@ export class PaymentCtrl extends helper.Controller {
         }
 
         model.set("bookingId", id);
-        //model.set("busList", lookupResponse.bus);
-        //model.set("driverList", lookupResponse.driver);
-        //model.set("alkhidmatCentreList", lookupResponse.alkhidmatCentre);
-        //model.set("paymentLocationList", lookupResponse.alkhidmatCentre);
-        //model.set("paymentTypeList", lookupResponse.paymentType);
-        //model.set("cashierList", lookupResponse.cashier);
-
-        //model.set("busSelected", "");
-        //model.set("driverSelected", "");
-        //model.set("alkhidmatCentreSelected", "");
-
-
-        //debugger;
-        //var paymentLocation1 = _.filter(lookupResponse.alkhidmatCentre, (p) => { return p.id == model.get("paymentLocation") });
-        //model.set("paymentLocationSelected1", paymentLocation1[0]);
-
-
-
-
-        //var paymentType = _.filter(lookupResponse.paymentType, (p) => { return p.id == model.get("paymentType") });
-        //model.set("paymentTypeSelected", paymentType[0]);
-
-        //var cashier = _.filter(lookupResponse.cashier, (p) => { return p.id == model.get("officerId") });
-        //model.set("cashierSelected", cashier[0]);
-
         this.layout = app.AppLayout;
-        //this.paymentViewModel = new views.PaymentViewModel(model, this);
-        //this.paymentView = new views.PaymentView({ viewModel: this.paymentViewModel });
-
-        this.paymentView = new views.PaymentView(model);
+        this.paymentView = new views.PaymentView(busList,model);
         var vm = this.paymentView.viewModel;
-
-        //vm.paymentTypeSelected(paymentType[0]);
-        ////vm.paymentLocationSelected(paymentLocation[0]);
-        //vm.cashierList(cashier[0]);
-        //vm.amount(model.get("amount"));
-        //vm.receiptNo(model.get("receiptNo"));
-        //vm.easyPaisaTranNo(model.get("easyPaisaTranNo"));
-        //vm.extraAmountCharge(model.get("extraAmountCharge"));
-        //vm.extraAmountReason(model.get("extraAmountReason"));
-        //vm.extraAmountReceipt(model.get("extraAmountReceipt"));
-        //vm.paymentStatus(model.get("paymentStatus"));
-
-
 
         this.paymentView.on("BusVisitAddItem", (bookingId, alkhidmatCentre, driver, bus) => this.AddBusVisitItem(bookingId, alkhidmatCentre, driver, bus));
         this.paymentView.on("PaymentSave", (bbmodel) => this.Save(bbmodel));
@@ -125,14 +101,6 @@ export class PaymentCtrl extends helper.Controller {
         app.SubRegion.show(this.busVisitCollectionView);
     }
 
-    //BindWithVM(vm) {
-
-    //    this.paymentView.viewModel.extraAmountReason("heheheheheh");
-    //    this.paymentView.viewModel.paymentLocationList(paymentLocation[0]);
-
-    //}
-
-
     InitalizeKoBinding(model) {
         model.set("amount", "");
         model.set("busChangeReason", "");
@@ -143,10 +111,10 @@ export class PaymentCtrl extends helper.Controller {
         model.set("extraAmountReceipt", "");
     }
 
-    LoadCompleted() {
+    LoadCompleted(busList:any) {
 
         this.layout = app.AppLayout;
-        this.paymentView = new views.PaymentView();
+        this.paymentView = new views.PaymentView(busList);
 
         this.paymentView.on("BusVisitAddItem", (bookingId, alkhidmatCentre, driver, bus) => this.AddBusVisitItem(bookingId, alkhidmatCentre, driver, bus));
         this.paymentView.on("PaymentSave", (bbmodel) => this.Save(bbmodel));
@@ -253,6 +221,6 @@ export class PaymentCtrl extends helper.Controller {
         var deferred = DAL.Save(payment);
 
         //TODO: call controller from here...
-        deferred.done(p=> new views.PaymentView().SaveCompleted(p));
+        deferred.done(p=> new views.PaymentView(null).SaveCompleted(p));
     }
 }

@@ -25,16 +25,10 @@ namespace CCTracking.Api.Controllers
                 {
                     graveyard.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(graveyard);
-
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    graveyard.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    graveyard = ((GraveyardResponse)response).GraveyardModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(graveyard);
+                //var a = facade.Execute(booking);
+                graveyard = ((GraveyardResponse)centreResponse).GraveyardModel;
+                //bookings.Add(booking);
             }
             return graveyard;
         }

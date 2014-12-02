@@ -24,4 +24,3 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
     exports.GetByCriteria = GetByCriteria;
 });
 //aaa
-//# sourceMappingURL=BookingLeft.js.map

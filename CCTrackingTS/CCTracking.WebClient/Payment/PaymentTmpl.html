@@ -38,7 +38,7 @@
                             <td class="col-sm-4 col-md-4 input-sm">Reason for Bus Change</td>
                             <td class="col-sm-8 col-md-8">
                                 <input id="Text2" type="text" class="form-control input-sm" data-bind="busChangeReason" />
-                                <a href="javascript:void(0);" class="jsAddMore pull-right input-sm" title="Add More Items" data-bind="visible: !isPaid()"><i class="glyphicon glyphicon-plus"></i>Add More</a>
+                                <a href="javascript:void(0);" class="jsAddMore pull-right input-sm" title="Add More Items" ><i class="glyphicon glyphicon-plus"></i>Add More</a>
                             </td>
                         </tr>
                             <tr>
@@ -72,7 +72,7 @@
                         <tr>
                             <td class="col-sm-4 col-md-4 input-sm">Amount</td>
                             <td class="col-sm-8 col-md-8">
-                                <input id="txtAmount" type="text" class="form-control input-sm" data-bind="value: amount, disable:isPaid, numeric: 1, valueUpdate: 'afterkeydown'" 
+                                <input id="txtAmount" type="text" class="form-control input-sm" data-bind="value: amount, numeric: 1, valueUpdate: 'afterkeydown'" 
                                     required="required" data-role="validate" title="Amount" data-content="Amount is required"
                                     /></td>
                         </tr>

@@ -47,7 +47,7 @@
                             <tr>
                                 <td class="col-sm-4 col-md-4 input-sm">Bus Visit Type</td>
                                 <td class="col-sm-8 col-md-8">
-                                    <select id="ddlOtherTravelling" class="form-control input-sm" data-bind="options: visitTypeList, optionsText:'description', value:visitTypeSelected"> </select>
+                                    <select id="ddlOtherTravelling" class="form-control input-sm" data-bind="options: visitTypeList, optionsText:'description', value:visitTypeSelected, disable:isEdit()"> </select>
                                 </td>
                             </tr>
                             <tr>
@@ -126,8 +126,8 @@
                             <tr>
                                 <td class="col-sm-4 col-md-4 input-sm">Booking Completed</td>
                                 <td class="col-sm-8 col-md-8">
-                                    <input type="radio" id="rbCurrentBooking" name="rbCurrentBooking" data-bind="value:isBookingCompleted, enable:isBooking()" />Yes
-                                    <input type="radio" id="Radio1" name="rbCurrentBooking" data-bind="value:isBookingCompleted, enable:isBooking()" />No
+                                    <input type="radio" name="rbCurrentBooking" value="1" data-bind="checked:isBookingCompleted, enable:isBooking()" />Yes
+                                    <input type="radio" name="rbCurrentBooking" value="0" data-bind="checked:isBookingCompleted, enable:isBooking()" />No
                                 </td>
                             </tr>
                            

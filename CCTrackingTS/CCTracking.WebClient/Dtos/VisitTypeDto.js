@@ -41,4 +41,3 @@ define(["require", "exports", "backbone"], function(require, exports) {
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });
-//# sourceMappingURL=VisitTypeDto.js.map

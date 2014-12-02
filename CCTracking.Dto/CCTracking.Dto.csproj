@@ -44,6 +44,7 @@
     <Compile Include="Booking.cs" />
     <Compile Include="BookingSummary.cs" />
     <Compile Include="Bus.cs" />
+    <Compile Include="BusAvailability.cs" />
     <Compile Include="BusMilage.cs" />
     <Compile Include="BusVisit.cs" />
     <Compile Include="CauseofDeath.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Response\BookingResponse.cs" />
     <Compile Include="Response\BookingLeftResponse.cs" />
     <Compile Include="Response\BookingSummaryResponse.cs" />
+    <Compile Include="Response\BusAvailabilityResponse.cs" />
     <Compile Include="Response\BusMilageResponse.cs" />
     <Compile Include="Response\PaymentTypeResponse.cs" />
     <Compile Include="Response\UnionCouncilResponse.cs" />

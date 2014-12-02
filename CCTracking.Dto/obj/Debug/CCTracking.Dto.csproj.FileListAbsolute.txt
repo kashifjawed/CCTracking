@@ -1,9 +1,5 @@
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\bin\Debug\CCTracking.Dto.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\bin\Debug\CCTracking.Dto.pdb
-C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.csprojResolveAssemblyReference.cache
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.pdb
-D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Dto\bin\Debug\CCTracking.Dto.dll
-D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Dto\bin\Debug\CCTracking.Dto.pdb
-D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.dll
-D:\Kashif\CCTracking\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.pdb
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.Dto\obj\Debug\CCTracking.Dto.csprojResolveAssemblyReference.cache

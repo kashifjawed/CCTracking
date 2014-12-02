@@ -24,6 +24,12 @@ String.prototype["getOuterHTML"] = function (selector) {
     return $(this.toString()).find(selector)[0].outerHTML;
 }
 
+APP.Application.getInstance().vent.on("Event:UpdateSummary", () => {
+    require(['./Booking/BookingLeft/BookingLeftCtrl'], (p) => {
+        new p.BookingLeftCtrl().Show();
+    });
+});
+
 export class Controller {
     layout: Marionette.Layout;
 }
@@ -284,13 +290,13 @@ function RemoveItem() {
 export function FormatDateString(aDate) {
     return new Date(aDate).toLocaleDateString();
 }
-
 export function GetParameterByName(paramName, locationHref) {
     paramName = paramName.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + paramName + "=([^&#]*)"),
         results = regex.exec(locationHref);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 export enum VisitTypes {
     PatrolPump = 1,
     Booking = 2,

@@ -24,15 +24,8 @@ namespace CCTracking.Api.Controllers
                 {
                     refundType.ModifiedDate = DateTime.Today;
                 }
-                BaseModelResponse response = facade.Execute(refundType);
-                if (!string.IsNullOrEmpty(response.ErrorMessage))
-                {
-                    refundType.ErrorMessage = response.ErrorMessage;
-                }
-                else
-                {
-                    refundType = ((RefundTypeResponse)response).RefundTypeModel;
-                }
+                BaseModelResponse centreResponse = facade.Execute(refundType);
+                refundType = ((RefundTypeResponse)centreResponse).RefundTypeModel;
             }
             return refundType;
         }

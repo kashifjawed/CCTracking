@@ -54,7 +54,7 @@ define(["require", "exports", "../../App", "../../Helper", "./PaymentTypeView", 
 
             // debugger;
             model.set("name", "");
-            model.set("isActive", "1");
+            model.set("isActive", "");
 
             this.paymentTypeViewModel = new views.PaymentTypeViewModel(model, this);
             this.paymentTypeView = new views.PaymentTypeView({ viewModel: this.paymentTypeViewModel });
@@ -127,13 +127,9 @@ define(["require", "exports", "../../App", "../../Helper", "./PaymentTypeView", 
         };
 
         PaymentTypeCtrl.prototype.SaveCompleted = function (paymentTypeDto) {
-            this.backboneModel = new Backbone.Model(paymentTypeDto);
-            var model = this.backboneModel;
-
-            //console.log(loginResponse);
-            if (paymentTypeDto == undefined) {
-                //alert("PaymentType Detail have not been saved successfully!");
-                helper.ShowModalPopup("danger", "Payment Type", "PaymentType Detail have not been saved successfully!");
+            var result = new Backbone.Model(paymentTypeDto);
+            if (result.get("errorMessage") != undefined && result.get("errorMessage").trim() != "") {
+                helper.ShowModalPopup("danger", "Booking", "Due to some technical reason Payment Type have not been saved successfully!<br> Pelase try later");
             } else {
                 //alert("Record has been saved successfully with PaymentType ID : " + paymentTypeDto["id"]);
                 helper.ShowModalPopup("success", "Payment Type", "Record has been saved successfully with PaymentType ID : " + paymentTypeDto["id"]);
