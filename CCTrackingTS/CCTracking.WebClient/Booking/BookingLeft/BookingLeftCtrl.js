@@ -91,6 +91,48 @@ define(["require", "exports", "../../App", "../../Helper", "./BookingLeftView", 
             ko.cleanNode($(this.bookingLeftView.el)[0]);
             ko.applyBindings(this.bookingLeftViewModel, this.bookingLeftView.el);
         };
+        BookingLeftCtrl.prototype.ShowProgressbar = function () {
+            var currentView = this.app.ModalRegion.currentView;
+
+             {
+                 {
+                    var alertModel = new Backbone.Model({ type: 'btn-', title: 'title', message: 'message' });
+                    var pview = new views.ProgressbarView({ model: alertModel });
+                    if (this.app.ModalRegion.currentView == undefined) {
+                        this.app.ModalRegion.show(pview);
+                    }
+                }
+            }
+        };
+
+        BookingLeftCtrl.prototype.HideProgressbar = function () {
+            //debugger;
+            var currentView = this.app.ModalRegion.currentView;
+
+             {
+                this.app.ModalRegion.close();
+                $(".modal-backdrop").remove();
+            }
+            //debugger;
+        };
+
+        BookingLeftCtrl.prototype.ShowModalPopup = function (type, title, message) {
+            //if (this.app.ModalRegion != undefined && this.app.ModalRegion.currentView != undefined) {
+            //this.app.ModalRegion.stopListening();
+            //this.app.ModalRegion.close();
+            //this.app.ModalRegion.$el.modal('hide');
+            //this.app.ModalAlertRegion.close();
+            //this.app.ModalRegion.reset();
+            //}
+            //this.app.ModalRegion.close();
+            //$(".modal-backdrop").remove();
+            var alertModel = new Backbone.Model({ type: 'btn-' + type, title: title, message: message });
+            var view = new views.ModalPopupView({ model: alertModel });
+
+             {
+                this.app.ModalAlertRegion.show(view);
+            }
+        };
         return BookingLeftCtrl;
     })(helper.Controller);
     exports.BookingLeftCtrl = BookingLeftCtrl;

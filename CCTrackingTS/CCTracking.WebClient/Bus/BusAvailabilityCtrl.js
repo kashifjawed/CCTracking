@@ -49,7 +49,7 @@ define(["require", "exports", "../App", "../Helper", "./BusAvailabilityView", ".
 
             //this.collectionView.on("itemview:Event:BusBookingDetail", (nearestCentreModel) => this.ShowBusBookingDetail(nearestCentreModel));
             this.app.RightRegion.show(this.view);
-            this.app.SubRegion.show(this.collectionView);
+            this.app.BusAvailabilityRegion.show(this.collectionView);
         };
         BusAvailabilityCtrl.prototype.ShowBusBookingDetail = function (busId) {
             var _this = this;

@@ -1,8 +1,16 @@
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.csprojResolveAssemblyReference.cache
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.dll.config
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.dll
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.pdb
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.Dto.dll
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.Dto.pdb
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.dll
+D:\Kashif\CCTracking\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.pdb
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.dll.config
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.DAL.pdb
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.Dto.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\bin\Debug\CCTracking.Dto.pdb
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.csprojResolveAssemblyReference.cache
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.pdb
-C:\LiveProjects\SourceCode\CCTrackingTS\CCTracking.DAL\obj\Debug\CCTracking.DAL.csprojResolveAssemblyReference.cache

@@ -36,5 +36,10 @@ export function GetById(id) {
     return o.doAjaxRequest(null, "GET", "Booking?id=" + id);
 }
 
+export function GetAllAuditBooking(auditRequest) {
+    var o: baseDAL.BaseDto = new BookingDal();
+    return o.doAjaxRequest(auditRequest, "POST", "AuditBooking");
+}
+
 //aaa
 

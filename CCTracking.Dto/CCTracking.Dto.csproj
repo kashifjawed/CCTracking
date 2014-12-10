@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlkhidmatCentre.cs" />
+    <Compile Include="Audit\AuditDisplay.cs" />
+    <Compile Include="Audit\AuditRequest.cs" />
     <Compile Include="BaseModel.cs" />
     <Compile Include="Booking.cs" />
     <Compile Include="BookingSummary.cs" />

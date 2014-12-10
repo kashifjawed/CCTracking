@@ -1,0 +1,30 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span> View - Town List
+                <span class="pull-right"><a href="#graveyard">Add New</a></span>
+            </div>
+            <div class="panel-body">
+                <table id="tblBus" class="table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <th class="input-sm">Town</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active"><td colspan="5">&nbsp;</td></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    <script type="text/html" id="rowTemplate">
+        <td class="jsShowDetail  input-sm"><a href="#town?id=<%=id%>"><%=name%></a></td>
+        <td class="input-sm"><%=landmarkDesc %></td>        
+</script>
+</div>
+
+

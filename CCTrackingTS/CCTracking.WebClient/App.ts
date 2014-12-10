@@ -15,11 +15,14 @@ export class Application extends Marionette.Application {
     LoginRegion: Marionette.Region;
     HeaderRegion: Marionette.Region;
     LeftRegion: Marionette.Region;
+    AdminLeftRegion: Marionette.Region;
     RightRegion: Marionette.Region;
     MainRegion: Marionette.Region;
     DetailRegion: Marionette.Region;
     ModalRegion: Marionette.Region;
+    ModalAlertRegion: Marionette.Region;
     SubRegion: Marionette.Region;
+    BusAvailabilityRegion: Marionette.Region;
 
     private static _instance: Application = null;
 
@@ -34,7 +37,8 @@ export class Application extends Marionette.Application {
 
         this.addRegions({
             ContainerRegion: '#ContainerRegion',
-            ModalRegion: '#ModalPopup'
+            ModalRegion: '#ModalPopup',
+            ModalAlertRegion:"#ModalAlertPopup"
         });
 
         //alert('constructor');
@@ -44,10 +48,13 @@ export class Application extends Marionette.Application {
                 LoginRegion: '#LoginRegion',
                 HeaderRegion: '#HeaderRegion',
                 LeftRegion: '#LeftRegion',
+                AdminLeftRegion: '#AdminLeftRegion',
                 RightRegion: '#RightRegion',
                 MainRegion: '#MainRegion',
                 DetailRegion: '#DetailRegion',
-                SubRegion: '#SubRegion'
+                SubRegion: '#SubRegion',
+                BusAvailabilityRegion: '#BusAvailabilityRegion',
+                
             }
         });
         this.AppLayout = new layout();
@@ -55,10 +62,12 @@ export class Application extends Marionette.Application {
         this.LoginRegion = this.AppLayout.LoginRegion;
         this.HeaderRegion = this.AppLayout.HeaderRegion;
         this.LeftRegion = this.AppLayout.LeftRegion;
+        this.AdminLeftRegion = this.AppLayout.AdminLeftRegion;
         this.RightRegion = this.AppLayout.RightRegion;
         this.MainRegion = this.AppLayout.MainRegion;
         this.DetailRegion = this.AppLayout.DetailRegion;
         this.SubRegion = this.AppLayout.SubRegion;
+        this.BusAvailabilityRegion = this.AppLayout.BusAvailabilityRegion;
 
         //start history...
         if (Backbone.history) {
@@ -68,9 +77,12 @@ export class Application extends Marionette.Application {
 
     initializeAfter() {
         //console.log('Initalize after called..');
+        this.ContainerRegion.reset();
         this.initalizeLocalStorage();
         //var loginView = new login.LoginItemView();
+        
         var layout = this.AppLayout;
+
         this.ContainerRegion.show(layout);
         //var loginCtrl = new loginController.LoginCtrl();
         //loginCtrl.Load();
@@ -84,6 +96,7 @@ export class Application extends Marionette.Application {
                 'bus': 'goBus',
                 'addBooking': 'goAddBooking',
                 'editBooking': 'goEditBooking',
+                'viewHome': 'goViewHome',
                 'viewBooking': 'goViewBooking',
                 'payment': 'goPayment',
                 'alkhidmatCentre': 'goStation',
@@ -127,8 +140,16 @@ export class Application extends Marionette.Application {
 
                 'trackingDevice': 'goTrackingDevice',
                 'viewTrackingDevice': 'goViewTrackingDevice',
-
+                'driverSummary': 'goDriverSummary',
+                'busVisitSummary': 'goBusVisitSummary',
+                'busVisitMilageSummary': 'goBusVisitMilageSummary',
+                'driverDetail': '',
+                'busVisitDetail': '',
+                'busVisitMilageDetail': '',
                 'changePassword': 'goChangePassword',
+                'auditBooking': 'goAuditBooking',
+                'auditPayment': 'goAuditPayment',
+                'auditRefundBooking': 'goAuditRefundBooking',
                 '*other': 'defaultRoute'
             },
             goUser() {
@@ -145,6 +166,9 @@ export class Application extends Marionette.Application {
             },
             goEditBooking() {
                 require(['./Booking/BookingCtrl'], (p) => { new p.BookingCtrl().Show(); });
+            },
+            goViewHome() {
+                require(['./Home/HomeCtrl'], (p) => { new p.HomeCtrl().Show(); });
             },
             goViewBooking() {
                 require(['./Booking/BookingCtrl'], (p) => { new p.BookingCtrl().GetAll(1); });
@@ -237,10 +261,10 @@ export class Application extends Marionette.Application {
                 require(['./Admin/VisitType/VisitTypeCtrl'], (p) => { new p.VisitTypeCtrl().GetAll(); });
             },
             goCauseOfDeath() {
-                require(['./Admin/PaymentType/PaymentTypeCtrl'], (p) => { new p.PaymentTypeCtrl().Show(); });
+                require(['./Admin/CauseOfDeath/CauseOfDeathCtrl'], (p) => { new p.CauseOfDeathCtrl().Show(); });
             },
             goViewCauseOfDeath() {
-                require(['./Admin/CauseOfDeath/CauseOfDeathCtrl'], (p) => { new p.PaymentTypeCtrl().GetAll(); });
+                require(['./Admin/CauseOfDeath/CauseOfDeathCtrl'], (p) => { new p.CauseOfDeathCtrl().GetAll(); });
             },
             goViewTest() {
                 // new koBindingController.KoBindingCtrl().Show();
@@ -254,6 +278,24 @@ export class Application extends Marionette.Application {
             goChangePassword() {
                 require(['./ChangePassword/ChangePasswordCtrl'], (p) => { new p.ChangePasswordCtrl().Load(); });
             },
+            goDriverSummary() {
+                require(['./Admin/Reports/Driver/DriverSummaryCtrl'], (p) => { new p.DriverSummaryCtrl().Show(); });
+            },
+            goBusVisitSummary() {
+            require(['./Admin/Reports/BusVisit/BusVisitSummaryCtrl'], (p) => { new p.BusVisitSummaryCtrl().ShowVisit(); });
+            },
+            goBusVisitMilageSummary() {
+                require(['./Admin/Reports/BusVisit/BusVisitSummaryCtrl'],(p) => { new p.BusVisitSummaryCtrl().ShowMilage(); });
+            },
+            goAuditBooking(){
+            require(['./Admin/Reports/Audit/Booking/AuditBookingCtrl'], (p) => { new p.AuditBookingCtrl().Show(); });
+            },
+            goAuditPayment() {
+                require(['./Admin/Reports/Audit/Payment/AuditPaymentCtrl'], (p) => { new p.AuditPaymentCtrl().Show(); });
+            },
+            goAuditRefundBooking() {
+                require(['./Admin/Reports/Audit/Refund/AuditRefundBookingCtrl'], (p) => { new p.AuditRefundBookingCtrl().Show(); });
+            },
             defaultRoute() {
                 self.ContainerRegion.reset();
                 self.ContainerRegion.show(layout);
@@ -261,6 +303,7 @@ export class Application extends Marionette.Application {
             }
         });
         this.AppRoutes = new routes();
+        //Backbone.history.start();
     }
 
     initalizeLocalStorage() {
@@ -292,10 +335,12 @@ $(function () {
 
     //var rgnModal = modalHelper.GetModalRegion();
     var rgnModal = new modalHelper.ModalRegion({ el: '#ModalPopup' });
-
+    var rgnModalAlert = new modalHelper.ModalRegion({ el: '#ModalAlertPopup' });
+    
     //var modal = new rgnModal({ el: '#ModalPopup' });    
     //app.ModalRegion = modal;
 
     app.ModalRegion = rgnModal;
+    app.ModalAlertRegion = rgnModalAlert;
 });
 //aaa

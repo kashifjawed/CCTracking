@@ -24,7 +24,8 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
 
             this.addRegions({
                 ContainerRegion: '#ContainerRegion',
-                ModalRegion: '#ModalPopup'
+                ModalRegion: '#ModalPopup',
+                ModalAlertRegion: "#ModalAlertPopup"
             });
 
             //alert('constructor');
@@ -34,10 +35,12 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                     LoginRegion: '#LoginRegion',
                     HeaderRegion: '#HeaderRegion',
                     LeftRegion: '#LeftRegion',
+                    AdminLeftRegion: '#AdminLeftRegion',
                     RightRegion: '#RightRegion',
                     MainRegion: '#MainRegion',
                     DetailRegion: '#DetailRegion',
-                    SubRegion: '#SubRegion'
+                    SubRegion: '#SubRegion',
+                    BusAvailabilityRegion: '#BusAvailabilityRegion'
                 }
             });
             this.AppLayout = new layout();
@@ -45,10 +48,12 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
             this.LoginRegion = this.AppLayout.LoginRegion;
             this.HeaderRegion = this.AppLayout.HeaderRegion;
             this.LeftRegion = this.AppLayout.LeftRegion;
+            this.AdminLeftRegion = this.AppLayout.AdminLeftRegion;
             this.RightRegion = this.AppLayout.RightRegion;
             this.MainRegion = this.AppLayout.MainRegion;
             this.DetailRegion = this.AppLayout.DetailRegion;
             this.SubRegion = this.AppLayout.SubRegion;
+            this.BusAvailabilityRegion = this.AppLayout.BusAvailabilityRegion;
 
             //start history...
             if (Backbone.history) {
@@ -57,10 +62,12 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
         }
         Application.prototype.initializeAfter = function () {
             //console.log('Initalize after called..');
+            this.ContainerRegion.reset();
             this.initalizeLocalStorage();
 
             //var loginView = new login.LoginItemView();
             var layout = this.AppLayout;
+
             this.ContainerRegion.show(layout);
 
             //var loginCtrl = new loginController.LoginCtrl();
@@ -77,6 +84,7 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                     'bus': 'goBus',
                     'addBooking': 'goAddBooking',
                     'editBooking': 'goEditBooking',
+                    'viewHome': 'goViewHome',
                     'viewBooking': 'goViewBooking',
                     'payment': 'goPayment',
                     'alkhidmatCentre': 'goStation',
@@ -111,7 +119,16 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                     'viewTest': 'goViewTest',
                     'trackingDevice': 'goTrackingDevice',
                     'viewTrackingDevice': 'goViewTrackingDevice',
+                    'driverSummary': 'goDriverSummary',
+                    'busVisitSummary': 'goBusVisitSummary',
+                    'busVisitMilageSummary': 'goBusVisitMilageSummary',
+                    'driverDetail': '',
+                    'busVisitDetail': '',
+                    'busVisitMilageDetail': '',
                     'changePassword': 'goChangePassword',
+                    'auditBooking': 'goAuditBooking',
+                    'auditPayment': 'goAuditPayment',
+                    'auditRefundBooking': 'goAuditRefundBooking',
                     '*other': 'defaultRoute'
                 },
                 goUser: function () {
@@ -137,6 +154,11 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                 goEditBooking: function () {
                     require(['./Booking/BookingCtrl'], function (p) {
                         new p.BookingCtrl().Show();
+                    });
+                },
+                goViewHome: function () {
+                    require(['./Home/HomeCtrl'], function (p) {
+                        new p.HomeCtrl().Show();
                     });
                 },
                 goViewBooking: function () {
@@ -285,13 +307,13 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                     });
                 },
                 goCauseOfDeath: function () {
-                    require(['./Admin/PaymentType/PaymentTypeCtrl'], function (p) {
-                        new p.PaymentTypeCtrl().Show();
+                    require(['./Admin/CauseOfDeath/CauseOfDeathCtrl'], function (p) {
+                        new p.CauseOfDeathCtrl().Show();
                     });
                 },
                 goViewCauseOfDeath: function () {
                     require(['./Admin/CauseOfDeath/CauseOfDeathCtrl'], function (p) {
-                        new p.PaymentTypeCtrl().GetAll();
+                        new p.CauseOfDeathCtrl().GetAll();
                     });
                 },
                 goViewTest: function () {
@@ -312,6 +334,36 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                         new p.ChangePasswordCtrl().Load();
                     });
                 },
+                goDriverSummary: function () {
+                    require(['./Admin/Reports/Driver/DriverSummaryCtrl'], function (p) {
+                        new p.DriverSummaryCtrl().Show();
+                    });
+                },
+                goBusVisitSummary: function () {
+                    require(['./Admin/Reports/BusVisit/BusVisitSummaryCtrl'], function (p) {
+                        new p.BusVisitSummaryCtrl().ShowVisit();
+                    });
+                },
+                goBusVisitMilageSummary: function () {
+                    require(['./Admin/Reports/BusVisit/BusVisitSummaryCtrl'], function (p) {
+                        new p.BusVisitSummaryCtrl().ShowMilage();
+                    });
+                },
+                goAuditBooking: function () {
+                    require(['./Admin/Reports/Audit/Booking/AuditBookingCtrl'], function (p) {
+                        new p.AuditBookingCtrl().Show();
+                    });
+                },
+                goAuditPayment: function () {
+                    require(['./Admin/Reports/Audit/Payment/AuditPaymentCtrl'], function (p) {
+                        new p.AuditPaymentCtrl().Show();
+                    });
+                },
+                goAuditRefundBooking: function () {
+                    require(['./Admin/Reports/Audit/Refund/AuditRefundBookingCtrl'], function (p) {
+                        new p.AuditRefundBookingCtrl().Show();
+                    });
+                },
                 defaultRoute: function () {
                     self.ContainerRegion.reset();
                     self.ContainerRegion.show(layout);
@@ -321,6 +373,7 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
                 }
             });
             this.AppRoutes = new routes();
+            //Backbone.history.start();
         };
 
         Application.prototype.initalizeLocalStorage = function () {
@@ -353,10 +406,12 @@ define(["require", "exports", "./ModalHelper", "marionette", "datatablesBootstra
 
         //var rgnModal = modalHelper.GetModalRegion();
         var rgnModal = new modalHelper.ModalRegion({ el: '#ModalPopup' });
+        var rgnModalAlert = new modalHelper.ModalRegion({ el: '#ModalAlertPopup' });
 
         //var modal = new rgnModal({ el: '#ModalPopup' });
         //app.ModalRegion = modal;
         app.ModalRegion = rgnModal;
+        app.ModalAlertRegion = rgnModalAlert;
     });
 });
 //aaa

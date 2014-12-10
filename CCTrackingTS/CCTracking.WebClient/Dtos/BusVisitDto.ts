@@ -45,4 +45,31 @@ export module Models {
             super(options);
         }
     }
+    export class BusVisitSummaryDto extends Backbone.Model {
+        default() {
+            return {
+                busId: "",
+                busDesc: "",
+                driverDesc: "",
+                centreDesc: "",
+                milage: "",
+                visitCount: "",
+                vehicleNo: "",
+                visitDate: "",
+                visitInterval: "",
+                bookingId: "",
+                isActive: "",
+                createdBy: "",
+                createdDate: "",
+                modifiedBy: "",
+                modifiedDate: ""
+            };
+        }
+    }
+    export class BusVisitSummaryCollection extends Backbone.Collection {
+        constructor(options?: any) {
+            this.model = BusVisitSummaryDto;
+            super(options);
+        }
+    }
 }

@@ -200,6 +200,7 @@ define(["require", "exports", "../App", "../Helper", "./BookingView", "CCTrackin
             deferred.done(function (p) {
                 return _this.SaveCompleted(p);
             });
+            //setTimeout(() => { alert('then'); }, 1000);
         };
 
         BookingCtrl.prototype.SaveCompleted = function (bookingResponse) {

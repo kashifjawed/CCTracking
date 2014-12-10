@@ -52,7 +52,7 @@ export class BusAvailabilityCtrl extends helper.Controller {
 
         
         this.app.RightRegion.show(this.view);
-        this.app.SubRegion.show(this.collectionView);
+        this.app.BusAvailabilityRegion.show(this.collectionView);
     }
     ShowBusBookingDetail(busId:number) {
         var deferred = DAL.GetById(busId);

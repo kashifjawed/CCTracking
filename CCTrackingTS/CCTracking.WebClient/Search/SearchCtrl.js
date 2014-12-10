@@ -150,7 +150,10 @@ define(["require", "exports", "../App", "../Helper", "./SearchView", "CCTracking
         };
 
         SearchCtrl.prototype.Cancel = function () {
-            window.location.href = "#searchBooking";
+            this.Load();
+            //this.backboneModel = new dto.Models.SearchDto();
+            //this.searchViewModel = new views.SearchViewModel(this.backboneModel, this);
+            //window.location.href = "#searchBooking";
         };
         return SearchCtrl;
     })(helper.Controller);

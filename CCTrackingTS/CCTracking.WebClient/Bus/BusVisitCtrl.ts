@@ -138,9 +138,9 @@ export class BusVisitCtrl extends helper.Controller {
         this.backboneModel = new Backbone.Model(dto["busVisitModel"]);
         var model = this.backboneModel;
 
-        if (model.get("visitDate") != null && model.get("visitDate").trim() != "")
+        if (model.get("visitDate")!=null && model.get("visitDate").trim() != "")
             model.set("visitDate", helper.FormatDateString(model.get("visitDate")));
-
+        
         this.view = new views.BusVisitView(model);
         this.view.on("Event:SaveForm", (busVisitModel) => this.Save(busVisitModel));
         this.view.on("Event:CancelForm", () => this.Cancel());

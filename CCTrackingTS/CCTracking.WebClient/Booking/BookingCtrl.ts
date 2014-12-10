@@ -179,7 +179,8 @@ export class BookingCtrl extends helper.Controller {
         //booking.set("busDetailId", booking.get("busDetailIdSelected").id);
         var deferred = DAL.Save(booking);
         //TODO: call controller from here...
-        deferred.done(p=> this.SaveCompleted(p));
+        deferred.done(p => this.SaveCompleted(p));
+        //setTimeout(() => { alert('then'); }, 1000);
     }
 
     SaveCompleted(bookingResponse: any) {

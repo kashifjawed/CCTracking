@@ -207,7 +207,7 @@ export class PaymentCtrl extends helper.Controller {
     Save(payment: any) {
         //reset actual id - match with DAL object's properties
         if (this.backboneCollection.length < 1) {
-            alert("Please add bus details");
+            helper.ShowModalPopup("danger", "Bus Details", "Please add bus details");
             return;
         }
         //payment.set("bus", payment.get("busSelected").id);
@@ -216,7 +216,9 @@ export class PaymentCtrl extends helper.Controller {
         //payment.set("paymentLocation", payment.get("paymentLocationSelected").id);
         //payment.set("officerId", payment.get("cashierSelected").id);
         //payment.set("paymentType", payment.get("paymentTypeSelected").id);
-        
+        var appObj = app.request("AppGlobalSetting");
+        payment.set("modifiedBy", appObj.get("Id"));
+
         payment.set("busVisits", this.backboneCollection.toJSON());
         var deferred = DAL.Save(payment);
 

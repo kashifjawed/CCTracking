@@ -1,0 +1,73 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span>View - Audit Payment Report </div>
+            <div class="panel-body">
+                <form>
+                    <table class="table table-condensed table-hover form-group table-removeTopBorder">
+
+                        <tr>
+                            <td class="col-sm-6 col-md-6">
+                                From Date <input type="text" id="txtFromDate" class="form-control input-sm" data-bind="datepicker: {}, value: fromDate" 
+                                    required="required" data-role="validate" title="From Date" data-content="From date is required"/>
+                            </td>
+                            <td class="col-sm-6 col-md-6">
+                                To Date <input type="text" id="txtToDate" class="form-control input-sm" data-bind="datepicker: {}, value: toDate" 
+                                    required="required" data-role="validate" title="To Date" data-content="To date is required"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-6 col-md-6">&nbsp;
+                            </td>
+                            <td class="col-sm-6 col-md-6 ">
+                                <span class="pull-right">
+                                    <button type="button" class="jsSearchAuditPayment btn btn-default">Search</button>&nbsp;&nbsp;
+                                    <button type="reset" class="jsCancel btn btn-default" title="Cancel">Cancel</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold">
+                <span class="glyphicon glyphicon-time">&nbsp;</span>View - Search Detail
+                <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+            </div>
+            
+            <div class="panel-body">
+                <table id="tblAuditPayment" class="table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <!--<th class="input-sm">Id</th>-->
+                            <th class="input-sm">Booking Id</th>
+                            <th class="input-sm">Property Name</th>
+                            <th class="input-sm">Old Value</th>
+                            <th class="input-sm">New Value</th>
+                            <th class="input-sm">User</th>
+                            <th class="input-sm">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active">
+                            <td colspan="6">&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="rowTemplate">  
+        <td class="input-sm"><%=bookingId%></td>              
+        <td class="jsShowDetail input-sm"><%=propertyName%></td>
+        <td class="input-sm"><%=oldValue%></td>
+        <td class="input-sm"><%=newValue%></td>        
+        <td class="input-sm"><%=userName%></td>        
+        <td class="input-sm"><%=actualModifiedDate%></td>        
+    </script>
+</div>
+
+

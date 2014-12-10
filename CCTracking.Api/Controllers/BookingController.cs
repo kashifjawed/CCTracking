@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using CCTracking.Api.App_Start;
+using CCTracking.Api.Helpers;
 using CCTracking.DAL;
 using CCTracking.Dto;
 using CCTracking.Dto.Response;
@@ -6,6 +11,7 @@ using System.Web.Http;
 
 namespace CCTracking.Api.Controllers
 {
+    //[AuthorizationFilter]
     public class BookingController : ApiController
     {
         //BookingStore _bookingStore = new BookingStore();        
@@ -39,6 +45,8 @@ namespace CCTracking.Api.Controllers
                     booking = ((BookingResponse)bookingResponse).BookingModel;
                 }
             }
+            //get rid of alerts from each file, a generic implementation is done on helper
+            booking.EntityType = "Booking";
             return booking;
         }
 
@@ -67,7 +75,40 @@ namespace CCTracking.Api.Controllers
             return bookingResponse;
         }
 
-
+        //private bool IsValidAuthenticationToken()
+        //{
+        //    IEnumerable<string> headerList = null;
+        //    if (Request.Headers.TryGetValues("AuthenticationToken", out headerList))
+        //    {
+        //        string authenticationToken = headerList.FirstOrDefault();
+        //        Guid authenticationGuid = Guid.Empty;
+        //        try
+        //        {
+        //            if (Guid.TryParse(Security.Decrypt(authenticationToken), out authenticationGuid))
+        //            {
+        //                return true;
+        //            }
+        //            else
+        //            {
+        //                throw new HttpResponseException(new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized)
+        //                {
+        //                    Content = new StringContent("Invalid Authentication Token")
+        //                });
+        //            }
+        //        }
+        //        catch (Exception exp)
+        //        {
+        //            throw new HttpResponseException(new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized)
+        //            {
+        //                Content = new StringContent("Invalid Authentication Token")
+        //            });
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
     }
 }

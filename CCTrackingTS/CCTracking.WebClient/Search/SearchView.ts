@@ -57,6 +57,10 @@ export class SearchCollectionView extends helper.Views.CompositeView {
         e.preventDefault();
         this.trigger("SearchBooking");
     }
+    Cancel(e) {
+        e.preventDefault();
+        this.trigger("CancelForm");
+    }
     onDomRefresh() {
         //alert("ddd");
         //debugger;

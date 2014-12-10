@@ -299,4 +299,29 @@ namespace CCTracking.DAL
             basemodel.ModifiedDate = dr.GetDateTime(dr.GetOrdinal("ModifiedDate"));
         }
     }
+
+    public static class DataReaderExt
+    {
+        public static bool IsColumnExists(this IDataReader dataReader, string columnName)
+        {
+            bool retVal = false;
+
+            try
+            {
+                dataReader.GetSchemaTable().DefaultView.RowFilter = string.Format("ColumnName= '{0}'", columnName);
+                if (dataReader.GetSchemaTable().DefaultView.Count > 0)
+                {
+                    retVal = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //throw;
+            }
+
+            return retVal;
+        }
+
+    }
 }

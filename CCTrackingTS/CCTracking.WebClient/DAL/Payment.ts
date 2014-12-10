@@ -39,6 +39,10 @@ export function GetBusAvialability(id) {
     var o: baseDAL.BaseDto = new PaymentDal();
     return o.doAjaxRequest(null, "GET", "BusAvailability?id=" + id);
 }
+export function GetAllAuditPayment(auditRequest) {
+    var o: baseDAL.BaseDto = new PaymentDal();
+    return o.doAjaxRequest(auditRequest, "POST", "AuditPayment");
+}
 
 //aaa
 

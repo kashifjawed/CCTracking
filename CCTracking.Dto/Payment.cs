@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CCTracking.Dto
 {
     public class Payment : BaseModel
@@ -21,5 +17,32 @@ namespace CCTracking.Dto
         public byte PaymentStatus { get; set; }
         public string EasyPaisaTranNo { get; set; }
         public List<BusVisit> BusVisits { get; set; }
+    }
+    public class AuditPayment : BaseModel
+    {
+        
+        public string BookingId { get; set; }
+        public string PaymentType { get; set; }
+        public string Pricing { get; set; }
+        public string Amount { get; set; }
+        public string PaymentLocation { get; set; }
+        public string OfficerId { get; set; }
+        public string ReceiptNo { get; set; }
+        public string ExtraAmountCharge { get; set; }
+        public string ExtraAmountReason { get; set; }
+        public string ExtraAmountReceipt { get; set; }
+        public string PaymentStatus { get; set; }
+        public string EasyPaisaTranNo { get; set; }
+        public string IsActive { get; set; }
+        public string ModifiedBy { get; set; }
+        public string ModifiedDate { get; set; }
+
+        //for auditing purpose
+        public int RowCounter { get; set; }
+        public int OperationType { get; set; }
+        public DateTime ActualModifiedDate { get; set; }
+        public string UserName { get; set; }
+
+
     }
 }

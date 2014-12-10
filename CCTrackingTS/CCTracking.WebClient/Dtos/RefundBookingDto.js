@@ -38,6 +38,37 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
             return RefundBookingDto;
         })(Backbone.Model);
         Models.RefundBookingDto = RefundBookingDto;
+
+        var AuditRefundBooking = (function (_super) {
+            __extends(AuditRefundBooking, _super);
+            function AuditRefundBooking() {
+                _super.apply(this, arguments);
+            }
+            AuditRefundBooking.prototype.default = function () {
+                return {
+                    id: "",
+                    bookingId: "",
+                    propertyName: "",
+                    oldValue: "",
+                    newValue: "",
+                    modifiedDate: "",
+                    createdDate: "",
+                    actualModifiedDate: "",
+                    userName: ""
+                };
+            };
+            return AuditRefundBooking;
+        })(Backbone.Model);
+        Models.AuditRefundBooking = AuditRefundBooking;
+        var AuditRefundBookingResponseCollection = (function (_super) {
+            __extends(AuditRefundBookingResponseCollection, _super);
+            function AuditRefundBookingResponseCollection(options) {
+                this.model = AuditRefundBooking;
+                _super.call(this, options);
+            }
+            return AuditRefundBookingResponseCollection;
+        })(Backbone.Collection);
+        Models.AuditRefundBookingResponseCollection = AuditRefundBookingResponseCollection;
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });

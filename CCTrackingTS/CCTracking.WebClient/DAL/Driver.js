@@ -40,5 +40,17 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
         return o.doAjaxRequest(null, "GET", "Driver?id=" + id);
     }
     exports.GetById = GetById;
+
+    function GetAllSummary() {
+        var o = new DriverDal();
+        return o.doAjaxRequest(null, "GET", "DriverSummary");
+    }
+    exports.GetAllSummary = GetAllSummary;
+    function GetAllDetail(id) {
+        var o = new DriverDal();
+        return o.doAjaxRequest(null, "GET", "DriverSummary?id=" + id);
+    }
+    exports.GetAllDetail = GetAllDetail;
 });
 //aaa
+//# sourceMappingURL=Driver.js.map

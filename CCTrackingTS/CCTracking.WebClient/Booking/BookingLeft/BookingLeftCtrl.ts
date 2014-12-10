@@ -49,7 +49,9 @@ export class BookingLeftCtrl extends helper.Controller {
        var deferredById = DAL.GetByCriteria(model);
             deferredById.done(p=> this.GetByCriteriaCompleted(p));      
     }
-       
+
+   
+
     GetByCriteriaCompleted(bookingLeftDto: dto.Models.BookingLeftDto) {
         //alert("GetByIdCompleted..");
         this.backboneModel = new Backbone.Model(bookingLeftDto["bookingLeftModel"]);
@@ -89,5 +91,59 @@ export class BookingLeftCtrl extends helper.Controller {
         this.bookingLeftViewModel.model = kb.viewModel(model);
         ko.cleanNode($(this.bookingLeftView.el)[0]);
         ko.applyBindings(this.bookingLeftViewModel, this.bookingLeftView.el);
+    }
+    ShowProgressbar() {
+        var currentView = this.app.ModalRegion.currentView;
+        //debugger;
+        //if (this.app.ModalRegion != undefined && currentView != undefined)
+        {
+            //if (currentView.$el.find(".jsModal").length > 0) {
+
+            //}
+            //else
+            {
+                var alertModel = new Backbone.Model({ type: 'btn-', title: 'title', message: 'message' });
+                var pview = new views.ProgressbarView({ model: alertModel });
+                if (this.app.ModalRegion.currentView == undefined)
+                {
+                    this.app.ModalRegion.show(pview);
+                }
+            }
+
+        }
+    }
+
+    HideProgressbar() {
+        //debugger;
+        var currentView = this.app.ModalRegion.currentView;
+        //if (this.app.ModalRegion != undefined && currentView != undefined && currentView.$el.find(".jsProgressbar").length > 0)
+        {
+            this.app.ModalRegion.close();
+            $(".modal-backdrop").remove();
+        }
+        //debugger;
+        
+
+    }
+
+    ShowModalPopup(type, title, message) {
+        //if (this.app.ModalRegion != undefined && this.app.ModalRegion.currentView != undefined) {
+            //this.app.ModalRegion.stopListening();
+            //this.app.ModalRegion.close();
+            //this.app.ModalRegion.$el.modal('hide');
+            //this.app.ModalAlertRegion.close();
+            //this.app.ModalRegion.reset();
+        //}
+        //this.app.ModalRegion.close();
+        //$(".modal-backdrop").remove();
+        var alertModel = new Backbone.Model({ type: 'btn-' + type, title: title, message: message });
+        var view = new views.ModalPopupView({ model: alertModel });
+        //this.app.ModalRegion.currentView = view;
+        //if (this.app.ModalAlertRegion.currentView == undefined)
+        {
+            this.app.ModalAlertRegion.show(view);
+        }
+        
+
     }
 }

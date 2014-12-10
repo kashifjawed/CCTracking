@@ -60,6 +60,28 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
         })(Backbone.Model);
         Models.PaymentResponse = PaymentResponse;
 
+        var AuditPayment = (function (_super) {
+            __extends(AuditPayment, _super);
+            function AuditPayment() {
+                _super.apply(this, arguments);
+            }
+            AuditPayment.prototype.default = function () {
+                return {
+                    id: "",
+                    bookingId: "",
+                    propertyName: "",
+                    oldValue: "",
+                    newValue: "",
+                    modifiedDate: "",
+                    createdDate: "",
+                    actualModifiedDate: "",
+                    userName: ""
+                };
+            };
+            return AuditPayment;
+        })(Backbone.Model);
+        Models.AuditPayment = AuditPayment;
+
         var PaymentResponseCollection = (function (_super) {
             __extends(PaymentResponseCollection, _super);
             function PaymentResponseCollection(options) {
@@ -69,6 +91,16 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
             return PaymentResponseCollection;
         })(Backbone.Collection);
         Models.PaymentResponseCollection = PaymentResponseCollection;
+
+        var AuditPaymentResponseCollection = (function (_super) {
+            __extends(AuditPaymentResponseCollection, _super);
+            function AuditPaymentResponseCollection(options) {
+                this.model = AuditPayment;
+                _super.call(this, options);
+            }
+            return AuditPaymentResponseCollection;
+        })(Backbone.Collection);
+        Models.AuditPaymentResponseCollection = AuditPaymentResponseCollection;
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });

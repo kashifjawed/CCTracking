@@ -79,6 +79,28 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
         })(Backbone.Model);
         Models.BookingResponse = BookingResponse;
 
+        var AuditBooking = (function (_super) {
+            __extends(AuditBooking, _super);
+            function AuditBooking() {
+                _super.apply(this, arguments);
+            }
+            AuditBooking.prototype.default = function () {
+                return {
+                    id: "",
+                    bookingId: "",
+                    propertyName: "",
+                    oldValue: "",
+                    newValue: "",
+                    modifiedDate: "",
+                    createdDate: "",
+                    actualModifiedDate: "",
+                    userName: ""
+                };
+            };
+            return AuditBooking;
+        })(Backbone.Model);
+        Models.AuditBooking = AuditBooking;
+
         var BookingResponseCollection = (function (_super) {
             __extends(BookingResponseCollection, _super);
             function BookingResponseCollection(options) {
@@ -88,6 +110,15 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
             return BookingResponseCollection;
         })(Backbone.Collection);
         Models.BookingResponseCollection = BookingResponseCollection;
+        var AuditBookingResponseCollection = (function (_super) {
+            __extends(AuditBookingResponseCollection, _super);
+            function AuditBookingResponseCollection(options) {
+                this.model = AuditBooking;
+                _super.call(this, options);
+            }
+            return AuditBookingResponseCollection;
+        })(Backbone.Collection);
+        Models.AuditBookingResponseCollection = AuditBookingResponseCollection;
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });

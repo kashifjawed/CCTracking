@@ -63,6 +63,10 @@ define(["require", "exports", "../Helper", "marionette", "jquery", "jqueryUI", "
             e.preventDefault();
             this.trigger("SearchBooking");
         };
+        SearchCollectionView.prototype.Cancel = function (e) {
+            e.preventDefault();
+            this.trigger("CancelForm");
+        };
         SearchCollectionView.prototype.onDomRefresh = function () {
             //alert("ddd");
             //debugger;

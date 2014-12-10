@@ -27,4 +27,27 @@ export module Models {
             }
         }
     }
+
+    export class AuditRefundBooking extends Backbone.Model {
+        default() {
+            return {
+                id: "",
+                bookingId: "",
+                propertyName: "",
+                oldValue: "",
+                newValue: "",
+                modifiedDate: "",
+                createdDate: "",
+                actualModifiedDate: "",
+                userName: ""
+            }
+
+        }
+    }
+    export class AuditRefundBookingResponseCollection extends Backbone.Collection {
+        constructor(options?: any) {
+            this.model = AuditRefundBooking;
+            super(options);
+        }
+    }
 }

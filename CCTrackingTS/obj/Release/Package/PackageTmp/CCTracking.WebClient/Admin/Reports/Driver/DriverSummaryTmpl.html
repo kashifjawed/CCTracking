@@ -1,0 +1,37 @@
+﻿<div>
+    <div id="gridTemplate">
+        <div class="panel panel-default">
+            <div class="panel-heading header-bold">
+                <span class="glyphicon glyphicon-time"></span>View - Driver Summary Report
+                <!--<span class="pull-right"><a href="#addBooking">Add New</a> </span>-->
+            </div>
+            <div class="panel-body">
+                <table id="tblSearch" class="table table-condensed table-bordered table-hover table-striped form-group">
+                    <thead>
+                        <tr class="active">
+                            <!--<th class="input-sm">Id</th>-->
+                            <th class="input-sm">Name</th>
+                            <th class="input-sm">Milage Convered</th>
+                            <th class="input-sm">Total Visits</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr class="active">
+                            <td colspan="6">&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="rowTemplate">
+        <!--<td class="jsShowDetail input-sm"><%=driverId %></td>-->
+        <!--<td class="jsShowDetail input-sm"><a href="#driverDetail?id=<%=driverId%>"> <%=driverName%></a></td>-->
+        <td class="jsShowDetail input-sm text-primary" style="cursor: hand;cursor: pointer"><%=driverName%></td>
+        <td class="input-sm"><%=milage%></td>
+        <td class="input-sm"><%=visitCount%></td>        
+    </script>
+</div>
+
+

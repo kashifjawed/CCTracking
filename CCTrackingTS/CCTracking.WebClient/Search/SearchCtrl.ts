@@ -160,6 +160,9 @@ export class SearchCtrl extends helper.Controller {
     }
 
     Cancel() {
-        window.location.href = "#searchBooking";
+        this.Load();
+        //this.backboneModel = new dto.Models.SearchDto();
+        //this.searchViewModel = new views.SearchViewModel(this.backboneModel, this);
+        //window.location.href = "#searchBooking";
     }
 }

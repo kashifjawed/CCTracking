@@ -1,0 +1,235 @@
+﻿<div id="BookingMainPane">
+    <div class="panel panel-default">
+        <div class="panel-heading header-bold"><span class="glyphicon glyphicon-time"></span>BOOKING REQUEST FORM</div>
+        <div class="panel-body">
+            <form id="form1">
+                <table class="table table-condensed table-hover form-group">
+                    <tr>
+                        <td colspan="2" class="header-bold">Contact Details</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Name</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="txtName" class="form-control input-sm" data-bind="value: model.contactName"  placeholder="Contact Name"
+                                required="required" data-role="validate" title="Contact Name" maxlength="200" data-content="Contact name is required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Mobile</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="txtMobile" class="form-control input-sm"  data-bind="value: model.contactMobile"  placeholder="Contact Mobile"
+                                required="required" data-role="validate" title="Contact Mobile" maxlength="200" data-content="Contact mobile is required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Nic</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="txtNic" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.contactNic" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="header-bold">Deseased Info</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Name</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="txtDeseasedName" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.deseasedName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Age</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="txtAge" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.deseasedAge" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Gender</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="radio" name="rbGender" value="1" data-bind="checked: model.deseasedGender" />Male
+                        <input type="radio" name="rbGender" value="2" data-bind="checked: model.deseasedGender" />Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Cause/Place of Death</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlCauseOfDeath" class="form-control input-sm" 
+                                data-bind="options: model.causeOfDeathList, optionsText:'description', value:model.causeOfDeathSelected">
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Address</td>
+                        <td class="col-sm-8 col-md-8">
+                            <textarea id="txtAddress"  class="form-control input-sm"  data-bind="value: model.address"></textarea>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Landmark</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlArea" class="form-control input-sm"
+                                data-bind="options: model.landmarkList, optionsText:'description', value:model.landmarkIdSelected">
+                            </select>
+
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td colspan="2" class="header-bold">Booking Details</td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Bus Point</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="Select1" class="form-control input-sm"
+                                data-bind="options: model.busPointList, optionsText:'description', value:model.busPointSelected">
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Union Council</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlUC" class="form-control input-sm"
+                                data-bind="options: model.unionCouncilList, optionsText:'description', value:model.unionCouncilIdSelected">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Town</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlTown" class="form-control input-sm"
+                                data-bind="options: model.townList, optionsText:'description', value:model.townIdSelected">
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Pick-up Date</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="PickupDate" placeholder="mm/dd/yyyy" class="form-control input-sm" data-bind="datepicker: {}, value: model.pickupDate" 
+                                required="required" data-role="validate" title="Pick-up Date" data-content="Pickup Date is required" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Pick-up Time</td>
+                        <td class="col-sm-8 col-md-8">
+                            <!--<input type="text" title="Pick-up Time"  pattern="[0-2][0-9]:[0-5][0-9] ((am)|(pm))"  id="PickupTime" class="form-control input-sm"  />-->
+                            <select id="ddlPickupTime" class="form-control input-sm"
+                                data-bind="options: model.pickupTimeSlotList, optionsText:'description', value:model.pickupTimeSlotSelected">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Return Time</td>
+                        <td class="col-sm-8 col-md-8">
+                             <select id="ddlReturnTime" class="form-control input-sm"
+                                data-bind="options: model.returnTimeSlotList, optionsText:'description', value:model.returnTimeSlotSelected">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Graveyard</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlGraveyard" class="form-control input-sm"
+                                data-bind="options: model.graveyardList, optionsText:'description', value:model.graveyardIdSelected">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Funeral Prayer</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="Select2" class="form-control input-sm"
+                                data-bind="options: model.prayersList, optionsText:'description', value:model.prayersSelected">
+                            </select>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Funeral Location</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="Text1" class="form-control input-sm" placeholder="Funeral Location" data-bind="value: model.namazEJanazaLocation" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Masjid Name</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="Text2" class="form-control input-sm" placeholder="Masjid Name" data-bind="value: model.masjidName" />
+                        </td>
+                    </tr>
+                   <!-- 
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Bus Detail</td>
+                        <td class="col-sm-8 col-md-8">
+                            <select id="ddlBusDetail" multiple class="form-control input-sm"
+                                data-bind="options: model.busDetailsList, optionsText:'description', value:model.busDetailIdSelected">                                
+                            </select><br />
+                            <a href="#" data-toggle="modal" data-target="#basicModal" class="btn-danger">Expected return time: 2 hours from now</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Initial Meter Reading</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="Text1" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.initialReading" />
+                            <br />
+                            (For multiple bookings please seperate entries with comma ",") 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Final Meter Reading</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="Text2" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.finalReading" />
+                            <br />
+                            (For multiple bookings please seperate entries with comma ",") 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Approx. Distance</td>
+                        <td class="col-sm-8 col-md-8">
+                            <input type="text" id="Text3" class="form-control input-sm" disabled="disabled" placeholder="22 km" />
+                        </td>
+                    </tr>
+                    -->
+                     <tr>
+                        <td class="col-sm-4 col-md-4 input-sm">Other Details</td>
+                        <td class="col-sm-8 col-md-8">
+                            <textarea id="txtOtherDetails" class="form-control input-sm" placeholder="set place holder" data-bind="value: model.otherDetail" ></textarea>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-sm-4 col-md-4"></td>
+                        <td class="col-sm-8 col-md-8">
+                            <button type="submit" class="btn btn-primary" data-role="trigger-validation">Save</button>
+                            &nbsp;
+                        <button type="reset" class="btn btn-primary">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            //var trackingApp = new TrackingApp();
+            //trackingApp.start();
+            var d = new Date();
+            var dateString = d.toISOString().substr(0, 10);
+            //alert(dateString);
+            $("#PickupDate").val(dateString);
+
+            $("#btnSave").bind("click", function () {
+
+            })
+
+            $("#PickupTime").bind("blur", function () {
+                var d1 = d = new Date("01/01/1990");
+                var hrs = $("#PickupTime").val();
+                d.setUTCHours(hrs.split(':')[0], hrs.split(':')[1]);
+                d1.setUTCHours(d.getUTCHours() + 3, d.getUTCMinutes());
+                var rhrs = d.getUTCHours() + 3 + ":" + d.getUTCMinutes();
+                //alert(d1.getUTCHours() + ":" + d1.getUTCMinutes());
+                $("#ReturnTime").val(d1.getUTCHours() + ":" + d1.getUTCMinutes());
+
+            });
+        });
+    </script>
+    
+</div>

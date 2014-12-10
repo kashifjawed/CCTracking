@@ -20,7 +20,7 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
         BaseDto.prototype.doAjaxRequest = function (request, requestType, actionUrl) {
             var _this = this;
             //alert(this.ajaxRequest.getResponse());
-            var webApiUrl = 'http://localhost/CCTracking.Api/api/' + actionUrl;
+            var webApiUrl = '/CCTracking.Api/api/' + actionUrl;
 
             var deferred = $.Deferred();
             var postData = null;

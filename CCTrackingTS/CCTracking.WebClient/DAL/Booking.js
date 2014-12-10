@@ -44,6 +44,12 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
         return o.doAjaxRequest(null, "GET", "Booking?id=" + id);
     }
     exports.GetById = GetById;
+
+    function GetAllAuditBooking(auditRequest) {
+        var o = new BookingDal();
+        return o.doAjaxRequest(auditRequest, "POST", "AuditBooking");
+    }
+    exports.GetAllAuditBooking = GetAllAuditBooking;
 });
 //aaa
 //# sourceMappingURL=Booking.js.map

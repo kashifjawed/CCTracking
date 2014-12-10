@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using CCTracking.Dto.Audit;
 
 namespace CCTracking.Dto.Response
 {
@@ -7,5 +7,7 @@ namespace CCTracking.Dto.Response
     {
         public Payment PaymentModel { get; set; }
         public List<Payment> PaymentList { get; set; }
+        public List<AuditDisplay> AuditPaymentDisplayList { get; set; }
+        public List<AuditPayment> AuditPaymentList { get; set; }
     }
 }

@@ -1,0 +1,16 @@
+﻿DECLARE @from_lsn binary (10) ,
+@to_lsn binary (10) 
+DECLARE @ContactName varchar(300)
+DECLARE @ContactMobile varchar(300)
+DECLARE @ContactNic varchar(300)
+
+SET @from_lsn = sys.fn_cdc_get_min_lsn('dbo_booking') 
+SET @to_lsn = sys.fn_cdc_get_max_lsn() 
+SET @ContactName = sys.fn_cdc_get_column_ordinal('dbo_booking', 'ContactName') 
+SET @ContactMobile = sys.fn_cdc_get_column_ordinal('dbo_booking', 'ContactMobile') 
+SET @ContactNic = sys.fn_cdc_get_column_ordinal('dbo_booking', 'ContactNic') 
+SELECT [cdc].[fn_cdc_get_all_changes_dbo_booking].__$operation ,[cdc].[fn_cdc_get_all_changes_dbo_booking].__$update_mask ,
+sys.fn_cdc_is_bit_set(@ContactName, __$update_mask) as 'ContactName' ,
+sys.fn_cdc_is_bit_set(@ContactMobile, __$update_mask) as 'ContactMobile' ,
+sys.fn_cdc_is_bit_set(@ContactNic, __$update_mask) as 'ContactNic' 
+FROM [cdc].[fn_cdc_get_all_changes_dbo_booking](@from_lsn, @to_lsn, 'all') ORDER BY __$seqval 

@@ -118,21 +118,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AuthorizationFilterAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AlkhidmatCentreController.cs" />
+    <Compile Include="Controllers\AuditBookingController.cs" />
+    <Compile Include="Controllers\AuditPaymentController.cs" />
+    <Compile Include="Controllers\AuditRefundBookingController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\BusAvailabilityController.cs" />
     <Compile Include="Controllers\BusController.cs" />
     <Compile Include="Controllers\BusMilageController.cs" />
     <Compile Include="Controllers\BusVisitController.cs" />
+    <Compile Include="Controllers\BusVisitMilageSummaryController.cs" />
+    <Compile Include="Controllers\BusVisitSummaryController.cs" />
     <Compile Include="Controllers\CauseOfDeathController.cs" />
     <Compile Include="Controllers\BookingLeftController.cs" />
     <Compile Include="Controllers\BookingSummaryController.cs" />
     <Compile Include="Controllers\ChangePasswordController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
+    <Compile Include="Controllers\DriverSummaryController.cs" />
     <Compile Include="Controllers\GraveyardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandmarkController.cs" />
@@ -214,6 +221,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\Profile-1.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />

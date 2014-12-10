@@ -35,3 +35,20 @@ export function GetById(id) {
     var o: baseDAL.BaseDto = new BusVisitDal();
     return o.doAjaxRequest(null, "GET", "BusVisit?id=" + id);
 }
+
+export function GetAllSummary() {
+    var o: baseDAL.BaseDto = new BusVisitDal();
+    return o.doAjaxRequest(null, "GET", "BusVisitSummary");
+}
+export function GetAllDetail(id: number) {
+    var o: baseDAL.BaseDto = new BusVisitDal();
+    return o.doAjaxRequest(null, "GET", "BusVisitSummary?id=" + id);
+}
+export function GetAllMilageSummary() {
+    var o: baseDAL.BaseDto = new BusVisitDal();
+    return o.doAjaxRequest(null, "GET", "BusVisitMilageSummary");
+}
+export function GetAllMilageDetail(id: number) {
+    var o: baseDAL.BaseDto = new BusVisitDal();
+    return o.doAjaxRequest(null, "GET", "BusVisitMilageSummary?id=" + id);
+}

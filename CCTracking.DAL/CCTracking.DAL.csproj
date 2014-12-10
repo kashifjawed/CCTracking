@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditBookingDal.cs" />
+    <Compile Include="AuditPaymentDal.cs" />
+    <Compile Include="AuditRefundBookingDal.cs" />
     <Compile Include="BookingDal.cs" />
     <Compile Include="BusAvailabilityDal.cs" />
     <Compile Include="BusDal.cs" />
     <Compile Include="BusMilageDal.cs" />
+    <Compile Include="BusVisitMilageSummaryDal.cs" />
+    <Compile Include="BusVisitSummaryDal.cs" />
     <Compile Include="CentreDal.cs" />
     <Compile Include="BusVisitDal.cs" />
     <Compile Include="CauseofDeathDal.cs" />
@@ -51,6 +56,7 @@
     <Compile Include="BookingSummaryDal.cs" />
     <Compile Include="ChangePasswordDal.cs" />
     <Compile Include="DalService.cs" />
+    <Compile Include="DriverSummaryDal.cs" />
     <Compile Include="PaymentTypeDal.cs" />
     <Compile Include="ResetPasswordDal.cs" />
     <Compile Include="UnionCouncilDal.cs" />
@@ -84,6 +90,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Db\CDC-ChangesOnly.txt" />
+    <Content Include="Db\ChangeDataCapture.txt" />
+    <Content Include="Db\CleanDb.txt" />
     <Content Include="Db\QryDbModification.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

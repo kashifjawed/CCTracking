@@ -7,7 +7,7 @@ namespace CCTracking.Dto
         public string ContactInfo { get; set; }
         public string DeseasedInfo { get; set; }
         public byte GenderId { get; set; }
-        public byte PaymentStatusId { get; set; }
+        public short PaymentStatusId { get; set; }
         public DateTime BookingDate { get; set; }
         public short GreveyardId { get; set; }
         public short CentreId { get; set; }
@@ -16,6 +16,11 @@ namespace CCTracking.Dto
         public DateTime ToBookingDate { get; set; }
         public DateTime FromVisitDate { get; set; }
         public DateTime ToVisitDate { get; set; }
+
+        public SearchCriteria()
+        {
+            this.PaymentStatusId = -1;
+        }
 
 
     }

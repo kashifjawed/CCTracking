@@ -2,3 +2,4 @@ C:\LiveProjects\SourceCode\CCTrackingTS\CCTrackingTS\bin\CCTrackingTS.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTrackingTS\bin\CCTrackingTS.pdb
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTrackingTS\obj\Release\CCTrackingTS.dll
 C:\LiveProjects\SourceCode\CCTrackingTS\CCTrackingTS\obj\Release\CCTrackingTS.pdb
+C:\LiveProjects\SourceCode\CCTrackingTS\CCTrackingTS\obj\Release\CCTrackingTS.csprojResolveAssemblyReference.cache

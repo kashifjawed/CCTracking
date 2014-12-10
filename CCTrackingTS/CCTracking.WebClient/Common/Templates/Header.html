@@ -2,40 +2,42 @@
     <script type="text/html" id="SiteHeader">
 
         <!--@*<nav class="navbar navbar-default" role="navigation">*@-->
-        <div class="container-fluid btn-default">
+        <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="#viewBooking"><span class="glyphicon glyphicon-home"></span>Home</a></li>               
+                <li><a href="#viewHome"><i class="fa fa-home">&nbsp;</i>Home</a></li>               
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-time"></span>Main<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gears">&nbsp;</i>Main<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <!--<li><a href="#addBooking"><span class="glyphicon glyphicon-time"></span>Add</a></li>-->
-                        <li><a href="#viewBooking"><span class="glyphicon glyphicon-time"></span>Booking</a></li>
-                        <li><a href="#viewBusVisit"><span class="glyphicon glyphicon-time"></span>Bus Visit</a></li>
-                        <li><a href="#searchBooking"><span class="glyphicon glyphicon-search"></span>Search</a></li>
+                        <li><a href="#viewBooking"><i class="fa fa-book">&nbsp;</i>Booking</a></li>
+                        <li><a href="#viewBusVisit"><i class="fa fa-bus">&nbsp;</i>Bus Visit</a></li>
+                        <li><a href="#searchBooking"><span class="fa fa-search">&nbsp;</span>Search</a></li>
+                        <li class="divider"></li>
                         <!--<li class="divider"></li>
-                        <li><a href="#cancelBooking"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>-->
+                            <li><a href="#cancelBooking"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>-->
                     </ul>
                 </li>
                 <!-- diaplay only to admin-->
                 <% if(isAdminRole()) {%> 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-time"></span>Admin<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lock">&nbsp;</i>Admin<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#viewAlkhidmatCentre"><span class="glyphicon glyphicon-time"></span>Alkhidmat Centre</a></li>
-                        <li><a href="#viewTrackingDevice"><span class="glyphicon glyphicon-time"></span>Tracking Device</a></li>
-                        <li><a href="#viewLandmark"><span class="glyphicon glyphicon-time"></span>Landmark</a></li>
-                        <li><a href="#viewAdminBus"><span class="glyphicon glyphicon-time"></span>Bus</a></li>
-                        <li><a href="#viewDriver"><span class="glyphicon glyphicon-time"></span>Driver</a></li>
-                        <li><a href="#viewGraveyard"><span class="glyphicon glyphicon-time"></span>Graveyard</a></li>
+                        <li><a href="#viewAlkhidmatCentre"><i class="fa fa-institution">&nbsp;</i>Alkhidmat Centre</a></li>
+                        <li><a href="#viewAdminBus"><i class="fa fa-bus">&nbsp;</i>Bus</a></li>
+                        <li><a href="#viewCauseOfDeath"><i class="fa fa-ambulance">&nbsp;</i>Cause of Death</a></li>
                         <li class="divider"></li>
-                        <li><a href="#viewPaymentType"><span class="glyphicon glyphicon-time"></span>Payment Type</a></li>
-                        <li><a href="#viewRefundType"><span class="glyphicon glyphicon-time"></span>Refund Type</a></li>
-                        <li><a href="#viewVisitType"><span class="glyphicon glyphicon-time"></span>Visit Type</a></li>
-                        <li><a href="#viewCauseOfDeath"><span class="glyphicon glyphicon-time"></span>Cause of Death</a></li>
+                        <li><a href="#viewDriver"><i class="fa fa-male">&nbsp;</i>Driver</a></li>
+                        <li><a href="#viewGraveyard"><i class="fa fa-random">&nbsp;</i>Graveyard</a></li>
+                        <li><a href="#viewLandmark"><i class="fa fa-building-o">&nbsp;</i>Landmark</a></li>
                         <li class="divider"></li>
-                        <li><a href="#viewUser"><span class="glyphicon glyphicon-search"></span>User</a></li>
-
-                        <li><a href="#cancelAdmin"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>
+                        <li><a href="#viewPaymentType"><i class="fa fa-cc-mastercard">&nbsp;</i>Payment Type</a></li>
+                        <li><a href="#viewRefundType"><i class="fa fa-cc-visa">&nbsp;</i>Refund Type</a></li>
+                        <li><a href="#viewTrackingDevice"><i class="fa fa-clock-o">&nbsp;</i>Tracking Device</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#viewUser"><i class="fa fa-user">&nbsp;</i>User</a></li>
+                        <li><a href="#viewVisitType"><i class="fa fa-bus">&nbsp;</i>Visit Type</a></li>
+                        <li class="divider"></li>
+                        <!--<li><a href="#cancelAdmin"><span class="glyphicon glyphicon-time"></span>Cancel</a></li>-->
                     </ul>
                 </li>
                 <%}%>
@@ -50,35 +52,15 @@
             <ul class="nav navbar-nav navbar-right">
                 <!--<li><a href="#">Link</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><%=firstName%>,<%=lastName%><span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user">&nbsp;</i><%=firstName%>,<%=lastName%><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#changePassword">Change Password</a></li>
+                        <li><a href="#"><i class="fa fa-file-text">&nbsp;</i> Profile</a></li>
+                        <li><a href="#changePassword"><i class="fa fa-edit">&nbsp;</i> Change Password</a></li>
                         <li class="divider"></li>
-                        <li><a href=""><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+                        <li><a href=""><i class="fa fa-sign-out">&nbsp;</i>Logout</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-
-        <!--@*</nav>*@-->
-
-        <!--<table class="table table-condensed">
-            <tr>
-                <td class="col-md-10">
-                    <ul class="nav nav-pills">
-                        <li class="active"><a href="~/home">Home</a></li>
-                        <li><a href="~/home">Booking</a></li>
-                        <li class="active"><a href="~/search">Searching</a></li>
-                        <li><a href="~/admin">Administration</a></li>
-                    </ul>
-                </td>
-                <td class="col-md-2">
-                    <%=firstName%>,<%=lastName%> &nbsp;&nbsp;<a href="#">Logout</a>                    
-                </td>
-            </tr>
-        </table>-->
-
-
     </script>
 </div>

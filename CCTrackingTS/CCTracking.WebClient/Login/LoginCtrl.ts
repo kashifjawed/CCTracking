@@ -27,7 +27,8 @@ import summary = require("../Booking/BookingLeft/BookingLeftView");
 
 import bookingLeftCtrl = require("../Booking/BookingLeft/BookingLeftCtrl");
 import busAvailabilityCtrl = require("../Bus/BusAvailabilityCtrl");
-import bookingCtrl = require("../Booking/BookingCtrl");
+//import bookingCtrl = require("../Booking/BookingCtrl");
+import homeCtrl = require("../Home/HomeCtrl");
 
 import uc = require("../User/UserCtrl");
 
@@ -47,9 +48,8 @@ export class LoginCtrl extends helper.Controller {
     }
 
     Load() {
-
         this.loginView = new views.LoginView();
-        var layout = this.app.AppLayout;
+        //var layout = this.app.AppLayout;
         //this.ContainerRegion.show(layout);
         this.app.LoginRegion.show(this.loginView);
         this.loginView.on("LoginUser", () => this.Login(this.loginViewModel.bbModel));
@@ -81,8 +81,7 @@ export class LoginCtrl extends helper.Controller {
 
         if (loginDto["errorMessage"] !== null) {
             helper.ShowModalPopup("danger", "Authentication", loginDto["errorMessage"]);
-        }
-        else {
+        } else {
             var appObject = new appObjectDto.Models.AppObject();
 
             appObject.set("Id", loginDto["id"]);
@@ -104,23 +103,22 @@ export class LoginCtrl extends helper.Controller {
             });
 
             this.app.HeaderRegion.show(headerView);
-
             if (loginDto["isAdmin"]) {
                 //admin view
-                this.app.LeftRegion.show(new adminLeft.AdminLeftItemView());
+                this.app.AdminLeftRegion.show(new adminLeft.AdminLeftItemView());
 
-                var ctrl = new uc.UserCtrl();
-                ctrl.GetAll();
-                var vm = ctrl.userViewModel.model;
+                //var ctrl = new uc.UserCtrl();
+                //ctrl.GetAll();
+                //var vm = ctrl.userViewModel.model;
 
             }
-            else {
+            new bookingLeftCtrl.BookingLeftCtrl().Show();
+            new busAvailabilityCtrl.BusAvailabilityCtrl().Show();
+            var home = new homeCtrl.HomeCtrl();
+            home.Show();
+            //var ctrlBooking = new bookingCtrl.BookingCtrl();
+            //ctrlBooking.Show();
 
-                new bookingLeftCtrl.BookingLeftCtrl().Show();
-                new busAvailabilityCtrl.BusAvailabilityCtrl().Show();
-                var ctrlBooking = new bookingCtrl.BookingCtrl();
-                ctrlBooking.Show();
-            }
 
         }
     }

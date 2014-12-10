@@ -14,7 +14,7 @@ export class BaseDto extends Backbone.Model {
     }
     doAjaxRequest(request: any, requestType: string, actionUrl: string) {
         //alert(this.ajaxRequest.getResponse());        
-        var webApiUrl = 'http://localhost/CCTracking.Api/api/' + actionUrl;
+        var webApiUrl = '/CCTracking.Api/api/' + actionUrl;
 
         var deferred =$.Deferred();
         var postData = null;

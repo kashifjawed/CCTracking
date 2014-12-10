@@ -208,7 +208,7 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
         PaymentCtrl.prototype.Save = function (payment) {
             //reset actual id - match with DAL object's properties
             if (this.backboneCollection.length < 1) {
-                alert("Please add bus details");
+                helper.ShowModalPopup("danger", "Bus Details", "Please add bus details");
                 return;
             }
 
@@ -218,6 +218,9 @@ define(["require", "exports", "../App", "../Helper", "./PaymentView", "../DAL/Pa
             //payment.set("paymentLocation", payment.get("paymentLocationSelected").id);
             //payment.set("officerId", payment.get("cashierSelected").id);
             //payment.set("paymentType", payment.get("paymentTypeSelected").id);
+            var appObj = app.request("AppGlobalSetting");
+            payment.set("modifiedBy", appObj.get("Id"));
+
             payment.set("busVisits", this.backboneCollection.toJSON());
             var deferred = DAL.Save(payment);
 

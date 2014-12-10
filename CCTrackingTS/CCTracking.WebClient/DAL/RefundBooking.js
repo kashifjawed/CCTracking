@@ -43,5 +43,10 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
         return o.doAjaxRequest(null, "GET", "RefundBooking?id=" + id);
     }
     exports.GetById = GetById;
+    function GetAllAuditRefundBooking(auditRequest) {
+        var o = new RefundBookingDal();
+        return o.doAjaxRequest(auditRequest, "POST", "AuditRefundBooking");
+    }
+    exports.GetAllAuditRefundBooking = GetAllAuditRefundBooking;
 });
 //# sourceMappingURL=RefundBooking.js.map

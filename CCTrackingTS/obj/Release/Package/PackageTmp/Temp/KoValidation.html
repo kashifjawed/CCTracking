@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Knockout - Validation</title>
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
+    <script src="../Scripts/knockout-3.1.0.js"></script>
+    <script src="../Scripts/knockout.validation.js"></script>
+
+    <script type="text/javascript">
+        //ko.validation.init();
+
+        //ko.validation.rules['nullableInt'] = {
+        //    validator: function (val, validate) {
+        //        return val === null || val === "" || (validate && /^-?\d*$/.test(val.toString()));
+        //    },
+        //    message: 'Must be empty or an integer value'
+        //};
+        //ko.validation.registerExtenders();
+
+
+        //want to know if all of your ViewModel's properties are valid?
+        var myViewModel = ko.validatedObservable({
+            property1: ko.observable().extend({ required: true }),
+            property2: ko.observable().extend({ min: 10 }),
+            property3: ko.observable().extend({ number: true })
+        });
+
+        myViewModel().property1("has someting in the property");
+        myViewModel().property2(200);
+        myViewModel().property3(100);
+        // the all important applyBindings
+        ko.applyBindings(myViewModel);
+
+        //alert(myViewModel.isValid());
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <label data-bind="validationMessage:  myViewModel().property3">
+            <!-- the 'errorElementClass' will be added to this element too -->
+            <input id="txt" type="text" data-bind="value: myViewModel().property3" />
+        </label>
+    </div>
+
+
+    <script type="text/javascript">
+        //ko.validation.init();
+
+        //ko.validation.rules['nullableInt'] = {
+        //    validator: function (val, validate) {
+        //        return val === null || val === "" || (validate && /^-?\d*$/.test(val.toString()));
+        //    },
+        //    message: 'Must be empty or an integer value'
+        //};
+        //ko.validation.registerExtenders();
+
+
+        //want to know if all of your ViewModel's properties are valid?
+        var myViewModel = ko.validatedObservable({
+            property1: ko.observable().extend({ required: true }),
+            property2: ko.observable().extend({ min: 10 }),
+            property3: ko.observable().extend({ number: true })
+        });
+
+        myViewModel().property1("has someting in the property");
+        myViewModel().property2(200);
+        myViewModel().property3(100);
+        // the all important applyBindings
+        ko.applyBindings(myViewModel);
+
+        //alert(myViewModel.isValid());
+    </script>
+    
+</body>
+</html>

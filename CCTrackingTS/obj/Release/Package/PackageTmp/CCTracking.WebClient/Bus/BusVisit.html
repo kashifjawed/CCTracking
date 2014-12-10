@@ -1,0 +1,159 @@
+﻿<div>
+    <div class="panel panel-default">
+        <div class="panel-heading header-bold"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;BUS DETAILS</div>
+        <div class="panel-body">
+            <form id="form1">
+                <div class="panel panel-default">
+                    <!--<div class="panel-heading header-bold">PAYMENT INFO</div>-->
+                    <div class="panel-body">
+                        <table class="table table-removeTopBorder table-condensed table-hover form-group">
+
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Alkhidmat/Co-Partners</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <select id="ddlCentre" class="form-control input-sm"
+                                            data-bind="options: alkhidmatCentreList, optionsText:'description', value:alkhidmatCentreSelected">
+                                    </select></td>
+                            </tr>
+                             <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Driver</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <select id="Select1" class="form-control input-sm"
+                                        data-bind="options: driverList, optionsText:'description', value:driverSelected">
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Vehicle No</td>
+                                <td class="col-sm-8 col-md-8">
+                                   <select id="ddlBusDetails" class="form-control input-sm"
+                                        data-bind="options: busList, optionsText:'description', value:busSelected, disable:isEdit()">
+                                    </select>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Incharge Name</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" class="form-control input-sm" placeholder="Incharge Name" data-bind="value:inchargeName" />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Visit Date</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" id="PickupDate" class="form-control input-sm" placeholder="mm/dd/yyyy" data-bind="datepicker:{}, value:visitDate"
+                                        required="required" data-role="validate" title="Visit Date" data-content="Visit date is required" />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Bus Visit Type</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <select id="ddlOtherTravelling" class="form-control input-sm" data-bind="options: visitTypeList, optionsText:'description', value:visitTypeSelected, disable:isEdit()"> </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Out Time</td>
+                                <td class="col-sm-8 col-md-8">
+                                     <select id="ddlReturnTime" class="form-control input-sm"
+                                data-bind="options: outTimeSlotList, optionsText:'description', value:outTimeSlotSelected">
+                            </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Return Time</td>
+                                <td class="col-sm-8 col-md-8">
+                                     <select id="Select2" class="form-control input-sm"
+                                data-bind="options: reutrnTimeSlotList, optionsText:'description', value:returnTimeSlotSelected">
+                            </select>
+                            </tr>
+                            <tr style="display:none">
+                                <td class="col-sm-4 col-md-4 input-sm">Current Reading</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" class="form-control input-sm" placeholder="Current Reading" data-bind="value:readingWhenFilling" 
+                                        required="required" data-role="validate" title="Current Reading" data-content="Current reading is required" />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Initial Reading</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" class="form-control input-sm" placeholder="Bus Initial Reading" data-bind="value:initialReading" />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Final Reading</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" class="form-control input-sm" placeholder="Bus Final Reading" data-bind="value:finalReading" />   
+                                </td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Pump Location</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <textarea id="txtPumpLocation" placeholder="Location" class="form-control input-sm" data-bind="value:pumpLocation, enable:isPatrolPump()">   
+                                    </textarea>
+                                </td>
+                            </tr>
+
+                            <!--<tr>
+                                <td>Booking (If any)</td>
+                                <td>
+                                    <input type="text" placeholder="Booking" disabled />
+                                    <br />
+                                    enable if visit type is booking
+                                </td>
+                            </tr>
+                            -->
+
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Fuel Rate</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" placeholder="Rate" class="form-control input-sm" data-bind="value:fuelRate, enable:isPatrolPump()" 
+                                        required="required" data-role="validate" title="Fuel Rate" data-content="Fuel rate is required"  />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Fuel Amount</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="text" placeholder="Fuel Amount"  class="form-control input-sm" data-bind="value:fuelAmount, enable:isPatrolPump()" 
+                                        required="required" data-role="validate" title="Fuel Amount" data-content="Fuel amount is required"  />   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Description</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <textarea id="txtDescription" placeholder="Description" class="form-control input-sm" data-bind="value:description" >   </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Booking Completed</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="radio" name="rbCurrentBooking" value="1" data-bind="checked:isBookingCompleted, enable:isBooking()" />Yes
+                                    <input type="radio" name="rbCurrentBooking" value="0" data-bind="checked:isBookingCompleted, enable:isBooking()" />No
+                                </td>
+                            </tr>
+                           
+                            <!--<tr>
+                                <td class="col-sm-4 col-md-4 input-sm"></td>
+                                <td class="col-sm-8 col-md-8"><a href="#" data-toggle="modal" data-target="#busDetailsModal" class="form-control input-sm">View Bus Details</a></td>
+                            </tr>-->
+                            <tr>
+                                <td class="col-sm-4 col-md-4"></td>
+                                <td class="col-sm-8 col-md-8">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    &nbsp;
+                                    <button type="button" class="jsCancel btn btn-primary">Cancel</button>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+
+            <div id="DetailRegion">
+            </div>
+        </div>
+
+    </div>
+
+</div>

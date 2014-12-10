@@ -1,0 +1,1181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/CCTrackingTS.dll">
+      <publishTime>11/19/2014 01:31:32</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AdminSearchBooking/AdminSearchBookingCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AdminSearchBooking/AdminSearchBookingGrid.html">
+      <publishTime>11/10/2014 00:20:53</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AdminSearchBooking/AdminSearchBookingTmpl.html">
+      <publishTime>11/09/2014 22:10:24</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AdminSearchBooking/AdminSearchBookingView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AlkhidmatCentre/AlkhidmatCentreCtrl.ts">
+      <publishTime>11/03/2014 17:22:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AlkhidmatCentre/AlkhidmatCentreGrid.html">
+      <publishTime>10/31/2014 16:04:23</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AlkhidmatCentre/AlkhidmatCentreGridRow.html">
+      <publishTime>10/31/2014 16:04:09</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AlkhidmatCentre/AlkhidmatCentreTmpl.html">
+      <publishTime>10/31/2014 16:03:56</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/AlkhidmatCentre/AlkhidmatCentreView.ts">
+      <publishTime>10/31/2014 16:03:25</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Bus/BusCtrl.ts">
+      <publishTime>11/03/2014 17:23:14</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Bus/BusGrid.html">
+      <publishTime>11/03/2014 17:06:04</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Bus/BusTmpl.html">
+      <publishTime>11/05/2014 02:11:22</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Bus/BusView.ts">
+      <publishTime>10/31/2014 16:08:40</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/BusMilage/BusMilageCtrl.ts">
+      <publishTime>11/05/2014 03:40:21</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/BusMilage/BusMilageGrid.html">
+      <publishTime>10/31/2014 16:11:59</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/BusMilage/BusMilageView.ts">
+      <publishTime>10/31/2014 16:11:35</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/CauseOfDeath/CauseOfDeathCtrl.ts">
+      <publishTime>11/03/2014 17:23:19</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/CauseOfDeath/CauseOfDeathGrid.html">
+      <publishTime>10/31/2014 16:12:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/CauseOfDeath/CauseOfDeathTmpl.html">
+      <publishTime>10/31/2014 16:12:47</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/CauseOfDeath/CauseOfDeathView.ts">
+      <publishTime>10/31/2014 22:14:12</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Driver/DriverCtrl.ts">
+      <publishTime>11/03/2014 17:23:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Driver/DriverGrid.html">
+      <publishTime>10/31/2014 16:14:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Driver/DriverTmpl.html">
+      <publishTime>10/31/2014 16:13:52</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Driver/DriverView.ts">
+      <publishTime>10/31/2014 16:13:28</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Graveyard/GraveyardCtrl.ts">
+      <publishTime>11/03/2014 17:23:35</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Graveyard/GraveyardGrid.html">
+      <publishTime>10/31/2014 16:16:57</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Graveyard/GraveyardTmpl.html">
+      <publishTime>10/31/2014 16:16:44</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Graveyard/GraveyardView.ts">
+      <publishTime>10/31/2014 16:16:12</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Landmark/LandmarkCtrl.ts">
+      <publishTime>11/03/2014 17:23:43</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Landmark/LandmarkGrid.html">
+      <publishTime>10/31/2014 16:19:06</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Landmark/LandmarkTmpl.html">
+      <publishTime>10/31/2014 16:18:56</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Landmark/LandmarkView.ts">
+      <publishTime>10/31/2014 16:18:31</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/PaymentType/PaymentTypeCtrl.ts">
+      <publishTime>11/03/2014 17:23:51</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/PaymentType/PaymentTypeGrid.html">
+      <publishTime>10/31/2014 16:21:35</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/PaymentType/PaymentTypeTmpl.html">
+      <publishTime>10/31/2014 16:21:25</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/PaymentType/PaymentTypeView.ts">
+      <publishTime>10/31/2014 16:20:23</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/RefundType/RefundTypeCtrl.ts">
+      <publishTime>11/03/2014 17:23:59</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/RefundType/RefundTypeGrid.html">
+      <publishTime>10/31/2014 16:22:46</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/RefundType/RefundTypeTmpl.html">
+      <publishTime>10/31/2014 16:22:37</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/RefundType/RefundTypeView.ts">
+      <publishTime>10/31/2014 16:45:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Reports/Driver/DriverDetail.html">
+      <publishTime>11/14/2014 01:03:59</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Reports/Driver/DriverSummaryCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Reports/Driver/DriverSummaryTmpl.html">
+      <publishTime>11/14/2014 01:18:51</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Reports/Driver/DriverSummaryView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Town/TownCtrl.ts">
+      <publishTime>11/03/2014 17:24:19</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Town/TownGrid.html">
+      <publishTime>10/31/2014 16:24:22</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Town/TownTmpl.html">
+      <publishTime>10/31/2014 16:24:10</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/Town/TownView.ts">
+      <publishTime>10/31/2014 16:23:41</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/TrackingDevice/TrackingDeviceCtrl.ts">
+      <publishTime>11/03/2014 17:24:25</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/TrackingDevice/TrackingDeviceGrid.html">
+      <publishTime>10/31/2014 16:26:33</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/TrackingDevice/TrackingDeviceTmpl.html">
+      <publishTime>10/31/2014 16:26:23</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/TrackingDevice/TrackingDeviceView.ts">
+      <publishTime>10/31/2014 22:14:59</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/UnionCouncil/UnionCouncilCtrl.ts">
+      <publishTime>11/03/2014 17:24:33</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/UnionCouncil/UnionCouncilGrid.html">
+      <publishTime>10/31/2014 16:28:03</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/UnionCouncil/UnionCouncilTmpl.html">
+      <publishTime>10/31/2014 16:27:52</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/UnionCouncil/UnionCouncilView.ts">
+      <publishTime>10/31/2014 16:27:18</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/VisitType/VisitTypeCtrl.ts">
+      <publishTime>11/03/2014 17:24:42</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/VisitType/VisitTypeGrid.html">
+      <publishTime>10/31/2014 16:29:41</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/VisitType/VisitTypeTmpl.html">
+      <publishTime>10/31/2014 16:29:32</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Admin/VisitType/VisitTypeView.ts">
+      <publishTime>10/31/2014 22:15:14</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/App.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BokingGridRow.html">
+      <publishTime>08/25/2014 17:09:00</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingCtrl.ts">
+      <publishTime>11/01/2014 00:55:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingGrid.html">
+      <publishTime>10/31/2014 03:19:54</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingLeft/BookingLeftCtrl.ts">
+      <publishTime>11/03/2014 14:18:47</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingLeft/BookingLeftTmpl.html">
+      <publishTime>11/16/2014 00:01:16</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingLeft/BookingLeftView.ts">
+      <publishTime>11/03/2014 14:17:05</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingTmpl.html">
+      <publishTime>11/01/2014 01:09:39</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/BookingView.ts">
+      <publishTime>10/31/2014 05:02:13</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Booking/Templates/BookingRight.html">
+      <publishTime>09/08/2014 11:34:48</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/Bus.html">
+      <publishTime>07/06/2014 01:10:08</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusAvailability.html">
+      <publishTime>11/05/2014 03:29:30</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusAvailabilityCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusAvailabilityGrid.html">
+      <publishTime>09/12/2014 00:14:06</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusAvailabilityView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusGrid.html">
+      <publishTime>07/06/2014 01:02:20</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusVisit.html">
+      <publishTime>11/07/2014 23:39:18</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusVisitCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusVisitGrid.html">
+      <publishTime>11/07/2014 23:36:22</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Bus/BusVisitView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/ChangePassword/ChangePassword.html">
+      <publishTime>11/03/2014 17:52:44</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/ChangePassword/ChangePasswordCtrl.ts">
+      <publishTime>11/03/2014 18:23:13</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/ChangePassword/ChangePasswordView.ts">
+      <publishTime>11/03/2014 17:24:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/AdminLeft.html">
+      <publishTime>11/09/2014 22:34:55</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/AdminRight.html">
+      <publishTime>10/31/2014 16:30:34</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/BusDetailModalPopup.html">
+      <publishTime>11/01/2014 19:40:11</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/BusDetailModalPopupGrid.html">
+      <publishTime>09/15/2014 02:09:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/Header.html">
+      <publishTime>11/03/2014 17:07:56</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Templates/ModalPopup.html">
+      <publishTime>09/08/2014 01:27:40</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Views/AdminLeftView.ts">
+      <publishTime>06/30/2014 23:54:56</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Views/AdminRightView.ts">
+      <publishTime>07/15/2014 02:23:40</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Common/Views/HeaderView.ts">
+      <publishTime>10/31/2014 01:08:36</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/AdminSearch.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/AjaxRequest.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/AlkhidmatCentre.ts">
+      <publishTime>08/17/2014 13:54:50</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Booking.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/BookingLeft.ts">
+      <publishTime>10/25/2014 21:15:08</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Bus.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/BusAvailability.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/BusMilage.ts">
+      <publishTime>10/31/2014 00:53:16</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/BusVisit.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/CauseOfDeath.ts">
+      <publishTime>09/21/2014 11:58:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Driver.ts">
+      <publishTime>11/10/2014 02:14:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Graveyard.ts">
+      <publishTime>09/21/2014 11:58:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Landmark.ts">
+      <publishTime>09/21/2014 11:58:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Login.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Payment.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/PaymentType.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/RefundBooking.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/RefundType.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Search.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/Town.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/TrackingDevice.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/UnionCouncil.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/User.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/DAL/VisitType.ts">
+      <publishTime>09/21/2014 11:59:02</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/AlkhidmatCentreDto.ts">
+      <publishTime>08/17/2014 13:55:14</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/AppObjectDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BaseDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BookingDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BookingLeftDto.ts">
+      <publishTime>10/25/2014 23:07:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BookingSummaryDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BusAvailabilityDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BusDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BusMilageDto.ts">
+      <publishTime>10/31/2014 00:53:27</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/BusVisitDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/CauseOfDeathDto.ts">
+      <publishTime>09/21/2014 11:59:22</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/DriverDto.ts">
+      <publishTime>11/10/2014 02:26:24</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/GraveyardDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/LandmarkDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/LoginDto.ts">
+      <publishTime>11/03/2014 17:25:40</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/NearestCentreDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/PaymentDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/PaymentTypeDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/RefundBookingDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/RefundTypeDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/SearchDto.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/TownDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/TrackingDeviceDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/UnionCouncilDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/UserDto.ts">
+      <publishTime>11/03/2014 17:11:40</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Dtos/VisitTypeDto.ts">
+      <publishTime>09/21/2014 11:59:26</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Helper.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Login/Login.html">
+      <publishTime>10/31/2014 01:49:58</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Login/LoginCtrl.ts">
+      <publishTime>11/16/2014 22:08:36</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Login/LoginView.ts">
+      <publishTime>10/08/2014 23:29:30</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Main.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/ModalHelper.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Payment/PaymentCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Payment/PaymentGrid.html">
+      <publishTime>10/26/2014 02:02:18</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Payment/PaymentTmpl.html">
+      <publishTime>11/02/2014 19:22:55</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Payment/PaymentView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/RefundBooking/RefundBookingCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/RefundBooking/RefundBookingTmpl.html">
+      <publishTime>10/29/2014 01:54:55</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/RefundBooking/RefundBookingView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Search/SearchCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Search/SearchGrid.html">
+      <publishTime>10/04/2014 11:31:46</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Search/SearchTmpl.html">
+      <publishTime>10/29/2014 03:53:12</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/Search/SearchView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/SuccessModal.html">
+      <publishTime>07/02/2014 00:40:16</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/UserCtrl.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/UserGrid.html">
+      <publishTime>11/03/2014 17:17:03</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/UserGridRow.html">
+      <publishTime>10/08/2014 23:31:16</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/UserTmpl.html">
+      <publishTime>11/03/2014 17:17:03</publishTime>
+    </File>
+    <File Include="CCTracking.WebClient/User/UserView.js">
+      <publishTime>11/19/2014 01:36:29</publishTime>
+    </File>
+    <File Include="Content/App.css">
+      <publishTime>08/05/2014 01:34:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.autoFill.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.autoFill.min.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.bootstrap.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.colReorder.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.colReorder.min.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.colVis.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.colvis.jqueryui.css">
+      <publishTime>07/04/2014 00:50:24</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.colVis.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.fixedColumns.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.fixedColumns.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.fixedHeader.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.fixedHeader.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.foundation.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.jqueryui.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.jqueryui.scss">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.keyTable.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.keyTable.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.scroller.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.scroller.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.tableTools.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/dataTables.tableTools.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/jquery.dataTables.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/jquery.dataTables.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/jquery.dataTables_themeroller.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/css/jquery.dataTables_themeroller.min.css">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/AutoFill/css/dataTables.autoFill.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/AutoFill/css/dataTables.autoFill.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/AutoFill/images/filler.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColReorder/css/dataTables.colReorder.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColReorder/css/dataTables.colReorder.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColReorder/images/insert.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColVis/css/dataTables.colVis.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColVis/css/dataTables.colvis.jqueryui.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/ColVis/css/dataTables.colVis.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/FixedColumns/css/dataTables.fixedColumns.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/FixedColumns/css/dataTables.fixedColumns.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/FixedHeader/css/dataTables.fixedHeader.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/KeyTable/css/dataTables.keyTable.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/KeyTable/css/dataTables.keyTable.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/Scroller/css/dataTables.scroller.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/Scroller/css/dataTables.scroller.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/Scroller/images/loading-background.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/css/dataTables.tableTools.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/css/dataTables.tableTools.min.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/background.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/collection.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/collection_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/copy.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/copy_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/csv.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/csv_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/pdf.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/pdf_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/print.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/print_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/psd/collection.psd">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/psd/copy document.psd">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/psd/file_types.psd">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/psd/printer.psd">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/xls.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/extensions/TableTools/images/xls_hover.png">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/background.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/back_disabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/back_enabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/back_enabled_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/collection.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/collection_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/copy.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/copy_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/csv.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/csv_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/filler.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/forward_disabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/forward_enabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/forward_enabled_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/insert.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/loading-background.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/pdf.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/pdf_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/print.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/print_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/sort_asc.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/sort_asc_disabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/sort_both.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/sort_desc.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/sort_desc_disabled.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/xls.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/images/xls_hover.png">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/css/jquery.dataTables.css">
+      <publishTime>07/05/2014 05:39:10</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/css/jquery.dataTables.min.css">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/css/jquery.dataTables_themeroller.css">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/css/jquery.dataTables_themeroller.min.css">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/back_disabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/back_enabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/back_enabled_hover.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/favicon.ico">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/forward_disabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/forward_enabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/forward_enabled_hover.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/Sorting icons.psd">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/sort_asc.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/sort_asc_disabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/sort_both.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/sort_desc.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/media/images/sort_desc_disabled.png">
+      <publishTime>07/05/2014 05:39:08</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/swf/copy_csv_xls.swf">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/DataTables-1.10.0/swf/copy_csv_xls_pdf.swf">
+      <publishTime>07/04/2014 00:50:22</publishTime>
+    </File>
+    <File Include="Content/datepicker.css">
+      <publishTime>10/07/2014 12:51:30</publishTime>
+    </File>
+    <File Include="Content/Images/bus.jpg">
+      <publishTime>09/12/2014 01:36:26</publishTime>
+    </File>
+    <File Include="Content/Images/spiffygif_54x54.gif">
+      <publishTime>10/20/2014 23:42:06</publishTime>
+    </File>
+    <File Include="Content/jquery-ui.css">
+      <publishTime>10/26/2014 03:44:48</publishTime>
+    </File>
+    <File Include="Content/Themes/amelia/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/cerulean/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/cosmo/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/cyborg/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/darkly/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/flatly/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/journal/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/lumen/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/readable/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/simplex/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/slate/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/spacelab/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/superhero/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/united/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="Content/Themes/yeti/bootstrap.min.css">
+      <publishTime>07/19/2014 16:03:44</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>11/16/2014 00:29:16</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/13/2014 16:48:18</publishTime>
+    </File>
+    <File Include="Scripts/backbone.js">
+      <publishTime>06/24/2014 00:31:38</publishTime>
+    </File>
+    <File Include="Scripts/backbone.marionette.js">
+      <publishTime>06/24/2014 00:32:36</publishTime>
+    </File>
+    <File Include="Scripts/backbone.marionette.min.js">
+      <publishTime>06/24/2014 00:32:36</publishTime>
+    </File>
+    <File Include="Scripts/backbone.min.js">
+      <publishTime>06/24/2014 00:31:38</publishTime>
+    </File>
+    <File Include="Scripts/backbone.min.map">
+      <publishTime>06/24/2014 00:31:38</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datepicker.js">
+      <publishTime>10/07/2014 12:51:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-popover.js">
+      <publishTime>07/14/2014 03:12:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-tooltip.js">
+      <publishTime>07/14/2014 03:12:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/27/2014 00:00:26</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.autoFill.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.autoFill.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.bootstrap.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.colReorder.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.colReorder.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.colVis.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.colVis.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.fixedColumns.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.fixedColumns.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.fixedHeader.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.fixedHeader.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.foundation.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.jqueryui.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.keyTable.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.keyTable.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.scroller.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.scroller.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.tableTools.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/dataTables.tableTools.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/jquery.dataTables.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/DataTables/jquery.dataTables.min.js">
+      <publishTime>07/05/2014 05:47:58</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>06/24/2014 00:33:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.js">
+      <publishTime>06/24/2014 00:33:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.map">
+      <publishTime>06/24/2014 00:33:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>10/26/2014 03:44:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>07/13/2014 16:48:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>07/13/2014 16:48:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>07/13/2014 16:47:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>07/13/2014 16:47:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>07/13/2014 16:47:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/13/2014 16:47:48</publishTime>
+    </File>
+    <File Include="Scripts/json2.js">
+      <publishTime>06/24/2014 00:34:16</publishTime>
+    </File>
+    <File Include="Scripts/json2.min.js">
+      <publishTime>06/24/2014 00:34:16</publishTime>
+    </File>
+    <File Include="Scripts/knockback-core-stack.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback-core-stack.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback-core.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback-core.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback-full-stack.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback-full-stack.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockback.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.1.0.debug.js">
+      <publishTime>06/24/2014 01:02:46</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.1.0.js">
+      <publishTime>06/24/2014 01:02:46</publishTime>
+    </File>
+    <File Include="Scripts/knockout.validation.debug.js">
+      <publishTime>07/06/2014 15:17:46</publishTime>
+    </File>
+    <File Include="Scripts/knockout.validation.js">
+      <publishTime>07/06/2014 15:17:46</publishTime>
+    </File>
+    <File Include="Scripts/lib/defaults.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/defaults.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/formatting.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/formatting.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/localization.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/localization.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/statistics.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/statistics.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/triggering.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/lib/triggering.min.js">
+      <publishTime>06/24/2014 01:03:38</publishTime>
+    </File>
+    <File Include="Scripts/r.js">
+      <publishTime>06/24/2014 00:50:54</publishTime>
+    </File>
+    <File Include="Scripts/require.js">
+      <publishTime>06/24/2014 00:50:54</publishTime>
+    </File>
+    <File Include="Scripts/text.js">
+      <publishTime>06/24/2014 00:51:18</publishTime>
+    </File>
+    <File Include="Scripts/typings/backbone/backbone.d.ts">
+      <publishTime>06/28/2014 13:43:50</publishTime>
+    </File>
+    <File Include="Scripts/typings/jquery/jquery.d.ts">
+      <publishTime>06/24/2014 00:56:06</publishTime>
+    </File>
+    <File Include="Scripts/typings/knockback/knockback.d.ts">
+      <publishTime>06/24/2014 01:04:10</publishTime>
+    </File>
+    <File Include="Scripts/typings/knockout.validation/knockout.validation.d.ts">
+      <publishTime>07/06/2014 15:27:58</publishTime>
+    </File>
+    <File Include="Scripts/typings/knockout/knockout.d.ts">
+      <publishTime>07/06/2014 15:27:58</publishTime>
+    </File>
+    <File Include="Scripts/typings/marionette/marionette.d.ts">
+      <publishTime>10/31/2014 02:54:29</publishTime>
+    </File>
+    <File Include="Scripts/typings/require/require.d.ts">
+      <publishTime>06/24/2014 01:00:02</publishTime>
+    </File>
+    <File Include="Scripts/typings/underscore/underscore.d.ts">
+      <publishTime>06/24/2014 00:57:00</publishTime>
+    </File>
+    <File Include="Scripts/underscore-min.js">
+      <publishTime>06/24/2014 00:54:18</publishTime>
+    </File>
+    <File Include="Scripts/underscore-min.map">
+      <publishTime>06/24/2014 00:54:18</publishTime>
+    </File>
+    <File Include="Scripts/underscore.js">
+      <publishTime>06/24/2014 00:54:18</publishTime>
+    </File>
+    <File Include="Temp/KoValidation.html">
+      <publishTime>07/13/2014 16:37:00</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>11/19/2014 01:36:32</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

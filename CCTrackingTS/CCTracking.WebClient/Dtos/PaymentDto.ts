@@ -43,9 +43,33 @@ export module Models {
         }
     }
 
+    export class AuditPayment extends Backbone.Model {
+        default() {
+            return {
+                id: "",
+                bookingId: "",
+                propertyName: "",
+                oldValue: "",
+                newValue: "",
+                modifiedDate: "",
+                createdDate: "",
+                actualModifiedDate: "",
+                userName: ""
+            }
+
+        }
+    }
+
     export class PaymentResponseCollection extends Backbone.Collection {
         constructor(options?: any) {
             this.model = PaymentResponse;
+            super(options);
+        }
+    }
+
+    export class AuditPaymentResponseCollection extends Backbone.Collection {
+        constructor(options?: any) {
+            this.model = AuditPayment;
             super(options);
         }
     }

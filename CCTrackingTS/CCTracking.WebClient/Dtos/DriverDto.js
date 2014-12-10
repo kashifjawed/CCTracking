@@ -35,6 +35,31 @@ define(["require", "exports", "backbone"], function(require, exports) {
             return DriverDto;
         })(Backbone.Model);
         Models.DriverDto = DriverDto;
+        var DriverSummaryDto = (function (_super) {
+            __extends(DriverSummaryDto, _super);
+            function DriverSummaryDto() {
+                _super.apply(this, arguments);
+            }
+            DriverSummaryDto.prototype.default = function () {
+                return {
+                    driverId: "",
+                    driverName: "",
+                    milage: "",
+                    visitCount: "",
+                    vehicleNo: "",
+                    visitDate: "",
+                    visitInterval: "",
+                    bookingId: "",
+                    isActive: "",
+                    createdBy: "",
+                    createdDate: "",
+                    modifiedBy: "",
+                    modifiedDate: ""
+                };
+            };
+            return DriverSummaryDto;
+        })(Backbone.Model);
+        Models.DriverSummaryDto = DriverSummaryDto;
         var DriverCollection = (function (_super) {
             __extends(DriverCollection, _super);
             function DriverCollection(options) {
@@ -44,6 +69,16 @@ define(["require", "exports", "backbone"], function(require, exports) {
             return DriverCollection;
         })(Backbone.Collection);
         Models.DriverCollection = DriverCollection;
+        var DriverSummaryCollection = (function (_super) {
+            __extends(DriverSummaryCollection, _super);
+            function DriverSummaryCollection(options) {
+                this.model = DriverSummaryDto;
+                _super.call(this, options);
+            }
+            return DriverSummaryCollection;
+        })(Backbone.Collection);
+        Models.DriverSummaryCollection = DriverSummaryCollection;
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });
+//# sourceMappingURL=DriverDto.js.map

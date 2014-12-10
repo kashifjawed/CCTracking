@@ -49,6 +49,11 @@ define(["require", "exports", "CCTracking.WebClient/DAL/AjaxRequest", "CCTrackin
         return o.doAjaxRequest(null, "GET", "BusAvailability?id=" + id);
     }
     exports.GetBusAvialability = GetBusAvialability;
+    function GetAllAuditPayment(auditRequest) {
+        var o = new PaymentDal();
+        return o.doAjaxRequest(auditRequest, "POST", "AuditPayment");
+    }
+    exports.GetAllAuditPayment = GetAllAuditPayment;
 });
 //aaa
 //# sourceMappingURL=Payment.js.map

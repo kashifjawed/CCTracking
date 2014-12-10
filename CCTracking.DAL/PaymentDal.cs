@@ -41,6 +41,7 @@ namespace CCTracking.DAL
             dictionary.Add("@EasyPaisaTranNo", payment.EasyPaisaTranNo);
             dictionary.Add("@CreatedBy", payment.CreatedBy);
             dictionary.Add("@ModifiedBy", payment.ModifiedBy);
+            dictionary.Add("@ModifiedDate", payment.ModifiedDate);
             return "SavePayment";
         }
 

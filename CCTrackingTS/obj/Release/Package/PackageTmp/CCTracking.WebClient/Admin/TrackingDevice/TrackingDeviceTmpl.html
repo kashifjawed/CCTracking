@@ -1,0 +1,45 @@
+﻿<div>
+    <div class="panel panel-default">
+        <div class="panel-heading header-bold"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Tracking Device Information</div>
+        <div class="panel-body">
+            <form id="form1">
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+                        <table class="table table-removeTopBorder table-condensed table-hover form-group">
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Tracking Device</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input id="txtGraveyard" type="text" class="form-control input-sm" data-bind="value: model.trackingNo" 
+                                        required="required" data-role="validate" title="Tracking Device" data-content="Tracking Device is required"/></td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-sm-4 col-md-4 input-sm">Is Active</td>
+                                <td class="col-sm-8 col-md-8">
+                                    <input type="radio" name="rbIsActive" value="1" data-bind="checked: model.isActive" />Yes
+                                    &nbsp;
+                                    <input type="radio" name="rbIsActive" value="0" data-bind="checked: model.isActive" />No </td>
+                            </tr>
+
+                            <tr>
+                                <td class="col-sm-4 col-md-4"></td>
+                                <td class="col-sm-8 col-md-8">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                    &nbsp;
+                                    <button type="button" class="jsCancel btn btn-primary">Cancel</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+
+            <div id="DetailRegion">
+            </div>
+        </div>
+
+    </div>
+
+</div>

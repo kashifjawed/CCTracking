@@ -65,9 +65,32 @@ export module Models {
         }
     }
 
+    export class AuditBooking extends Backbone.Model {
+        default() {
+            return {
+                id: "",
+                bookingId: "",
+                propertyName: "",
+                oldValue: "",
+                newValue: "",
+                modifiedDate: "",
+                createdDate: "",
+                actualModifiedDate: "",
+                userName: ""
+            }
+
+        }
+    }
+
     export class BookingResponseCollection extends Backbone.Collection {
         constructor(options?: any) {
             this.model = BookingResponse;
+            super(options);
+        }
+    }
+    export class AuditBookingResponseCollection extends Backbone.Collection {
+        constructor(options?: any) {
+            this.model = AuditBooking;
             super(options);
         }
     }

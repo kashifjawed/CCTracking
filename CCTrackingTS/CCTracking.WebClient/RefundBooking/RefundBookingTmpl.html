@@ -1,6 +1,10 @@
 ﻿<div>
     <div class="panel panel-default">
-        <div class="panel-heading header-bold"><span class="glyphicon glyphicon-remove-circle"></span>BOOKING CANCELLATION</div>
+        <div class="panel-heading header-bold"><i class="fa fa-cc-visa">&nbsp;</i> BOOKING CANCELLATION
+            <div class="pull-right">
+                Booking ID - <span data-bind="text: model.bookingId"></span>
+             </div>
+        </div>
         <div class="panel-body">
             <form id="form1">
                 <table class="table table-condensed table-hover form-group">
@@ -72,9 +76,9 @@
                     <tr>
                         <td class="col-sm-4 col-md-4"></td>
                         <td class="col-sm-8 col-md-8">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-default">Save</button>
                             &nbsp;
-                        <button type="button" class="jsCancel btn btn-primary">Cancel</button>
+                        <button type="button" class="jsCancel btn btn-default">Cancel</button>
                         </td>
                     </tr>
                     

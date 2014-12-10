@@ -59,6 +59,42 @@ define(["require", "exports", "jquery", "backbone"], function(require, exports) 
             return BusVisitCollection;
         })(Backbone.Collection);
         Models.BusVisitCollection = BusVisitCollection;
+        var BusVisitSummaryDto = (function (_super) {
+            __extends(BusVisitSummaryDto, _super);
+            function BusVisitSummaryDto() {
+                _super.apply(this, arguments);
+            }
+            BusVisitSummaryDto.prototype.default = function () {
+                return {
+                    busId: "",
+                    busDesc: "",
+                    driverDesc: "",
+                    centreDesc: "",
+                    milage: "",
+                    visitCount: "",
+                    vehicleNo: "",
+                    visitDate: "",
+                    visitInterval: "",
+                    bookingId: "",
+                    isActive: "",
+                    createdBy: "",
+                    createdDate: "",
+                    modifiedBy: "",
+                    modifiedDate: ""
+                };
+            };
+            return BusVisitSummaryDto;
+        })(Backbone.Model);
+        Models.BusVisitSummaryDto = BusVisitSummaryDto;
+        var BusVisitSummaryCollection = (function (_super) {
+            __extends(BusVisitSummaryCollection, _super);
+            function BusVisitSummaryCollection(options) {
+                this.model = BusVisitSummaryDto;
+                _super.call(this, options);
+            }
+            return BusVisitSummaryCollection;
+        })(Backbone.Collection);
+        Models.BusVisitSummaryCollection = BusVisitSummaryCollection;
     })(exports.Models || (exports.Models = {}));
     var Models = exports.Models;
 });

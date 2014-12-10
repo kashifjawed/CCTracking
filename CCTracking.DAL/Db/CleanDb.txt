@@ -1,0 +1,10 @@
+﻿delete from Booking
+delete from Payment
+delete from BusVisit
+delete from refundbooking
+
+
+delete from cdc.dbo_booking_CT
+delete from cdc.dbo_Payment_CT
+delete from cdc.dbo_BusVisit_CT
+delete from cdc.dbo_RefundBooking_CT

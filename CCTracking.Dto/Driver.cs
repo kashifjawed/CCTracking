@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CCTracking.Dto
 {
@@ -17,5 +13,15 @@ namespace CCTracking.Dto
         public string  Address { get; set; }
         public string City { get; set; }
 
+
+       //Report Related Properties
+       public int DriverId { get; set; }
+       public string DriverName { get; set; }
+       public string Milage { get; set; }
+       public int VisitCount { get; set; }
+       public string VehicleNo { get; set; }
+       public DateTime VisitDate { get; set; }
+       public string VisitInterval { get; set; }
+       public int BookingId { get; set; }
     }
 }

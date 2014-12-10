@@ -25,6 +25,18 @@ namespace CCTracking.Dto
         public long InitialReading { get; set; }
         public long FinalReading { get; set; }
         public string Description { get; set; }
+
+        //Report Related Properties
+
+        public string Milage { get; set; }
+        public int VisitCount { get; set; }
+        public string VisitInterval { get; set; }
+        public string VehicleNo { get; set; }
+        public string OutTimeDesc { get; set; }
+        public string ReturnTimeDesc { get; set; }
+        
+        
+        
     }
     
 }

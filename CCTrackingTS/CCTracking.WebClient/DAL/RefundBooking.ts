@@ -35,3 +35,7 @@ export function GetById(id) {
     var o: baseDAL.BaseDto = new RefundBookingDal();
     return o.doAjaxRequest(null, "GET", "RefundBooking?id=" + id);
 }
+export function GetAllAuditRefundBooking(auditRequest) {
+    var o: baseDAL.BaseDto = new RefundBookingDal();
+    return o.doAjaxRequest(auditRequest, "POST", "AuditRefundBooking");
+}
